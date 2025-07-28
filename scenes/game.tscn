@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://fv6hx7jmbcer"]
+
+[ext_resource type="Texture2D" uid="uid://x8d1wx7jewnr" path="res://assets/first sea landscape.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://djjo7aqahcu7y" path="res://scenes/player.tscn" id="2_yqjtg"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(574, 319)
+scale = Vector2(10.5, 10.5)
+texture = ExtResource("1_uwrxv")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(586, 309)
