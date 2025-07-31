@@ -1,0 +1,176 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc2klmb86axca"]
+
+[ext_resource type="Script" uid="uid://ce5ngtg8r7huy" path="res://scripts/mainMenu.gd" id="1_qkhwq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3d1i7"]
+font_size = 64
+
+[node name="mainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qkhwq")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="CenterContainer/menu"]
+layout_mode = 2
+text = "Ikea Game"
+label_settings = SubResource("LabelSettings_3d1i7")
+
+[node name="playGame" type="Button" parent="CenterContainer/menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Play"
+
+[node name="credits" type="Button" parent="CenterContainer/menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Credits"
+
+[node name="quitGame" type="Button" parent="CenterContainer/menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Quit"
+
+[node name="credits" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/credits"]
+layout_mode = 2
+text = "CREDITS"
+horizontal_alignment = 1
+
+[node name="mac" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/mac"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Mgmac"
+
+[node name="task" type="Label" parent="CenterContainer/credits/mac"]
+layout_mode = 2
+text = "programming"
+
+[node name="glitchagon" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/glitchagon"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Glitchagon"
+
+[node name="task" type="Label" parent="CenterContainer/credits/glitchagon"]
+layout_mode = 2
+text = "programming"
+
+[node name="cygnusTheRock" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/cygnusTheRock"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Cygnus the rock"
+
+[node name="task" type="Label" parent="CenterContainer/credits/cygnusTheRock"]
+layout_mode = 2
+text = "programming"
+
+[node name="blocks" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/blocks"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Blocks1245"
+
+[node name="task" type="Label" parent="CenterContainer/credits/blocks"]
+layout_mode = 2
+text = "programming"
+
+[node name="Merilin25" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/Merilin25"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Merilin25"
+
+[node name="task" type="Label" parent="CenterContainer/credits/Merilin25"]
+layout_mode = 2
+text = "Music"
+
+[node name="dukeJinYu" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/dukeJinYu"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Duke Jin Yu"
+
+[node name="task" type="Label" parent="CenterContainer/credits/dukeJinYu"]
+layout_mode = 2
+text = "art/asset creation"
+
+[node name="luisLimersin" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/luisLimersin"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Luis Limersin"
+
+[node name="task" type="Label" parent="CenterContainer/credits/luisLimersin"]
+layout_mode = 2
+text = "art/asset creation"
+
+[node name="betaStar" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/betaStar"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Beta Star"
+
+[node name="task" type="Label" parent="CenterContainer/credits/betaStar"]
+layout_mode = 2
+text = "art/asset creation"
+
+[node name="boof" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/boof"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Boof Taco Pants Boy"
+
+[node name="task" type="Label" parent="CenterContainer/credits/boof"]
+layout_mode = 2
+text = "Playtesting"
+
+[node name="return" type="Button" parent="CenterContainer/credits"]
+layout_mode = 2
+text = "Return To Main Menu"
+
+[node name="menuCam" type="Camera2D" parent="."]
+top_level = true
+position = Vector2(635, 290)
+
+[connection signal="pressed" from="CenterContainer/menu/playGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="CenterContainer/menu/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/menu/quitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="CenterContainer/credits/return" to="." method="_on_return_pressed"]

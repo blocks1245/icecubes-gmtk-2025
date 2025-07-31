@@ -2,7 +2,7 @@ extends Node
 
 @onready var score = 0
 @onready var rooms = len(DirAccess.get_files_at("res://scenes/rooms/"))
-
+@onready var running = false
 
 func addScore(): #adds to the current score
 	score += 1
