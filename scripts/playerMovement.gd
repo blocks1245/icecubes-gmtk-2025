@@ -3,6 +3,7 @@ extends CharacterBody2D
 #Exported variables for the speed and jump velocity of the player
 @export var speed = 500
 @export var jumpVelocity = -500
+@onready var right = false
 
 #Get the gravity value for the project (I changed this because it looked liked we were on the moon)
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,4 +35,3 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
 	move_and_slide() #Move the player based on the velocity 
-
