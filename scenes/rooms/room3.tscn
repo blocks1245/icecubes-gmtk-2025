@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/parentroom.tscn" id="1_4c8fp"]
 
 [node name="room3" instance=ExtResource("1_4c8fp")]
+
+[node name="Black" parent="." index="6"]
+color = Color(0, 0, 0, 1)
