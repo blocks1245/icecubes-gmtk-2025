@@ -14,19 +14,19 @@ func _ready():
 		
 	_fading_process() #fade in
 	_generate_anomaly() #Roll to see if this room is an anomaly
-	marker.text = "Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore() + " | mistakes: " + str(gameManager.getMistakes())) #Temp output for anomaly status
+	marker.text = "Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) + " | mistakes: " + str(gameManager.getMistakes()) #Temp output for anomaly status
 
 func _fading_process():
-	get_tree().paused = true
 	animation_player.play("FadeIn") #start animation
 	await animation_player.animation_finished #wait till its done to continue
-	get_tree().paused = false
 
 func _generate_anomaly():
 	if rng.randi_range(0, 100) > 50: #50% chance for anomaly
 		anomaly = true #the 0-100 feels so wack but oh well, works aswell lol
+		music.playAnomaly()
 	else:
 		anomaly = false
+		music.playRegular()
 
 func _on_right_exit_area_area_entered(_area: Area2D) -> void: # if you touch the right side
 	await get_tree().physics_frame # waits until the next physics frame because godot keeps yelling at me for going too fast
@@ -46,7 +46,7 @@ func _on_left_exit_area_area_entered(_area: Area2D) -> void: # if you touch the 
 	
 func _check_direction(entry, exit):
 	if anomaly == true:
-		if entry != exit:
+		if entry == exit:
 			gameManager.addScore()
 		else:
 			gameManager.resetScore()
@@ -57,10 +57,8 @@ func _check_direction(entry, exit):
 			gameManager.resetScore()
 
 func _select_next_room():
-	get_tree().paused = true
 	animation_player.play("FadeToBlack") # start animation
 	await animation_player.animation_finished # do not continue process until the animation is finished
-	get_tree().paused = false
 	
 	var room = rng.randi_range(1, gameManager.getRooms()) # select the next room randomly
 	print(str(room))

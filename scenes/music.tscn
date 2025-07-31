@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp5obif2qlos4"]
+
+[ext_resource type="AudioStream" uid="uid://l4fg535agw4c" path="res://assets/music/test1.wav" id="1_05ggv"]
+[ext_resource type="Script" uid="uid://blnnposnxut56" path="res://scenes/music.gd" id="1_ibx2e"]
+[ext_resource type="AudioStream" uid="uid://dwqcw343ea36h" path="res://assets/music/test2.wav" id="3_qnihg"]
+
+[node name="MusicPlayer" type="Node"]
+script = ExtResource("1_ibx2e")
+
+[node name="regular" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_05ggv")
+
+[node name="anomaly" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_qnihg")

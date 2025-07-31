@@ -31,7 +31,6 @@ shape = SubResource("CircleShape2D_g2els")
 offset = Vector2(0, -150)
 
 [node name="pauseMenu" parent="." instance=ExtResource("3_qhqgy")]
-visible = false
 offset_left = -631.0
 offset_top = -436.0
 offset_right = -599.0
