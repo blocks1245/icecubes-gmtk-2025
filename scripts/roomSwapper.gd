@@ -1,6 +1,6 @@
 extends Node2D
 
-## PLEASE DO NOTE, BATHROOM IS THE PARENT OF ALL ROOMS, ALL CHANGES MADE ON BATHROOM WILL AFFECT ALL ROOMS, BUT CHANGES ON OTHER ROOMS WILL NOT AFAIK
+## PLEASE DO NOTE, BATHROOM IS THE PARENT OF ALL ROOMS, ALL CHANGES MADE ON PARENTROOM WILL AFFECT ALL ROOMS, BUT CHANGES ON OTHER ROOMS WILL NOT AFAIK
 
 @onready var floor_collision: CollisionPolygon2D = $floor/floorCollision #get floor collision
 @onready var floor_polygon: Polygon2D = $floor/floorCollision/floorPolygon#get floor polygon
@@ -44,7 +44,9 @@ func _on_left_exit_area_area_entered(_area: Area2D) -> void: # if you touch the 
 	await get_tree().physics_frame # waits until the next physics frame because godot keeps yelling at me for going too fast
 	_select_next_room() # select the next room
 	
-func _select_next_room(): #this whole function makes me want to cry
+func _select_next_room(): #this whole function makes me want to cryaaaaaaaaaaaaaaaaaaadaddada
+	animation_player.play("FadeToBlack")
+	await animation_player.animation_finished
 	if rng.randi_range(1, 4) == 1: # runs a 1 in 4 chance that the living room gets chosen
 		if name == "livingroom": # this is so horrid but i tried everything
 			if !get_tree(): return #im sorry i had to repeat this so often, it just doesnt work if i dont do it like this
