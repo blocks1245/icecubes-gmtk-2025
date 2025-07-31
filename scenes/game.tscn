@@ -4,11 +4,24 @@
 [ext_resource type="Texture2D" uid="uid://x8d1wx7jewnr" path="res://assets/first sea landscape.png" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://djjo7aqahcu7y" path="res://scenes/player.tscn" id="2_yqjtg"]
 
+[sub_resource type="GDScript" id="GDScript_yqjtg"]
+script/source = "extends Node2D
+@onready var player: CharacterBody2D = $Player
+@onready var floor: StaticBody2D = $Floor
+
+func _ready():
+	pass
+"
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 12.0
 
 [node name="Game" type="Node2D"]
+<<<<<<< HEAD
+script = SubResource("GDScript_yqjtg")
+=======
 script = ExtResource("1_lnu2h")
+>>>>>>> main
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(632, 313)
@@ -17,11 +30,6 @@ texture = ExtResource("1_uwrxv")
 
 [node name="Player" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(608, 297)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2(0, -100)
-position_smoothing_enabled = true
-position_smoothing_speed = 8.0
 
 [node name="Floor" type="StaticBody2D" parent="."]
 position = Vector2(0, 500)

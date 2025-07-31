@@ -1,7 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://3yy3x54wukbp"]
 
-[ext_resource type="Script" uid="uid://dmwxmmcld3cfc" path="res://scripts/roomSwapper.gd" id="1_ffxv4"]
-[ext_resource type="PackedScene" uid="uid://djjo7aqahcu7y" path="res://scenes/player.tscn" id="2_85yof"]
+[ext_resource type="Script" uid="uid://dmwxmmcld3cfc" path="res://scripts/roomSwapper.gd" id="1_2j8ko"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2j8ko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffxv4"]
 size = Vector2(121.5, 485)
@@ -11,6 +12,22 @@ size = Vector2(90, 485)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14vil"]
 size = Vector2(1409, 96)
+
+[sub_resource type="Animation" id="Animation_ur823"]
+resource_name = "FadeIn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Black:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 2),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_e0elq"]
 resource_name = "FadeToBlack"
@@ -28,22 +45,6 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_ur823"]
-resource_name = "FadeToWhite"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Black:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 2),
-"update": 0,
-"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_8pl6i"]
 length = 0.001
 tracks/0/type = "value"
@@ -56,34 +57,26 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(0, 0, 0, 0)]
+"values": [Color(0, 0, 0, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_w4rbc"]
 _data = {
+&"FadeIn": SubResource("Animation_ur823"),
 &"FadeToBlack": SubResource("Animation_e0elq"),
-&"FadeToWhite": SubResource("Animation_ur823"),
 &"RESET": SubResource("Animation_8pl6i")
 }
 
 [node name="parentroom" type="Node2D"]
 process_mode = 3
-script = ExtResource("1_ffxv4")
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("2_85yof")]
-process_mode = 1
-position = Vector2(682, 338)
+script = ExtResource("1_2j8ko")
 
 [node name="floor" type="StaticBody2D" parent="."]
 position = Vector2(519, 651)
 
-[node name="floorCollision" type="CollisionPolygon2D" parent="floor"]
-position = Vector2(-601.391, -119)
-scale = Vector2(3.02419, 1)
-polygon = PackedVector2Array(11, 0, 476, 0, 476, -56, 11, -56)
-
-[node name="floorPolygon" type="Polygon2D" parent="floor/floorCollision"]
-position = Vector2(-3.50805, 78)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2(0, -120)
+shape = SubResource("WorldBoundaryShape2D_2j8ko")
 
 [node name="rightExitArea" type="Area2D" parent="."]
 process_mode = 1
@@ -119,11 +112,12 @@ libraries = {
 }
 
 [node name="Black" type="ColorRect" parent="."]
-offset_left = -24.0
-offset_top = -32.0
-offset_right = 1300.0
-offset_bottom = 548.0
-color = Color(0, 0, 0, 0)
+offset_left = -600.0
+offset_top = -250.0
+offset_right = 724.0
+offset_bottom = 330.0
+scale = Vector2(2, 2)
+color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
 
 [connection signal="area_entered" from="rightExitArea" to="." method="_on_right_exit_area_area_entered"]

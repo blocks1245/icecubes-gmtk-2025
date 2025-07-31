@@ -25,3 +25,6 @@ shape = SubResource("CircleShape2D_qhqgy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -150)
