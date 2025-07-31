@@ -31,8 +31,7 @@ func _generate_anomaly():
 func _on_right_exit_area_area_entered(_area: Area2D) -> void: # if you touch the right side
 	await get_tree().physics_frame # waits until the next physics frame because godot keeps yelling at me for going too fast
 	
-	player.right = true # the player is currently on the right side
-	_check_direction() # checks if the player made the right choice
+	_check_direction(player.right, true) # checks if the player made the right choice
 	player.right = false # player will be put on the left side in the next room
 	
 	_select_next_room() # select the next room
@@ -40,23 +39,22 @@ func _on_right_exit_area_area_entered(_area: Area2D) -> void: # if you touch the
 func _on_left_exit_area_area_entered(_area: Area2D) -> void: # if you touch the left side
 	await get_tree().physics_frame # waits until the next physics frame because godot keeps yelling at me for going too fast
 	
-	player.right = false # the player is currently on the left side
-	_check_direction() # checks if the player made the right choice
+	_check_direction(player.right, false) # checks if the player made the right choice
 	player.right = true # the player will be on the right side in the next room
 	
 	_select_next_room() # select the next room
 	
-func _check_direction():
-	if player.right == true:
-		if anomaly == true: #if the player went to the right and there was an anomaly, reset the score (wrong)
-			gameManager.resetScore()
-		else: # if they went to the right and had an anomaly, add to the score (correct)
-			gameManager.addScore()
-	else:
-		if anomaly == true: # if they went left and there was an anomaly, add to the score (correct)
+func _check_direction(entry, exit):
+	if anomaly == true:
+		if entry != exit:
 			gameManager.addScore()
 		else:
-			gameManager.resetScore() # if they went left and there was no anomaly, reset the score (wrong)
+			gameManager.resetScore()
+	else:
+		if entry != exit:
+			gameManager.addScore()
+		else:
+			gameManager.resetScore()
 
 func _select_next_room():
 	get_tree().paused = true
