@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djjo7aqahcu7y"]
+[gd_scene load_steps=6 format=3 uid="uid://djjo7aqahcu7y"]
 
 [ext_resource type="Texture2D" uid="uid://c4fp74giehsp8" path="res://assets/coolFrog3.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://d3svbfm073ve8" path="res://scripts/playerMovement.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://cxc6s7xuinfgl" path="res://scenes/pauseMenu.tscn" id="3_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 103.0
@@ -28,3 +29,10 @@ shape = SubResource("CircleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -150)
+
+[node name="pauseMenu" parent="." instance=ExtResource("3_qhqgy")]
+visible = false
+offset_left = -631.0
+offset_top = -436.0
+offset_right = -599.0
+offset_bottom = -403.0

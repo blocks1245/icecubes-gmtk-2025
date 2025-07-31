@@ -74,3 +74,4 @@ func _select_next_room():
 			room += 1 # add one to avoid duplicates
 	
 	get_tree().change_scene_to_packed(load("res://scenes/rooms/room%s.tscn" % room)) # change scene to the selected room
+	
