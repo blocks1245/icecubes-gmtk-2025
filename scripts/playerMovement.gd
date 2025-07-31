@@ -11,6 +11,9 @@ extends CharacterBody2D
 #Variable for the sprite itself (this will need to be changed when we animate it)
 @onready var PlayerSprite = $PlayerSprite
 
+func _ready() -> void:
+	is_game_running() # done at the start so it doesnt do anything to main menu
+
 #Runs on every physics frame instead of each normal frame like _process
 func _physics_process(delta):
 	_handle_gravity(delta)
@@ -41,3 +44,11 @@ func _handle_movement():
 	else: #If the direction is null
 		#Smoothly move the velocity from the current velocity to 0 using the speed
 		velocity.x = move_toward(velocity.x, 0, speed)
+
+func is_game_running(): # checks if the game is running
+	if !gameManager.running: #checks to see if the player is actually in game and not in the main menu
+		visible = false # makes player invisible
+		$Camera2D.enabled = false # disables camera, avoids messing up the main menu camera
+	else: # if it fails, game is running
+		visible = true # makes player visible
+		$Camera2D.enabled = true # enables camera
