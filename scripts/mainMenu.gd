@@ -6,6 +6,7 @@ extends Control
 var game = load("res://scenes/rooms/room1.tscn") # gets room 1 from filepath
 
 func _on_play_game_pressed() -> void:	
+	gameManager.reset()
 	gameManager.running = true # game is running
 	player.is_game_running() # makes player visible again
 	get_tree().change_scene_to_packed(game) # changes level to first room
