@@ -14,7 +14,7 @@ func _ready():
 		
 	_fading_process() #fade in
 	_generate_anomaly() #Roll to see if this room is an anomaly
-	marker.text = "Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) #Temp output for anomaly status
+	marker.text = "Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore() + " | mistakes: " + str(gameManager.getMistakes())) #Temp output for anomaly status
 
 func _fading_process():
 	get_tree().paused = true
