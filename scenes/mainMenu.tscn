@@ -60,33 +60,21 @@ layout_mode = 2
 [node name="name" type="Label" parent="CenterContainer/credits/mac"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Mgmac"
+text = "@mgmac_"
 
 [node name="task" type="Label" parent="CenterContainer/credits/mac"]
 layout_mode = 2
 text = "programming"
 
-[node name="glitchagon" type="HBoxContainer" parent="CenterContainer/credits"]
+[node name="cygnus" type="HBoxContainer" parent="CenterContainer/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/glitchagon"]
+[node name="name" type="Label" parent="CenterContainer/credits/cygnus"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Glitchagon"
+text = "@cygnustherock"
 
-[node name="task" type="Label" parent="CenterContainer/credits/glitchagon"]
-layout_mode = 2
-text = "programming"
-
-[node name="cygnusTheRock" type="HBoxContainer" parent="CenterContainer/credits"]
-layout_mode = 2
-
-[node name="name" type="Label" parent="CenterContainer/credits/cygnusTheRock"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Cygnus the rock"
-
-[node name="task" type="Label" parent="CenterContainer/credits/cygnusTheRock"]
+[node name="task" type="Label" parent="CenterContainer/credits/cygnus"]
 layout_mode = 2
 text = "programming"
 
@@ -96,59 +84,71 @@ layout_mode = 2
 [node name="name" type="Label" parent="CenterContainer/credits/blocks"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Blocks1245"
+text = "@blocks1245"
 
 [node name="task" type="Label" parent="CenterContainer/credits/blocks"]
 layout_mode = 2
-text = "programming"
+text = "git management"
 
-[node name="Merilin25" type="HBoxContainer" parent="CenterContainer/credits"]
+[node name="glitch" type="HBoxContainer" parent="CenterContainer/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Merilin25"]
+[node name="name" type="Label" parent="CenterContainer/credits/glitch"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Merilin25"
+text = "@glitchagon22"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Merilin25"]
+[node name="task" type="Label" parent="CenterContainer/credits/glitch"]
 layout_mode = 2
-text = "Music"
+text = "music/writing"
 
-[node name="dukeJinYu" type="HBoxContainer" parent="CenterContainer/credits"]
+[node name="ice" type="HBoxContainer" parent="CenterContainer/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/dukeJinYu"]
+[node name="name" type="Label" parent="CenterContainer/credits/ice"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Duke Jin Yu"
+text = "@merilin25"
 
-[node name="task" type="Label" parent="CenterContainer/credits/dukeJinYu"]
+[node name="task" type="Label" parent="CenterContainer/credits/ice"]
 layout_mode = 2
-text = "art/asset creation"
+text = "music"
 
-[node name="luisLimersin" type="HBoxContainer" parent="CenterContainer/credits"]
+[node name="buzzy" type="HBoxContainer" parent="CenterContainer/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/luisLimersin"]
+[node name="name" type="Label" parent="CenterContainer/credits/buzzy"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Luis Limersin"
+text = "@dukejinyu"
 
-[node name="task" type="Label" parent="CenterContainer/credits/luisLimersin"]
+[node name="task" type="Label" parent="CenterContainer/credits/buzzy"]
 layout_mode = 2
-text = "art/asset creation"
+text = "art"
 
-[node name="betaStar" type="HBoxContainer" parent="CenterContainer/credits"]
+[node name="luis" type="HBoxContainer" parent="CenterContainer/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/betaStar"]
+[node name="name" type="Label" parent="CenterContainer/credits/luis"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Beta Star"
+text = "@luislimersin"
 
-[node name="task" type="Label" parent="CenterContainer/credits/betaStar"]
+[node name="task" type="Label" parent="CenterContainer/credits/luis"]
 layout_mode = 2
-text = "art/asset creation"
+text = "art"
+
+[node name="beta" type="HBoxContainer" parent="CenterContainer/credits"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/credits/beta"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "@beta_star"
+
+[node name="task" type="Label" parent="CenterContainer/credits/beta"]
+layout_mode = 2
+text = "art"
 
 [node name="boof" type="HBoxContainer" parent="CenterContainer/credits"]
 layout_mode = 2
@@ -156,11 +156,11 @@ layout_mode = 2
 [node name="name" type="Label" parent="CenterContainer/credits/boof"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-text = "Boof Taco Pants Boy"
+text = "@booftacopantsboy"
 
 [node name="task" type="Label" parent="CenterContainer/credits/boof"]
 layout_mode = 2
-text = "Playtesting"
+text = "team management"
 
 [node name="return" type="Button" parent="CenterContainer/credits"]
 layout_mode = 2
