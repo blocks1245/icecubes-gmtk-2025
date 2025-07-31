@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3yy3x54wukbp"]
+[gd_scene load_steps=10 format=3 uid="uid://244q2egytpv2"]
 
 [ext_resource type="Script" uid="uid://dmwxmmcld3cfc" path="res://scripts/roomSwapper.gd" id="1_ffxv4"]
 [ext_resource type="PackedScene" uid="uid://djjo7aqahcu7y" path="res://scenes/player.tscn" id="2_85yof"]
