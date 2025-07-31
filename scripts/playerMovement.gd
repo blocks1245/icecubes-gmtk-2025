@@ -20,7 +20,7 @@ func _physics_process(delta):
 	
 	#Direction is basically -1 for left, +1 for right, as a float (null for no action I believe)
 	var direction = Input.get_axis("left", "right") 
-	
+
 	if direction: #If the direction is not null
 		#Set the horizontal velocity of the player to their speed value in the direction specified
 		velocity.x = direction * speed 
@@ -34,3 +34,4 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
 	move_and_slide() #Move the player based on the velocity 
+
