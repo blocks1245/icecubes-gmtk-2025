@@ -24,6 +24,7 @@ grow_vertical = 2
 
 [node name="menu" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="title" type="Label" parent="CenterContainer/menu"]
 layout_mode = 2
