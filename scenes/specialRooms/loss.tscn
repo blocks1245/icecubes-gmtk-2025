@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2ch1lwkvwgao"]
+
+[ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/parentroom.tscn" id="1_kjl7v"]
+
+[node name="loss" instance=ExtResource("1_kjl7v")]
+
+[node name="Label" type="Label" parent="." index="7"]
+offset_left = 407.0
+offset_top = 117.0
+offset_right = 711.0
+offset_bottom = 249.0
+theme_override_font_sizes/font_size = 50
+text = "you lose"

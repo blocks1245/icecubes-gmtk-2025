@@ -60,6 +60,14 @@ func _select_next_room():
 	animation_player.play("FadeToBlack") # start animation
 	await animation_player.animation_finished # do not continue process until the animation is finished
 	
+	if gameManager.getMistakes() > settings.mistakesAllowed:
+		get_tree().change_scene_to_packed(load("res://scenes/specialRooms/loss.tscn"))
+		return
+	
+	if gameManager.getScore() >= (settings.roomsPerLoop * settings.loops):
+		get_tree().change_scene_to_packed(load("res://scenes/specialRooms/win.tscn"))
+		return
+	
 	var room = rng.randi_range(1, gameManager.getRooms()) # select the next room randomly
 	print(str(room))
 	
