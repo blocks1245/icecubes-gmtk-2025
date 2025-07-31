@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://d3svbfm073ve8" path="res://scripts/playerMovement.gd" id="1_g2els"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+script = ExtResource("1_g2els")
 radius = 96.0208
 
 [node name="player" type="CharacterBody2D"]
@@ -25,4 +26,3 @@ shape = SubResource("CircleShape2D_g2els")
 scale = Vector2(9, 9)
 shape = SubResource("CircleShape2D_g2els")
 one_way_collision_margin = 0.0
-
