@@ -1,54 +1,51 @@
 extends CharacterBody2D
 
-#Exported variables for the speed and jump velocity of the player
-@export var speed = 500
-@export var jumpVelocity = 500
-@onready var right = false
+@export var speed: int = 500 # Speed of the player
+@export var jumpVelocity: int = 500 # Jump power of the player
+@onready var right: bool = false # Is the player traveling to/from the left (false), or the right (true)? This is inelegant but it works
 
-#Export variable for gravity so we don't have to go in the project settings to change it
-@export var gravity = 980
+@export var gravity: int = 1470 # Export variable for gravity so we don't have to go in the project settings to change it
 
-#Variable for the sprite itself (this will need to be changed when we animate it)
-@onready var PlayerSprite = $PlayerSprite
+@onready var PlayerSprite: Sprite2D = $PlayerSprite #Variable for the player sprite (this will need to be changed when we animate it)
 
 func _ready() -> void:
-	is_game_running() # done at the start so it doesnt do anything to main menu
+	update() # Update at the start so that the player is disabled and cannot interact with the menu
 
-#Runs on every physics frame instead of each normal frame like _process
-func _physics_process(delta):
-	_handle_gravity(delta)
-	_handle_jumping()
-	_handle_movement()
-	move_and_slide() #Move the player based on the velocity 
+func _physics_process(delta) -> void: # Runs on each physics frame instead of each normal frame like _process to keep it regular regardless of device framerate
+	_handle_gravity(delta) # Calculate the velocity change from gravity
+	_handle_jumping() # Calculate the velocity change from jumping
+	_handle_movement() # Calculate the velocity change from horizontal player movement
 	
-func _handle_gravity(delta):
-	if not is_on_floor(): #If the player is not on the floor
-		velocity.y += gravity * delta #Add the gravity multiplied by time since the last frame
-		
-func _handle_jumping():
-	if Input.is_action_just_pressed("jump") and is_on_floor(): #If jump pressed and on floor
-		velocity.y -= jumpVelocity #Set the vertical velocity to jump velocity
+	move_and_slide() #Move the player based on the velocity 
 
-func _handle_movement():
-	#Direction is basically -1 for left, +1 for right, as a float (null for no action I believe)
+func _handle_gravity(delta) -> void:
+	if not is_on_floor(): # If the player is not on the floor
+		velocity.y += gravity * delta # Add the gravity multiplied by time since the last frame to the vertical velocity
+
+func _handle_jumping() -> void:
+	if Input.is_action_just_pressed("jump") and is_on_floor(): #If jump pressed and the character is on the floor
+		velocity.y -= jumpVelocity # Set the vertical velocity to the jump velocity
+
+func _handle_movement() -> void:
+	# Direction is basically -1 for left, +1 for right, as a float (null for no action)
 	var direction = Input.get_axis("left", "right") 
 	
-	if direction: #If the direction is not null
-		#Set the horizontal velocity of the player to their speed value in the direction specified
+	if direction: # If the direction is not null
+		# Set the horizontal velocity of the player to their speed value in the direction specified
 		velocity.x = direction * speed 
 		
-		if direction < 0: #If direction is negative (left)
-			PlayerSprite.flip_h = true #Flip the sprite
-		else: #If not (right)
-			PlayerSprite.flip_h = false #Flip the sprite to the default
-	else: #If the direction is null
-		#Smoothly move the velocity from the current velocity to 0 using the speed
-		velocity.x = move_toward(velocity.x, 0, speed)
+		if direction < 0: # If direction is negative (left)
+			PlayerSprite.flip_h = true # Flip the sprite
+		else: # If the direction is 0 (not possible) or positive (right)
+			PlayerSprite.flip_h = false # Flip the sprite to the default
+		
+	else: # If the direction is null
+		velocity.x = move_toward(velocity.x, 0, speed) # Smoothly move the velocity from the current velocity to 0 by the player's speed
 
-func is_game_running(): # checks if the game is running
-	if !gameManager.running: #checks to see if the player is actually in game and not in the main menu
-		visible = false # makes player invisible
-		$Camera2D.enabled = false # disables camera, avoids messing up the main menu camera
-	else: # if it fails, game is running
-		visible = true # makes player visible
-		$Camera2D.enabled = true # enables camera
+func update() -> void: # Update the functionality of the player based on the status of the game
+	if !gameManager.running: # If the game is NOT running
+		visible = false # Make the player invisible
+		$Camera2D.enabled = false # Disable the player camera
+	else: # If the game IS running
+		visible = true # Make the player visible
+		$Camera2D.enabled = true # Enable the player camera
