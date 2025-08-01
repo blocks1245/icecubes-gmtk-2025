@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var rng: RandomNumberGenerator = RandomNumberGenerator.new() # RNG object for randomization
-@onready var marker: Label = $Marker # Temporary output of room data for testing
 @onready var animation_player: AnimationPlayer = $AnimationPlayer # Animation player for fading to and from black
 @onready var propsFolder: Array = $Props.get_children() # Folder of all props that may be affected by anomalies
 
@@ -19,7 +18,7 @@ func _ready() -> void:
 	_generate_anomaly() # Roll to see if this room is an anomaly
 	
 	# This massive disgusting line of code is basically just debug output and will not remain
-	marker.text = "Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) + " | mistakes: " + str(gameManager.getMistakes()) 
+	print("Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) + " | mistakes: " + str(gameManager.getMistakes()))
 	
 	animation_player.play("FadeIn") # Start animation to fade back in from black
 	await animation_player.animation_finished # Wait for the animation to finish (quite brief)
