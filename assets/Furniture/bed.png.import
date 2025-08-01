@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8diy8i2aw5w1"
-path="res://.godot/imported/sprite_1-Sheet.png-f2cda5b030700652773a849058ee7820.ctex"
+uid="uid://bsigypqqlp5cb"
+path="res://.godot/imported/bed.png-f38d00153a4442c53fe81bcc588a0eda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprite_1-Sheet.png"
-dest_files=["res://.godot/imported/sprite_1-Sheet.png-f2cda5b030700652773a849058ee7820.ctex"]
+source_file="res://assets/Furniture/bed.png"
+dest_files=["res://.godot/imported/bed.png-f38d00153a4442c53fe81bcc588a0eda.ctex"]
 
 [params]
 

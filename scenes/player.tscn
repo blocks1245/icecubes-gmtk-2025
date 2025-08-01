@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://djjo7aqahcu7y"]
 
 [ext_resource type="Script" uid="uid://d3svbfm073ve8" path="res://scripts/playerMovement.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Sprite_2_idle-Sheet.png" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/Sprite_2-Sheet.png" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Furniture/Sprite_2_idle-Sheet.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/Furniture/Sprite_2-Sheet.png" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://cxc6s7xuinfgl" path="res://scenes/pauseMenu.tscn" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
