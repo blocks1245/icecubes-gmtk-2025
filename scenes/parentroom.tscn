@@ -5,10 +5,10 @@
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2j8ko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffxv4"]
-size = Vector2(121.5, 485)
+size = Vector2(121.5, 590)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_85yof"]
-size = Vector2(90, 485)
+size = Vector2(90, 589)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14vil"]
 size = Vector2(1409, 96)
@@ -120,14 +120,14 @@ shape = SubResource("WorldBoundaryShape2D_2j8ko")
 process_mode = 1
 
 [node name="rightExitAreaCollider" type="CollisionShape2D" parent="rightExitArea"]
-position = Vector2(1295.75, 233.5)
+position = Vector2(1295.75, 286)
 shape = SubResource("RectangleShape2D_ffxv4")
 
 [node name="leftExitArea" type="Area2D" parent="."]
 process_mode = 1
 
 [node name="leftExitAreaCollider" type="CollisionShape2D" parent="leftExitArea"]
-position = Vector2(-5, 233.5)
+position = Vector2(-5, 285.5)
 shape = SubResource("RectangleShape2D_85yof")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
