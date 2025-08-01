@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bcfpjlcwcjfcc" path="res://scripts/pauseMenu.gd" id="1_qeqa7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ie4t"]
-font_size = 64
 
 [node name="pauseMenu" type="Control"]
 process_mode = 3
@@ -16,8 +15,11 @@ script = ExtResource("1_qeqa7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1275.0
-offset_bottom = 585.0
+offset_left = -1.0
+offset_top = 35.0
+offset_right = 1274.0
+offset_bottom = 620.0
+scale = Vector2(0.998093, 0.981714)
 color = Color(0.258824, 0.258824, 0.258824, 0.6)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -27,10 +29,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 341.0
-offset_top = 86.0
-offset_right = 835.0
-offset_bottom = 341.0
+offset_left = 504.0
+offset_top = 321.0
+offset_right = 699.0
+offset_bottom = 437.0
 grow_horizontal = 0
 grow_vertical = 0
 
@@ -42,14 +44,17 @@ horizontal_alignment = 1
 
 [node name="unpause" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
 text = "Return To Game"
+
+[node name="returnToMain" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Return To Main Menu"
 
 [node name="quit" type="Button" parent="VBoxContainer"]
 editor_description = "Coward"
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
 text = "Quit Game"
 
 [connection signal="pressed" from="VBoxContainer/unpause" to="." method="_on_unpause_pressed"]
+[connection signal="pressed" from="VBoxContainer/returnToMain" to="." method="_on_return_to_main_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

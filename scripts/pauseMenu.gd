@@ -10,9 +10,15 @@ func _physics_process(_delta: float) -> void:
 
 
 func _on_unpause_pressed() -> void:
-	visible = false
+	visible = false # make 
 	get_tree().paused = false
 
+func _on_return_to_main_pressed() -> void:
+	get_tree().paused = false #unpauses the game
+	music.stopAll() # stops music
+	gameManager.running = false # the game is no longer running
+	player.update() # update player to not fuck up main menu
+	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn") # swap to main menu scene
 
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	get_tree().quit() # quits game when button pressed
