@@ -1,7 +1,8 @@
 extends Control
 
 @onready var menu: VBoxContainer = $CenterContainer/menu # Main menu UI parent node
-@onready var credits: VBoxContainer = $CenterContainer/credits # Credits screen UI parent node
+@onready var returnButton: Button = $return  # Credits screen UI parent node
+@onready var credits: TabContainer = $CenterContainer/credits
 
 func _ready() -> void:
 	music.playMainMenu()
@@ -18,6 +19,7 @@ func _on_play_game_pressed() -> void: # When the play button is pressed (start t
 func _on_credits_pressed() -> void: # When the credits button is pressed
 	menu.visible = false # Make main menu UI invisible
 	credits.visible = true # Make credits UI visible
+	returnButton.visible = true
 
 
 func _on_quit_game_pressed() -> void: # When the quit button is pressed
@@ -27,3 +29,5 @@ func _on_quit_game_pressed() -> void: # When the quit button is pressed
 func _on_return_pressed() -> void: # When return to menu is pressed
 	credits.visible = false # Make credits UI invisible
 	menu.visible = true # Make main menu UI visible
+	returnButton.visible = false
+	credits.current_tab = 0
