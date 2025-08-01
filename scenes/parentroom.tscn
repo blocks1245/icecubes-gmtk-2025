@@ -1,14 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://3yy3x54wukbp"]
+[gd_scene load_steps=8 format=3 uid="uid://3yy3x54wukbp"]
 
 [ext_resource type="Script" uid="uid://dmwxmmcld3cfc" path="res://scripts/roomSwapper.gd" id="1_2j8ko"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2j8ko"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffxv4"]
 size = Vector2(121.5, 590)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_85yof"]
-size = Vector2(90, 589)
+size = Vector2(76, 577)
 
 [sub_resource type="Animation" id="Animation_ur823"]
 resource_name = "FadeIn"
@@ -106,26 +104,39 @@ script = ExtResource("1_2j8ko")
 
 [node name="Props" type="Node" parent="."]
 
-[node name="floor" type="StaticBody2D" parent="."]
-position = Vector2(519, 651)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2(0, -120)
-shape = SubResource("WorldBoundaryShape2D_2j8ko")
-
 [node name="rightExitArea" type="Area2D" parent="."]
 process_mode = 1
 
 [node name="rightExitAreaCollider" type="CollisionShape2D" parent="rightExitArea"]
-position = Vector2(584, 279)
+position = Vector2(584, 0)
 shape = SubResource("RectangleShape2D_ffxv4")
 
 [node name="leftExitArea" type="Area2D" parent="."]
 process_mode = 1
 
 [node name="leftExitAreaCollider" type="CollisionShape2D" parent="leftExitArea"]
-position = Vector2(-5, 285.5)
+position = Vector2(-7, 0)
 shape = SubResource("RectangleShape2D_85yof")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+&"": SubResource("AnimationLibrary_w4rbc")
+}
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 446.0
+offset_top = -18.0
+offset_right = 557.0
+offset_bottom = 65.0
+text = "right exit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 36.0
+offset_top = -20.0
+offset_right = 147.0
+offset_bottom = 63.0
+text = "left exit"
 
 [node name="Black" type="ColorRect" parent="."]
 offset_left = -546.0
@@ -135,26 +146,6 @@ offset_bottom = 1393.0
 scale = Vector2(2, 2)
 color = Color(0, 0, 0, 1)
 metadata/_edit_use_anchors_ = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-process_mode = 3
-libraries = {
-&"": SubResource("AnimationLibrary_w4rbc")
-}
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 403.0
-offset_top = 437.0
-offset_right = 514.0
-offset_bottom = 520.0
-text = "right exit"
-
-[node name="Label" type="Label" parent="."]
-offset_left = 61.0
-offset_top = 442.0
-offset_right = 172.0
-offset_bottom = 525.0
-text = "left exit"
 
 [connection signal="area_entered" from="rightExitArea" to="." method="_on_right_exit_area_area_entered"]
 [connection signal="area_entered" from="leftExitArea" to="." method="_on_left_exit_area_area_entered"]

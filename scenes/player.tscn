@@ -1,8 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://djjo7aqahcu7y"]
+[gd_scene load_steps=16 format=3 uid="uid://djjo7aqahcu7y"]
 
 [ext_resource type="Script" uid="uid://d3svbfm073ve8" path="res://scripts/playerMovement.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Furniture/Sprite_2_idle-Sheet.png" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/Furniture/Sprite_2-Sheet.png" id="3_dqkch"]
+[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/furniture/Sprite_2_idle-Sheet.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/furniture/Sprite_2-Sheet.png" id="3_dqkch"]
 [ext_resource type="PackedScene" uid="uid://cxc6s7xuinfgl" path="res://scenes/pauseMenu.tscn" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
@@ -84,9 +84,6 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_qhqgy"]
 radius = 7.73161
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 8.24621
-
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
 jumpVelocity = 300
@@ -101,9 +98,6 @@ frame_progress = 0.404029
 
 [node name="playerAreaCollider" type="CollisionShape2D" parent="playerArea"]
 shape = SubResource("CircleShape2D_qhqgy")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -10)
