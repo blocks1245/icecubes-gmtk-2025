@@ -33,7 +33,7 @@ layout_mode = 2
 
 [node name="title" type="Label" parent="CenterContainer/menu"]
 layout_mode = 2
-text = "Ikea Game"
+text = "       Ikea Game          "
 label_settings = SubResource("LabelSettings_3d1i7")
 horizontal_alignment = 1
 vertical_alignment = 1

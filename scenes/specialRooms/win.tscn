@@ -4,10 +4,7 @@
 
 [node name="end" instance=ExtResource("1_2512t")]
 
-[node name="Marker" parent="." index="5"]
-text = ":3"
-
-[node name="Label" type="Label" parent="." index="7"]
+[node name="Label3" type="Label" parent="." index="7"]
 offset_left = 407.0
 offset_top = 117.0
 offset_right = 711.0

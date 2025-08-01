@@ -4,7 +4,7 @@
 
 [node name="loss" instance=ExtResource("1_kjl7v")]
 
-[node name="Label" type="Label" parent="." index="7"]
+[node name="Label3" type="Label" parent="." index="7"]
 offset_left = 407.0
 offset_top = 117.0
 offset_right = 711.0

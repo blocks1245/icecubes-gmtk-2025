@@ -1,21 +1,21 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://drqf40jgpx4ip"]
 
-[ext_resource type="Texture2D" uid="uid://cx70vvvums7pd" path="res://assets/button_pressed.png" id="1_vkxyb"]
-[ext_resource type="Texture2D" uid="uid://bi41haf47ocp8" path="res://assets/Button_default.png" id="2_7ad4h"]
+[ext_resource type="Texture2D" uid="uid://cidy3dxkpea11" path="res://assets/buttonPressed.png" id="1_vkxyb"]
+[ext_resource type="Texture2D" uid="uid://cp6crqvk2ld8t" path="res://assets/button.png" id="2_7ad4h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ory1"]
 texture = ExtResource("1_vkxyb")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vkxyb"]
 texture = ExtResource("2_7ad4h")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
