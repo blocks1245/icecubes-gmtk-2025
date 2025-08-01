@@ -3,6 +3,9 @@ extends Control
 @onready var menu: VBoxContainer = $CenterContainer/menu # Main menu UI parent node
 @onready var credits: VBoxContainer = $CenterContainer/credits # Credits screen UI parent node
 
+func _ready() -> void:
+	music.playMainMenu()
+
 func _on_play_game_pressed() -> void: # When the play button is pressed (start the game)
 	gameManager.reset() # Reset game stats, in case the player quit to menu
 	
