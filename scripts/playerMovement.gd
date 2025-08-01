@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
-@export var speed: int = 500 # Speed of the player
-@export var jumpVelocity: int = 500 # Jump power of the player
+@export var speed: int = 200 # Speed of the player
+@export var jumpVelocity: int = 100 # Jump power of the player
 @onready var right: bool = false # Is the player traveling to/from the left (false), or the right (true)? This is inelegant but it works
 
 @export var gravity: int = 1470 # Export variable for gravity so we don't have to go in the project settings to change it
 
-@onready var PlayerSprite: Sprite2D = $PlayerSprite #Variable for the player sprite (this will need to be changed when we animate it)
+@onready var PlayerSprite: AnimatedSprite2D = $playerSprite #Variable for the player sprite (this will need to be changed when we animate it)
 
 func _ready() -> void:
 	update() # Update at the start so that the player is disabled and cannot interact with the menu
@@ -15,6 +15,7 @@ func _physics_process(delta) -> void: # Runs on each physics frame instead of ea
 	_handle_gravity(delta) # Calculate the velocity change from gravity
 	_handle_jumping() # Calculate the velocity change from jumping
 	_handle_movement() # Calculate the velocity change from horizontal player movement
+	_handle_animations()# handles the walking and idle animations of the player
 	
 	move_and_slide() #Move the player based on the velocity 
 
@@ -49,3 +50,10 @@ func update() -> void: # Update the functionality of the player based on the sta
 	else: # If the game IS running
 		visible = true # Make the player visible
 		$Camera2D.enabled = true # Enable the player camera
+		
+func _handle_animations():
+	if velocity.x != 0:
+		PlayerSprite.play("walk_animation_1")
+	else:
+		PlayerSprite.stop()
+		PlayerSprite.frame = 1

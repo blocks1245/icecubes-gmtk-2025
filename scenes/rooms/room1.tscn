@@ -3,9 +3,3 @@
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/parentroom.tscn" id="1_j37sy"]
 
 [node name="room1" instance=ExtResource("1_j37sy")]
-
-[node name="Black" parent="." index="5"]
-offset_left = -546.0
-offset_top = 813.0
-offset_right = 778.0
-offset_bottom = 1393.0
