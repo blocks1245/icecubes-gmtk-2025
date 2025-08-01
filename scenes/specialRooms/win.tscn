@@ -1,13 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb3moufpryno6"]
+[gd_scene load_steps=4 format=3 uid="uid://bb3moufpryno6"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/parentroom.tscn" id="1_2512t"]
+[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/buttonTheme.tres" id="2_4xd2c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_snlvt"]
+font_color = Color(0, 1, 0, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
 
 [node name="end" instance=ExtResource("1_2512t")]
 
-[node name="Label3" type="Label" parent="." index="7"]
-offset_left = 407.0
-offset_top = 117.0
-offset_right = 711.0
-offset_bottom = 249.0
-theme_override_font_sizes/font_size = 50
-text = "you win"
+[node name="Camera2D" type="Camera2D" parent="." index="7"]
+zoom = Vector2(3, 3)
+
+[node name="winUI" type="CenterContainer" parent="." index="8"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="winUI" index="0"]
+layout_mode = 2
+
+[node name="youWon" type="Label" parent="winUI/VBoxContainer" index="0"]
+layout_mode = 2
+text = "Congrats! You Escaped!"
+label_settings = SubResource("LabelSettings_snlvt")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tryAgain" type="Button" parent="winUI/VBoxContainer" index="1"]
+layout_mode = 2
+theme = ExtResource("2_4xd2c")
+text = "Play Again"
+
+[node name="returnToMenu" type="Button" parent="winUI/VBoxContainer" index="2"]
+layout_mode = 2
+theme = ExtResource("2_4xd2c")
+theme_override_font_sizes/font_size = 10
+text = "Return To Menu"

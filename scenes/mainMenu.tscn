@@ -19,16 +19,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -8.0
-offset_bottom = -47.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="menu" type="VBoxContainer" parent="CenterContainer"]
-layout_mode = 2
-
-[node name="HSeparator" type="HSeparator" parent="CenterContainer/menu"]
-custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
 [node name="title" type="Label" parent="CenterContainer/menu"]
@@ -53,155 +47,153 @@ layout_mode = 2
 theme = ExtResource("2_3d1i7")
 text = "Quit"
 
-[node name="credits" type="TabContainer" parent="CenterContainer"]
+[node name="creditsVbox" type="VBoxContainer" parent="CenterContainer"]
 visible = false
+layout_mode = 2
+
+[node name="credits" type="TabContainer" parent="CenterContainer/creditsVbox"]
 custom_minimum_size = Vector2(250, 0)
 layout_mode = 2
 current_tab = 0
 
-[node name="Contrubutors" type="ScrollContainer" parent="CenterContainer/credits"]
+[node name="Contrubutors" type="ScrollContainer" parent="CenterContainer/creditsVbox/credits"]
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="credits" type="VBoxContainer" parent="CenterContainer/credits/Contrubutors"]
+[node name="credits" type="VBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors"]
 layout_mode = 2
 
-[node name="mac" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="mac" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/mac"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/mac"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@mgmac_"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/mac"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/mac"]
 layout_mode = 2
 text = "Programming"
 
-[node name="cygnus" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="cygnus" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/cygnus"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/cygnus"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@cygnustherock"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/cygnus"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/cygnus"]
 layout_mode = 2
 text = "Programming"
 
-[node name="blocks" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="blocks" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/blocks"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/blocks"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@blocks1245"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/blocks"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/blocks"]
 layout_mode = 2
 text = "Git Management"
 
-[node name="glitch" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="glitch" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/glitch"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/glitch"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@glitchagon22"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/glitch"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/glitch"]
 layout_mode = 2
 text = "Music/Writing"
 
-[node name="ice" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="ice" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/ice"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/ice"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@merilin25"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/ice"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/ice"]
 layout_mode = 2
 text = "Music"
 
-[node name="buzzy" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="buzzy" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/buzzy"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/buzzy"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@dukejinyu"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/buzzy"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/buzzy"]
 layout_mode = 2
 text = "Art"
 
-[node name="luis" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="luis" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/luis"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/luis"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@luislimersin"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/luis"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/luis"]
 layout_mode = 2
 text = "Art"
 
-[node name="beta" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="beta" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/beta"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/beta"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@beta_star"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/beta"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/beta"]
 layout_mode = 2
-text = "art"
+text = "Art"
 
-[node name="boof" type="HBoxContainer" parent="CenterContainer/credits/Contrubutors/credits"]
+[node name="boof" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/Contrubutors/credits/boof"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/boof"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "@booftacopantsboy"
 
-[node name="task" type="Label" parent="CenterContainer/credits/Contrubutors/credits/boof"]
+[node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contrubutors/credits/boof"]
 layout_mode = 2
 text = "Team Management"
 
-[node name="External Resources" type="ScrollContainer" parent="CenterContainer/credits"]
+[node name="External Resources" type="ScrollContainer" parent="CenterContainer/creditsVbox/credits"]
 visible = false
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 2
 metadata/_tab_index = 1
 
-[node name="font" type="HBoxContainer" parent="CenterContainer/credits/External Resources"]
+[node name="font" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/credits/External Resources/font"]
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/font"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Font: Pixelify Sans"
 
-[node name="link" type="LinkButton" parent="CenterContainer/credits/External Resources/font"]
+[node name="link" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/font"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 text = "Link"
 uri = "https://fonts.google.com/specimen/Pixelify+Sans"
 
-[node name="return" type="Button" parent="."]
-visible = false
+[node name="return" type="Button" parent="CenterContainer/creditsVbox"]
 layout_mode = 2
-offset_left = 457.0
-offset_top = 336.0
-offset_right = 808.0
-offset_bottom = 376.0
 theme = ExtResource("2_3d1i7")
 text = "Return To Main Menu"
 
@@ -213,4 +205,4 @@ zoom = Vector2(3, 3)
 [connection signal="pressed" from="CenterContainer/menu/playGame" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="CenterContainer/menu/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CenterContainer/menu/quitGame" to="." method="_on_quit_game_pressed"]
-[connection signal="pressed" from="return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="CenterContainer/creditsVbox/return" to="." method="_on_return_pressed"]
