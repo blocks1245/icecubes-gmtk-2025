@@ -53,7 +53,6 @@ func update() -> void: # Update the functionality of the player based on the sta
 		
 func _handle_animations():
 	if velocity.x != 0:
-		PlayerSprite.play("walk_animation_1")
+		PlayerSprite.play("walk_animation")
 	else:
-		PlayerSprite.stop()
-		PlayerSprite.frame = 1
+		PlayerSprite.play("idle_animation")
