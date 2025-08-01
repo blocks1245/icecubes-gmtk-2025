@@ -12,3 +12,6 @@ stream = ExtResource("2_ejojg")
 
 [node name="mainMenu" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ejojg")
+
+[connection signal="finished" from="regular" to="." method="_on_regular_finished"]
+[connection signal="finished" from="mainMenu" to="." method="_on_main_menu_finished"]
