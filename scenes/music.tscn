@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://blnnposnxut56" path="res://scripts/music.gd" id="1_ibx2e"]
 [ext_resource type="AudioStream" uid="uid://b8o3a4d42jego" path="res://assets/music/weewooweewooweewoo.mp3" id="2_ejojg"]
-[ext_resource type="AudioStream" uid="uid://4cw4ayhk26nf" path="res://assets/music/In Space No One Can Hear You Think.wav" id="4_ejojg"]
+[ext_resource type="AudioStream" uid="uid://csahwli0l76jg" path="res://assets/music/MainMenu.wav" id="3_qnihg"]
 
 [node name="MusicPlayer" type="Node"]
 script = ExtResource("1_ibx2e")
@@ -11,7 +11,7 @@ script = ExtResource("1_ibx2e")
 stream = ExtResource("2_ejojg")
 
 [node name="mainMenu" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_ejojg")
+stream = ExtResource("3_qnihg")
 
 [connection signal="finished" from="regular" to="." method="_on_regular_finished"]
 [connection signal="finished" from="mainMenu" to="." method="_on_main_menu_finished"]

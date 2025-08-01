@@ -9,7 +9,7 @@ var progress: bool # Is the player able to progress forwards
 
 func _ready() -> void:
 	rng.randomize() # Randomize the RNG seed to prevent repetition
-	
+	#player.
 	if player.right == true: # If the player is entering through the right, place them on the right
 		player.position.x = $rightExitArea/rightExitAreaCollider.position.x - 200
 	else: # If the player is entering through the left, place them on the left
