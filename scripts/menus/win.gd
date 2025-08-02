@@ -30,4 +30,4 @@ func _on_main_menu_pressed() -> void:
 	animation_player.play("FadeToBlack") # Start animation to fade back in from black
 	await animation_player.animation_finished # Wait for the animation to finish (quite brief)
 	
-	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn") # swap to main menu scene
+	get_tree().change_scene_to_file("res://scenes/menus/mainMenu.tscn") # swap to main menu scene

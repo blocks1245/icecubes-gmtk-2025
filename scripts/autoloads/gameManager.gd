@@ -8,11 +8,16 @@ extends Node
 
 @onready var score: int = 0 # Score of the player (successful decisions)
 @onready var mistakes: int = 0 #N umber of failures/mistakes the player has made
+@onready var roomsEntered: int = 0
 
 @onready var running: bool = false # Is the game currently running, or on a menu?
 
+var repeatA: int # quick dirty fix to rooms repeating too much
+var repeatR: int # im sorry if its ugly
+
 func addScore() -> void: # Increments the score upwards by 1
-	score += 1
+	if roomsEntered >= settings.roomsPerLoop: # so that the first rooms dont count to the score and lets the map be cool score
+		score += 1
 
 func resetScore() -> void: # Resets the score
 	score = 0 # Score to 0
@@ -24,6 +29,7 @@ func getScore() -> int: # Returns the score
 func makeMistake() -> void: # Increments the mistake counter upwards by 1
 	roomIndex = 0 # 
 	mistakes += 1
+	roomsEntered += 1
 
 func getMistakes() -> int: # Returns the mistake counter
 	return mistakes
@@ -32,6 +38,8 @@ func reset() -> void: # Resets all gameplay in the round, but maintains the room
 	score = 0
 	mistakes = 0
 	roomIndex = 0
+	roomsEntered = 0
+	player.right = false
 	music.reset()
 
 func chooseRooms() -> Array: # Select which rooms will be active
@@ -58,3 +66,4 @@ func getRooms() -> Array: # Return the array of active rooms
 
 func getRoomIndex() -> int: # Return the current room index
 	return roomIndex
+	

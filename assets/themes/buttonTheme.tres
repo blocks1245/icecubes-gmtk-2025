@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://drqf40jgpx4ip"]
 
-[ext_resource type="Texture2D" uid="uid://cidy3dxkpea11" path="res://assets/buttonPressed.png" id="1_vkxyb"]
-[ext_resource type="Texture2D" uid="uid://cp6crqvk2ld8t" path="res://assets/button.png" id="2_7ad4h"]
+[ext_resource type="Texture2D" uid="uid://cidy3dxkpea11" path="res://assets/UI/buttonPressed.png" id="1_vkxyb"]
+[ext_resource type="Texture2D" uid="uid://cp6crqvk2ld8t" path="res://assets/UI/button.png" id="2_7ad4h"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ory1"]
 texture = ExtResource("1_vkxyb")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://dttqk5fdj4t4d"]
 
-[ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/parentroom.tscn" id="1_j37sy"]
+[ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/dependencies/parentroom.tscn" id="1_j37sy"]
 [ext_resource type="Texture2D" uid="uid://8vgbixqb5pjr" path="res://assets/furniture/cupboard.png" id="2_0yqos"]
 [ext_resource type="Texture2D" uid="uid://c8dfqb12k24cv" path="res://assets/furniture/nightstand.png" id="3_geole"]
 [ext_resource type="Texture2D" uid="uid://bsigypqqlp5cb" path="res://assets/furniture/bed.png" id="4_itexc"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://btrrq80i4wpgy" path="res://assets/furniture/wardrobe_2.png" id="6_ps85p"]
 [ext_resource type="Texture2D" uid="uid://cc5kmkvicrrw0" path="res://assets/furniture/Shelves1.png" id="7_ps85p"]
 [ext_resource type="Texture2D" uid="uid://l71jcayodjym" path="res://assets/furniture/Shelves2.png" id="8_tmlba"]
-[ext_resource type="Texture2D" uid="uid://bkpdf04ffnjyx" path="res://assets/furniture/desk.png" id="9_bkknd"]
+[ext_resource type="Texture2D" uid="uid://bkpdf04ffnjyx" path="res://assets/furniture/Desk.png" id="9_bkknd"]
 [ext_resource type="Texture2D" uid="uid://c415js3y1tn1c" path="res://assets/furniture/lamp.png" id="9_chifo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4t3sc"]
@@ -118,7 +118,7 @@ animations = [{
 
 [node name="bookshelf" type="AnimatedSprite2D" parent="Props" index="0"]
 z_index = 1
-position = Vector2(72, -24)
+position = Vector2(82, -24)
 sprite_frames = SubResource("SpriteFrames_4t3sc")
 animation = &"anomaly"
 

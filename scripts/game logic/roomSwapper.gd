@@ -15,6 +15,7 @@ var anomaly: bool # Is the room an anomaly
 var progress: bool # Is the player able to progress forwards
 
 func _ready() -> void:
+	gameManager.roomsEntered += 1
 	player.update()
 	
 	rng.randomize() # Randomize the RNG seed to prevent repetition
@@ -34,20 +35,31 @@ func _ready() -> void:
 	_generate_anomaly() # Roll to see if this room is an anomaly
 	
 	# This massive disgusting line of code is basically just debug output and will not remain
-	print("Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) + " | mistakes: " + str(gameManager.getMistakes()))
+	print("Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) + " | mistakes: " + str(gameManager.getMistakes()) + " | repeatA: " + str(gameManager.repeatA) + " | repeatR: " + str(gameManager.repeatR))
 	
 	animation_player.play("FadeIn") # Start animation to fade back in from black
 	await animation_player.animation_finished # Wait for the animation to finish (quite brief)
 
 func _generate_anomaly() -> void:
 	music.playRegular() # Default to regular music. This will carry into every room that does not then change the music via anomaly selection. This is here because it used to be under the section for rolling a non-anomaly room, but then it persists into consecutive anomaly rooms that it should not existent in
-	
-	if gameManager.getScore() > settings.roomsPerLoop-1: # If the current room is NOT in the first loop (which is for the user to observe the default states of each room)
-		if rng.randi_range(0, 100) > 100 - settings.anomalyChance: # Roll to see if the room is an anomaly, based on percentage chance from settings
+	if gameManager.roomsEntered > settings.roomsPerLoop: # If the current room is NOT in the first loop (which is for the user to observe the default states of each room)
+		if rng.randi_range(0, 100) > 100 - settings.anomalyChance and gameManager.repeatA < 3: # Roll to see if the room is an anomaly, based on percentage chance from settings
 			anomaly = true # If successful, set the anomaly boolean to true
+			gameManager.repeatA += 1
+			gameManager.repeatR = 0
+			print("repeatedA")
 			_choose_anomaly() # Choose which anomaly will occur
-		else: # If the room is not an anomaly
+		elif gameManager.repeatR < 3: # If the room is not an anomaly
 			anomaly = false # Set the anomaly boolean to false
+			gameManager.repeatR += 1
+			gameManager.repeatA = 0
+			print("repeatedR")
+		else:
+			anomaly = true
+			gameManager.repeatA += 1
+			gameManager.repeatR = 0
+			print("repeatedA")
+			_choose_anomaly() # This will only happen if the rng chose regular and it was already repeated 3 times
 
 func _on_right_exit_area_area_entered(_area: Area2D) -> void: # If the player touches the right exit
 	await get_tree().physics_frame # Wait for a physics frame to avoid an error
@@ -71,7 +83,7 @@ func _on_left_exit_area_area_entered(_area: Area2D) -> void: # if you touch the 
 	var endpos: int = leftExit.position.x - playerWidth - MARGIN
 	moveTween(player.position.x, endpos, leftExit)
 	
-	_next_room() # sSelect and load the next room
+	_next_room() # Select and load the next room
 
 func _check_success(entry, exit) -> void:
 	if anomaly == true: # If the room is an anomaly
