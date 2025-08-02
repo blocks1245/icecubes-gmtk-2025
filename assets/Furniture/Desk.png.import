@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://babb4j7gf43o1"
-path="res://.godot/imported/Sprite_2-Sheet.png-a0c516809ea1b739b0f92ff53639f89e.ctex"
+uid="uid://bkpdf04ffnjyx"
+path="res://.godot/imported/Desk.png-077a16fc53988cee68328e4b56f6c71c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/Sprite_2-Sheet.png"
-dest_files=["res://.godot/imported/Sprite_2-Sheet.png-a0c516809ea1b739b0f92ff53639f89e.ctex"]
+source_file="res://assets/furniture/Desk.png"
+dest_files=["res://.godot/imported/Desk.png-077a16fc53988cee68328e4b56f6c71c.ctex"]
 
 [params]
 
