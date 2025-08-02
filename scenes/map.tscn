@@ -63,10 +63,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_mlgqr")
 }],
 "loop": true,
-"name": &"default",
+"name": &"map",
 "speed": 5.0
 }]
 
 [node name="map" type="AnimatedSprite2D"]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_wslke")
+animation = &"map"
 script = ExtResource("2_gldc4")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://rt87fblqx2je"
-path="res://.godot/imported/DeskFrogless.png-35be736c23035720f2b8db1e4db2db56.ctex"
+path="res://.godot/imported/DeskFrogless.png-ab21ff6159b34bac2169bcb3f7eaad21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Furniture/DeskFrogless.png"
-dest_files=["res://.godot/imported/DeskFrogless.png-35be736c23035720f2b8db1e4db2db56.ctex"]
+source_file="res://assets/furniture/DeskFrogless.png"
+dest_files=["res://.godot/imported/DeskFrogless.png-ab21ff6159b34bac2169bcb3f7eaad21.ctex"]
 
 [params]
 

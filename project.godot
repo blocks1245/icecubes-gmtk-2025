@@ -22,6 +22,7 @@ gameManager="*res://scripts/gameManager.gd"
 player="*res://scenes/player.tscn"
 music="*res://scenes/ui/music.tscn"
 settings="*res://scripts/settings.gd"
+map="*res://scenes/map.tscn"
 
 [display]
 

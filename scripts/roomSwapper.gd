@@ -17,19 +17,23 @@ var prevAnomaly: int = 0
 
 func _ready() -> void:
 	player.update()
-	
 	rng.randomize() # Randomize the RNG seed to prevent repetition
 	
 	var startpos: int 
 	var endpos: int 
+	
 	if player.right == true: # If the player is entering through the right, place them on the right
 		startpos = rightExit.position.x + playerWidth + MARGIN
 		endpos = rightExit.position.x - playerWidth - MARGIN
+		
+		map.update(endpos)
 		moveTween(startpos, endpos, rightExit)
 		
 	else: # If the player is entering through the left, place them on the left
 		startpos = leftExit.position.x - playerWidth - MARGIN
 		endpos = leftExit.position.x + playerWidth + MARGIN
+		
+		map.update(endpos)
 		moveTween(startpos, endpos, leftExit)
 	
 	_generate_anomaly() # Roll to see if this room is an anomaly
@@ -45,7 +49,6 @@ func _generate_anomaly() -> void:
 	
 	if gameManager.getScore() > settings.roomsPerLoop-1: # If the current room is NOT in the first loop (which is for the user to observe the default states of each room)
 		var rollAnomaly: int = rng.randi_range(0, 100)
-		print(rollAnomaly)
 		
 		if rollAnomaly > 100 - settings.anomalyChance + (gameManager.aStreak): # Roll to see if the room is an anomaly, based on percentage chance from settings
 			anomaly = true # If successful, set the anomaly boolean to true
