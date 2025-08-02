@@ -11,17 +11,17 @@ config_version=5
 [application]
 
 config/name="icecubes gmtk 2025"
-run/main_scene="uid://dc2klmb86axca"
+run/main_scene="uid://rraxg8p14rip"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/show_image=false
-config/icon="uid://yccf1obeduos"
+config/icon="res://icon.svg"
 
 [autoload]
 
-gameManager="*res://scripts/autoloads/gameManager.gd"
-player="*res://scenes/dependencies/player.tscn"
-music="*res://scenes/dependencies/music.tscn"
-settings="*res://scripts/autoloads/settings.gd"
+gameManager="*res://scripts/gameManager.gd"
+player="*res://scenes/player.tscn"
+music="*res://scenes/music.tscn"
+settings="*res://scripts/settings.gd"
 
 [display]
 

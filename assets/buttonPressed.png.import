@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://madn8rotay34"
-path="res://.godot/imported/bedBlue.png-a468f807931a68848a9c9b854803a1f2.ctex"
+uid="uid://cidy3dxkpea11"
+path="res://.godot/imported/buttonPressed.png-183cbad5c1bf90498ee6fcf73ff22846.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/bedBlue.png"
-dest_files=["res://.godot/imported/bedBlue.png-a468f807931a68848a9c9b854803a1f2.ctex"]
+source_file="res://assets/buttonPressed.png"
+dest_files=["res://.godot/imported/buttonPressed.png-183cbad5c1bf90498ee6fcf73ff22846.ctex"]
 
 [params]
 

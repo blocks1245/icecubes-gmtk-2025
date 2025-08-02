@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c2ch1lwkvwgao"]
 
-[ext_resource type="Script" uid="uid://2o3lllt84krk" path="res://scripts/menus/loss.gd" id="1_pixf8"]
-[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/themes/buttonTheme.tres" id="2_pixf8"]
+[ext_resource type="Script" uid="uid://2o3lllt84krk" path="res://scripts/loss.gd" id="1_pixf8"]
+[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/buttonTheme.tres" id="2_pixf8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f4haf"]
 font_color = Color(1, 0, 0, 1)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxc6s7xuinfgl"]
+[gd_scene load_steps=4 format=3 uid="uid://dhvlevirgwc6c"]
 
-[ext_resource type="Script" uid="uid://bcfpjlcwcjfcc" path="res://scripts/menus/pauseMenu.gd" id="1_qeqa7"]
-[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/themes/buttonTheme.tres" id="2_r5qvj"]
+[ext_resource type="Script" uid="uid://bcfpjlcwcjfcc" path="res://scripts/pauseMenu.gd" id="1_qeqa7"]
+[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/buttonTheme.tres" id="2_r5qvj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_1ie4t"]
 
