@@ -197,9 +197,3 @@ animation = &"anomaly"
 position = Vector2(328, -16)
 sprite_frames = SubResource("SpriteFrames_0ucck")
 animation = &"anomaly"
-
-[node name="Black" parent="." index="6"]
-offset_left = -546.0
-offset_top = 813.0
-offset_right = 778.0
-offset_bottom = 1393.0

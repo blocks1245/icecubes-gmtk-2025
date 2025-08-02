@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bv05wobsxp2h5"
-path="res://.godot/imported/Shelves2Horseful.png-5c18f407893dda0300e4ad5a51aab22e.ctex"
+path="res://.godot/imported/Shelves2Horseful.png-25b2f1946a494deb3fc80df6fb947b73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Furniture/Shelves2Horseful.png"
-dest_files=["res://.godot/imported/Shelves2Horseful.png-5c18f407893dda0300e4ad5a51aab22e.ctex"]
+source_file="res://assets/furniture/Shelves2Horseful.png"
+dest_files=["res://.godot/imported/Shelves2Horseful.png-25b2f1946a494deb3fc80df6fb947b73.ctex"]
 
 [params]
 
