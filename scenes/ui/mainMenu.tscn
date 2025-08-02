@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ce5ngtg8r7huy" path="res://scripts/mainMenu.gd" id="1_qkhwq"]
 [ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/ui/buttonTheme.tres" id="2_3d1i7"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_3d1i7"]
+[ext_resource type="Texture2D" uid="uid://dstudmrwvnfav" path="res://assets/ui/title.png" id="2_c8enf"]
 
 [sub_resource type="Animation" id="Animation_ur823"]
 resource_name = "FadeIn"
@@ -115,12 +114,9 @@ grow_vertical = 2
 [node name="menu" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
 
-[node name="title" type="Label" parent="CenterContainer/menu"]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/menu"]
 layout_mode = 2
-text = "       Ikea Game          "
-label_settings = SubResource("LabelSettings_3d1i7")
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("2_c8enf")
 
 [node name="playGame" type="Button" parent="CenterContainer/menu"]
 layout_mode = 2
@@ -282,19 +278,64 @@ layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 4
 
-[node name="font" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer"]
 layout_mode = 2
 
-[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/font"]
+[node name="font" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/font"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Font: Pixelify Sans"
 
-[node name="link" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/font"]
+[node name="link" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/font"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 1, 1)
 text = "Link"
 uri = "https://fonts.google.com/specimen/Pixelify+Sans"
+
+[node name="walkSound" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/walkSound"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Walking SFX"
+
+[node name="link" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/walkSound"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://www.youtube.com/watch?v=yHDh_GDHKKI"
+
+[node name="lightsSound" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/lightsSound"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Lights SFX"
+
+[node name="link" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/lightsSound"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://www.youtube.com/watch?v=Y8DfNQLqJ2Y"
+
+[node name="buttonSound" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/buttonSound"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Button SFX"
+
+[node name="link" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/buttonSound"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://www.youtube.com/watch?v=fmCbOy39hro"
 
 [node name="return" type="Button" parent="CenterContainer/creditsVbox"]
 layout_mode = 2
@@ -332,4 +373,5 @@ libraries = {
 [connection signal="pressed" from="CenterContainer/menu/playGame" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="CenterContainer/menu/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="CenterContainer/menu/quitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="tab_changed" from="CenterContainer/creditsVbox/credits" to="." method="_on_credits_tab_changed"]
 [connection signal="pressed" from="CenterContainer/creditsVbox/return" to="." method="_on_return_pressed"]
