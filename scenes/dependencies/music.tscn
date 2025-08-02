@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4a872766tocn"]
+
+[ext_resource type="Script" uid="uid://blnnposnxut56" path="res://scripts/autoloads/music.gd" id="1_al1eo"]
+[ext_resource type="AudioStream" uid="uid://b8o3a4d42jego" path="res://assets/music/weewooweewooweewoo.mp3" id="2_4kxy8"]
+[ext_resource type="AudioStream" uid="uid://csahwli0l76jg" path="res://assets/music/MainMenu.wav" id="3_klxta"]
+[ext_resource type="AudioStream" uid="uid://c4qgvf8qesyee" path="res://assets/sfx/lights_buzz.mp3" id="4_f57ro"]
+[ext_resource type="AudioStream" uid="uid://ysop1ace0jeq" path="res://assets/sfx/button.mp3" id="5_2e4ch"]
+
+[node name="musicPlayer" type="Node"]
+script = ExtResource("1_al1eo")
+
+[node name="regular" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4kxy8")
+
+[node name="mainMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_klxta")
+
+[node name="buzzing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f57ro")
+volume_db = 12.0
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2e4ch")
+
+[connection signal="finished" from="regular" to="." method="_on_regular_finished"]
+[connection signal="finished" from="mainMenu" to="." method="_on_main_menu_finished"]
