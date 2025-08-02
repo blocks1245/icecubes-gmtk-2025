@@ -1,8 +1,8 @@
 extends Node
 
-@onready var loops: int = 3 # Number of loops to complete before winning the game (includes intro loop)
+@onready var loops: int = 2 # Number of loops to complete before winning the game (includes intro loop)
 @onready var roomsPerLoop: int = 3 # Number of rooms per loop
-@onready var mistakesAllowed: int = 5 # Number of mistakes allowed before a loss
+@onready var mistakesAllowed: int = 10 # Number of mistakes allowed before a loss
 @onready var anomalyChance: int = 50 # Chance in percentage of an anomaly occuring
 
 func maxmin() -> void: #If roomsPerLoop is either too large or too small and will cause errors, reset it to the current maximum or minimum

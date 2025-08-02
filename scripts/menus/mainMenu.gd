@@ -6,10 +6,6 @@ extends Control
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
-	music.stopAll() # stops music
-	gameManager.running = false # the game is no longer running
-	player.update() # update player to not fuck up main menu
-	
 	music.playMainMenu()
 	animation_player.play("FadeIn") # Start animation to fade back in from black
 	await animation_player.animation_finished # Wait for the animation to finish (quite brief)
