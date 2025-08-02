@@ -32,6 +32,7 @@ func reset() -> void: # Resets all gameplay in the round, but maintains the room
 	score = 0
 	mistakes = 0
 	roomIndex = 0
+	music.reset()
 
 func chooseRooms() -> Array: # Select which rooms will be active
 	rooms = [] # Empty the rooms array to begin, so that losing and restarting does not double the length of the game

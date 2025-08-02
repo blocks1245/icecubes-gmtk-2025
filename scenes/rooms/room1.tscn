@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dttqk5fdj4t4d"]
+[gd_scene load_steps=21 format=3 uid="uid://dttqk5fdj4t4d"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/parentroom.tscn" id="1_j37sy"]
 [ext_resource type="Texture2D" uid="uid://8vgbixqb5pjr" path="res://assets/furniture/cupboard.png" id="2_0yqos"]
@@ -6,9 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bsigypqqlp5cb" path="res://assets/furniture/bed.png" id="4_itexc"]
 [ext_resource type="Texture2D" uid="uid://c7jqvf265oqqo" path="res://assets/furniture/painting.png" id="5_8aoxc"]
 [ext_resource type="Texture2D" uid="uid://cuhtncgl815or" path="res://assets/furniture/wardrobe.png" id="6_bkknd"]
+[ext_resource type="Texture2D" uid="uid://btrrq80i4wpgy" path="res://assets/furniture/wardrobe_2.png" id="6_ps85p"]
 [ext_resource type="Texture2D" uid="uid://cc5kmkvicrrw0" path="res://assets/furniture/Shelves1.png" id="7_ps85p"]
 [ext_resource type="Texture2D" uid="uid://l71jcayodjym" path="res://assets/furniture/Shelves2.png" id="8_tmlba"]
-[ext_resource type="Texture2D" uid="uid://52vgh0aih162" path="res://assets/furniture/Desk.png" id="9_bkknd"]
+[ext_resource type="Texture2D" uid="uid://bkpdf04ffnjyx" path="res://assets/furniture/desk.png" id="9_bkknd"]
 [ext_resource type="Texture2D" uid="uid://c415js3y1tn1c" path="res://assets/furniture/lamp.png" id="9_chifo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4t3sc"]
@@ -58,6 +59,9 @@ animations = [{
 [sub_resource type="SpriteFrames" id="SpriteFrames_fhsdr"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ps85p")
+}, {
 "duration": 1.0,
 "texture": ExtResource("6_bkknd")
 }],
@@ -136,7 +140,7 @@ sprite_frames = SubResource("SpriteFrames_4kf1l")
 animation = &"anomaly"
 
 [node name="wardrobe" type="AnimatedSprite2D" parent="Props" index="4"]
-position = Vector2(208, -16)
+position = Vector2(208, -24)
 sprite_frames = SubResource("SpriteFrames_fhsdr")
 animation = &"anomaly"
 
@@ -159,10 +163,3 @@ animation = &"anomaly"
 position = Vector2(328, -16)
 sprite_frames = SubResource("SpriteFrames_0ucck")
 animation = &"anomaly"
-
-[node name="Black" parent="." index="4"]
-visible = true
-offset_left = -546.0
-offset_top = 813.0
-offset_right = 778.0
-offset_bottom = 1393.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxc6s7xuinfgl"]
+[gd_scene load_steps=4 format=3 uid="uid://dhvlevirgwc6c"]
 
 [ext_resource type="Script" uid="uid://bcfpjlcwcjfcc" path="res://scripts/pauseMenu.gd" id="1_qeqa7"]
 [ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/buttonTheme.tres" id="2_r5qvj"]
@@ -7,9 +7,15 @@
 
 [node name="pauseMenu" type="CenterContainer"]
 process_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.5
+offset_top = -69.5
+offset_right = 87.5
+offset_bottom = 69.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qeqa7")

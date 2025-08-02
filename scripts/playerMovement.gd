@@ -3,10 +3,12 @@ extends CharacterBody2D
 @export var speed: int = 200 # Speed of the player
 @export var jumpVelocity: int = 100 # Jump power of the player
 @onready var right: bool = false # Is the player traveling to/from the left (false), or the right (true)? This is inelegant but it works
+@onready var inTween: bool = false
 
 @export var gravity: int = 1470 # Export variable for gravity so we don't have to go in the project settings to change it
 
 @onready var PlayerSprite: AnimatedSprite2D = $playerSprite #Variable for the player sprite (this will need to be changed when we animate it)
+@onready var walking: AudioStreamPlayer = $walking
 
 func _ready() -> void:
 	update() # Update at the start so that the player is disabled and cannot interact with the menu
@@ -50,9 +52,11 @@ func update() -> void: # Update the functionality of the player based on the sta
 	else: # If the game IS running
 		visible = true # Make the player visible
 		$Camera2D.enabled = true # Enable the player camera
-		
-func _handle_animations():
-	if velocity.x != 0:
+
+func _handle_animations() -> void:
+	if (velocity.x != 0 or inTween) and gameManager.running:
 		PlayerSprite.play("walk_animation")
+		walking.play(walking.get_playback_position())
 	else:
 		PlayerSprite.play("idle_animation")
+		walking.stop()
