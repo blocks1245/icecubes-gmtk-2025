@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://fv6hx7jmbcer"]
+
+[ext_resource type="Script" uid="uid://bvgnqpv1a8ega" path="res://scripts/game.gd" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://x8d1wx7jewnr" path="res://assets/first sea landscape.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://djjo7aqahcu7y" path="res://scenes/player.tscn" id="2_yqjtg"]
+
+[sub_resource type="GDScript" id="GDScript_yqjtg"]
+script/source = "extends Node2D
+@onready var player: CharacterBody2D = $Player
+@onready var floor: StaticBody2D = $Floor
+
+func _ready():
+	pass
+"
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
+distance = 12.0
+
+[node name="Game" type="Node2D"]
+<<<<<<< HEAD
+script = SubResource("GDScript_yqjtg")
+=======
+script = ExtResource("1_lnu2h")
+>>>>>>> main
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(632, 313)
+scale = Vector2(10.5, 10.5)
+texture = ExtResource("1_uwrxv")
+
+[node name="Player" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(608, 297)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape2D_yqjtg")

@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bb3moufpryno6"]
+[gd_scene load_steps=8 format=3 uid="uid://cxr81gmc5jdsh"]
 
-[ext_resource type="Script" uid="uid://cuqdrgkt1pmlb" path="res://scripts/menus/win.gd" id="1_4xd2c"]
-[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/themes/buttonTheme.tres" id="2_4xd2c"]
+[ext_resource type="Script" uid="uid://cuqdrgkt1pmlb" path="res://scripts/win.gd" id="1_4xd2c"]
+[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/buttonTheme.tres" id="2_4xd2c"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f4haf"]
 font_color = Color(0, 1, 0, 1)

@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://3yy3x54wukbp"]
+[gd_scene load_steps=18 format=4 uid="uid://3yy3x54wukbp"]
 
-[ext_resource type="Script" uid="uid://dmwxmmcld3cfc" path="res://scripts/game logic/roomSwapper.gd" id="1_2j8ko"]
+[ext_resource type="Script" uid="uid://dmwxmmcld3cfc" path="res://scripts/roomSwapper.gd" id="1_2j8ko"]
 [ext_resource type="Texture2D" uid="uid://cvj3do5j760ku" path="res://assets/tiles/floor.png" id="2_sv4f0"]
 [ext_resource type="Texture2D" uid="uid://o8g6ikrcvvsj" path="res://assets/tiles/wall.png" id="3_5whjn"]
 [ext_resource type="Texture2D" uid="uid://c7cswl0mfxhr" path="res://assets/tiles/shadow.png" id="4_5whjn"]
 [ext_resource type="Texture2D" uid="uid://beofsjqfirmlp" path="res://assets/tiles/shadowEnd.png" id="4_bntx6"]
-[ext_resource type="PackedScene" uid="uid://u3l5gkwrl21a" path="res://scenes/menus/map.tscn" id="6_15iek"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ffxv4"]
 size = Vector2(30.75, 590)
@@ -171,20 +170,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -546.0
-offset_top = 813.0
-offset_right = 778.0
-offset_bottom = 1393.0
+offset_left = -565.0
+offset_top = -234.0
+offset_right = 759.0
+offset_bottom = 346.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 color = Color(0, 0, 0, 1)
-
-[node name="map" parent="." instance=ExtResource("6_15iek")]
-position = Vector2(56, -18)
-
-[node name="map2" parent="." instance=ExtResource("6_15iek")]
-position = Vector2(354, -18)
 
 [connection signal="area_entered" from="rightExitArea" to="." method="_on_right_exit_area_area_entered"]
 [connection signal="area_entered" from="leftExitArea" to="." method="_on_left_exit_area_area_entered"]

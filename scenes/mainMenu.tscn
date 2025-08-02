@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dc2klmb86axca"]
+[gd_scene load_steps=8 format=3 uid="uid://rraxg8p14rip"]
 
-[ext_resource type="Script" uid="uid://ce5ngtg8r7huy" path="res://scripts/menus/mainMenu.gd" id="1_rb2ri"]
-[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/themes/buttonTheme.tres" id="2_cv8r1"]
+[ext_resource type="Script" uid="uid://ce5ngtg8r7huy" path="res://scripts/mainMenu.gd" id="1_qkhwq"]
+[ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/buttonTheme.tres" id="2_3d1i7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3d1i7"]
 
@@ -102,7 +102,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_rb2ri")
+script = ExtResource("1_qkhwq")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -124,17 +124,17 @@ vertical_alignment = 1
 
 [node name="playGame" type="Button" parent="CenterContainer/menu"]
 layout_mode = 2
-theme = ExtResource("2_cv8r1")
+theme = ExtResource("2_3d1i7")
 text = "Play"
 
 [node name="credits" type="Button" parent="CenterContainer/menu"]
 layout_mode = 2
-theme = ExtResource("2_cv8r1")
+theme = ExtResource("2_3d1i7")
 text = "Credits"
 
 [node name="quitGame" type="Button" parent="CenterContainer/menu"]
 layout_mode = 2
-theme = ExtResource("2_cv8r1")
+theme = ExtResource("2_3d1i7")
 text = "Quit"
 
 [node name="creditsVbox" type="VBoxContainer" parent="CenterContainer"]
@@ -298,7 +298,7 @@ uri = "https://fonts.google.com/specimen/Pixelify+Sans"
 
 [node name="return" type="Button" parent="CenterContainer/creditsVbox"]
 layout_mode = 2
-theme = ExtResource("2_cv8r1")
+theme = ExtResource("2_3d1i7")
 text = "Return To Main Menu"
 
 [node name="menuCam" type="Camera2D" parent="."]
