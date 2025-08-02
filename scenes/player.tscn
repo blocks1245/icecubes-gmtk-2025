@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://djjo7aqahcu7y"]
 
 [ext_resource type="Script" uid="uid://d3svbfm073ve8" path="res://scripts/playerMovement.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Furniture/Sprite_2_idle-Sheet.png" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/Furniture/Sprite_2-Sheet.png" id="3_dqkch"]
-[ext_resource type="PackedScene" uid="uid://cxc6s7xuinfgl" path="res://scenes/pauseMenu.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/furniture/Sprite_2_idle-Sheet.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/furniture/Sprite_2-Sheet.png" id="3_dqkch"]
+[ext_resource type="PackedScene" uid="uid://cxc6s7xuinfgl" path="res://scenes/ui/pauseMenu.tscn" id="3_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
 atlas = ExtResource("2_dqkch")
@@ -88,7 +88,10 @@ radius = 7.73161
 radius = 7.0
 
 [node name="player" type="CharacterBody2D"]
+z_index = 2
+motion_mode = 1
 script = ExtResource("1_g2els")
+speed = 100
 jumpVelocity = 300
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="."]
@@ -103,8 +106,8 @@ frame_progress = 0.404029
 shape = SubResource("CircleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -10)
-zoom = Vector2(12, 12)
+offset = Vector2(0, -20)
+zoom = Vector2(8, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dqkch")
