@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://l71jcayodjym"
-path="res://.godot/imported/Shelves2.png-e62dda062d5b09ebd4b921767e919235.ctex"
+path="res://.godot/imported/Shelves2.png-38b4e980618c4dfdaa858904bef29daa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/Shelves2.png"
-dest_files=["res://.godot/imported/Shelves2.png-e62dda062d5b09ebd4b921767e919235.ctex"]
+source_file="res://assets/Furniture/Shelves2.png"
+dest_files=["res://.godot/imported/Shelves2.png-38b4e980618c4dfdaa858904bef29daa.ctex"]
 
 [params]
 
