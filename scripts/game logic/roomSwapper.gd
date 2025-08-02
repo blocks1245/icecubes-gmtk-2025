@@ -35,7 +35,7 @@ func _ready() -> void:
 	_generate_anomaly() # Roll to see if this room is an anomaly
 	
 	# This massive disgusting line of code is basically just debug output and will not remain
-	print("Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) + " | mistakes: " + str(gameManager.getMistakes()) + " | repeatA: " + str(gameManager.repeatA) + " | repeatR: " + str(gameManager.repeatR))
+	print("Room: " + str(self.name) + " | anomaly ?: " + str(anomaly) + " | score: " + str(gameManager.getScore()) + " | mistakes: " + str(gameManager.getMistakes()) + " | repeatA: " + str(gameManager.repeatA) + " | repeatR: " + str(gameManager.repeatR) + " | Rooms Entered: " + str(gameManager.roomsEntered))
 	
 	animation_player.play("FadeIn") # Start animation to fade back in from black
 	await animation_player.animation_finished # Wait for the animation to finish (quite brief)
@@ -48,7 +48,8 @@ func _generate_anomaly() -> void:
 			gameManager.repeatA += 1
 			gameManager.repeatR = 0
 			print("repeatedA")
-			_choose_anomaly() # Choose which anomaly will occur
+			for i in range(3): # 3 random anomalies
+				_choose_anomaly() # Choose which anomaly will occur
 		elif gameManager.repeatR < 3: # If the room is not an anomaly
 			anomaly = false # Set the anomaly boolean to false
 			gameManager.repeatR += 1
@@ -59,7 +60,8 @@ func _generate_anomaly() -> void:
 			gameManager.repeatA += 1
 			gameManager.repeatR = 0
 			print("repeatedA")
-			_choose_anomaly() # This will only happen if the rng chose regular and it was already repeated 3 times
+			for i in range(3): # 3 random anomalies
+				_choose_anomaly() # This will only happen if the rng chose regular and it was already repeated 3 times
 
 func _on_right_exit_area_area_entered(_area: Area2D) -> void: # If the player touches the right exit
 	await get_tree().physics_frame # Wait for a physics frame to avoid an error

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bog7w6w6gxagw"
-path="res://.godot/imported/planBluet.png-f15d740e711a5f40cfd8b97e14a5e9ae.ctex"
+uid="uid://bvm36dkcmtu68"
+path="res://.godot/imported/pictureAltered.png-2d7a80c760ab2d3c89673fe91c8851cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/planBluet.png"
-dest_files=["res://.godot/imported/planBluet.png-f15d740e711a5f40cfd8b97e14a5e9ae.ctex"]
+source_file="res://assets/furniture/pictureAltered.png"
+dest_files=["res://.godot/imported/pictureAltered.png-2d7a80c760ab2d3c89673fe91c8851cd.ctex"]
 
 [params]
 

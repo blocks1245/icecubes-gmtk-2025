@@ -27,9 +27,8 @@ func getScore() -> int: # Returns the score
 	return score
 
 func makeMistake() -> void: # Increments the mistake counter upwards by 1
-	roomIndex = 0 # 
+	roomIndex = 0 
 	mistakes += 1
-	roomsEntered += 1
 
 func getMistakes() -> int: # Returns the mistake counter
 	return mistakes

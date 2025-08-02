@@ -1,5 +1,215 @@
-[gd_scene load_steps=2 format=3 uid="uid://crh38b5282x0q"]
+[gd_scene load_steps=32 format=3 uid="uid://crh38b5282x0q"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/dependencies/parentroom.tscn" id="1_7ilqw"]
+[ext_resource type="Texture2D" uid="uid://dfglyc6ku7qo1" path="res://assets/furniture/picture.png" id="2_2rn45"]
+[ext_resource type="Texture2D" uid="uid://bvm36dkcmtu68" path="res://assets/furniture/pictureAltered.png" id="3_h26u8"]
+[ext_resource type="Texture2D" uid="uid://d3d4hgb4jatdk" path="res://assets/furniture/plant.png" id="4_txd13"]
+[ext_resource type="Texture2D" uid="uid://bog7w6w6gxagw" path="res://assets/furniture/plantBlue.png" id="5_qsqdi"]
+[ext_resource type="Texture2D" uid="uid://18mrsus6tmk4" path="res://assets/furniture/stool.png" id="6_8jbrb"]
+[ext_resource type="Texture2D" uid="uid://6ma5i7x5dm5p" path="res://assets/furniture/stoolAltered.png" id="7_8etcu"]
+[ext_resource type="Texture2D" uid="uid://citdsepnvtijn" path="res://assets/furniture/clock_1.png" id="8_8npys"]
+[ext_resource type="Texture2D" uid="uid://833qpdqotjg7" path="res://assets/furniture/clock_1Altered.png" id="9_g3ydg"]
+[ext_resource type="Texture2D" uid="uid://cagk0gb84sjai" path="res://assets/furniture/bin.png" id="10_jisb6"]
+[ext_resource type="Texture2D" uid="uid://cvyovuq5o7na2" path="res://assets/furniture/binAltered.png" id="11_5j3ra"]
+[ext_resource type="Texture2D" uid="uid://cd6fdxunov6ub" path="res://assets/furniture/hooks.png" id="12_fbnk3"]
+[ext_resource type="Texture2D" uid="uid://b6x0fsupspl3" path="res://assets/furniture/hooksAltered.png" id="13_ogxaq"]
+[ext_resource type="Texture2D" uid="uid://l71jcayodjym" path="res://assets/furniture/Shelves2.png" id="14_j8mn2"]
+[ext_resource type="Texture2D" uid="uid://bv05wobsxp2h5" path="res://assets/furniture/Shelves2Horseful.png" id="15_6qmia"]
+[ext_resource type="Texture2D" uid="uid://cmrobhog7h6cy" path="res://assets/furniture/bedOrange.png" id="16_qc642"]
+[ext_resource type="Texture2D" uid="uid://madn8rotay34" path="res://assets/furniture/bedBlue.png" id="17_jgo2u"]
+[ext_resource type="Texture2D" uid="uid://crx8wm534iby2" path="res://assets/furniture/wardrobe_1.png" id="18_kumsq"]
+[ext_resource type="Texture2D" uid="uid://jq2r48b2i4m0" path="res://assets/furniture/wardrobe_1Altered.png" id="19_rhgw1"]
+[ext_resource type="Texture2D" uid="uid://bkpdf04ffnjyx" path="res://assets/furniture/Desk.png" id="20_sfuo4"]
+[ext_resource type="Texture2D" uid="uid://cqbd5msw4p6gw" path="res://assets/furniture/DeskFrogless.png" id="21_lh3f6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tuh2r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2rn45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h26u8")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sy8as"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_txd13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qsqdi")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yw6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8jbrb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8etcu")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ljdae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_8npys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_g3ydg")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8k6ih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_jisb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5j3ra")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1fqik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_fbnk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ogxaq")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vlru5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_j8mn2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6qmia")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4tdb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_qc642")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_jgo2u")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_frh23"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_kumsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_rhgw1")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hmh3m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_sfuo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_lh3f6")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
 
 [node name="room2" instance=ExtResource("1_7ilqw")]
+
+[node name="painting" type="AnimatedSprite2D" parent="Props" index="0"]
+position = Vector2(97, -29)
+sprite_frames = SubResource("SpriteFrames_tuh2r")
+animation = &"anomaly"
+
+[node name="plant" type="AnimatedSprite2D" parent="Props" index="1"]
+position = Vector2(136, -22)
+sprite_frames = SubResource("SpriteFrames_sy8as")
+animation = &"anomaly"
+
+[node name="stool" type="AnimatedSprite2D" parent="Props" index="2"]
+position = Vector2(137, -8)
+sprite_frames = SubResource("SpriteFrames_1yw6t")
+animation = &"anomaly"
+
+[node name="clock" type="AnimatedSprite2D" parent="Props" index="3"]
+position = Vector2(226, -37)
+sprite_frames = SubResource("SpriteFrames_ljdae")
+animation = &"anomaly"
+
+[node name="bin" type="AnimatedSprite2D" parent="Props" index="4"]
+position = Vector2(112, -8)
+sprite_frames = SubResource("SpriteFrames_8k6ih")
+animation = &"anomaly"
+
+[node name="hooks" type="AnimatedSprite2D" parent="Props" index="5"]
+position = Vector2(320, -16)
+sprite_frames = SubResource("SpriteFrames_1fqik")
+animation = &"anomaly"
+
+[node name="shelves" type="AnimatedSprite2D" parent="Props" index="6"]
+position = Vector2(293, -25)
+sprite_frames = SubResource("SpriteFrames_vlru5")
+animation = &"anomaly"
+
+[node name="bed" type="AnimatedSprite2D" parent="Props" index="7"]
+position = Vector2(226, -16)
+sprite_frames = SubResource("SpriteFrames_m4tdb")
+animation = &"anomaly"
+
+[node name="wardrobe" type="AnimatedSprite2D" parent="Props" index="8"]
+position = Vector2(265, -16)
+sprite_frames = SubResource("SpriteFrames_frh23")
+animation = &"anomaly"
+
+[node name="desk" type="AnimatedSprite2D" parent="Props" index="9"]
+position = Vector2(172, -16)
+sprite_frames = SubResource("SpriteFrames_hmh3m")
+animation = &"anomaly"

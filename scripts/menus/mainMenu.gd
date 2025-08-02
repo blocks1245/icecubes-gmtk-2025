@@ -1,13 +1,15 @@
 extends Control
 
-@onready var menu: VBoxContainer = $CenterContainer/menu # Main menu UI parent node
+@onready var menu: VBoxContainer = $menu # Main menu UI parent node
 @onready var credits_vbox: VBoxContainer = $CenterContainer/creditsVbox #vbox container for credits UI
 @onready var credits_tab: TabContainer = $CenterContainer/creditsVbox/credits
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var animation_player_2: AnimationPlayer = $AnimationPlayer2
 
 func _ready() -> void:
 	music.playMainMenu()
 	animation_player.play("FadeIn") # Start animation to fade back in from black
+	animation_player_2.play("main menu bob")
 	await animation_player.animation_finished # Wait for the animation to finish (quite brief)
 
 func _on_play_game_pressed() -> void: # When the play button is pressed (start the game)
