@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkpdf04ffnjyx"
-path="res://.godot/imported/Desk.png-077a16fc53988cee68328e4b56f6c71c.ctex"
+uid="uid://dk23pb0qoymws"
+path="res://.godot/imported/mapSheet.png-0eb76aee508ae19997589a339d05afd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/Desk.png"
-dest_files=["res://.godot/imported/Desk.png-077a16fc53988cee68328e4b56f6c71c.ctex"]
+source_file="res://assets/mapSheet.png"
+dest_files=["res://.godot/imported/mapSheet.png-0eb76aee508ae19997589a339d05afd6.ctex"]
 
 [params]
 

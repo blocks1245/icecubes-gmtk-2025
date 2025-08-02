@@ -131,8 +131,6 @@ func _choose_anomaly() -> void:
 		match chosenAnomaly - propsFolder.size(): # Subtract all prop spaces from the anomaly to make it a predictable number
 			1: # Case 1: Alternate music
 				music.playAnomaly()
-			2: # Case 2: Filler print output, just to have multiple cases for now
-				print("hi i am an anomaly")
 			_: # Default (none of the above)
 				print("Critical error: an anomaly was generated but could not be chosen") # Output so we are aware if this happens unexpectedly, since it does resolve itself gameplay-wise
 				_choose_anomaly() # Select a new anomaly, since something went wrong (usually UNIQUE_ANOMALIES being too large)
