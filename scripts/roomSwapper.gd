@@ -3,17 +3,20 @@ extends Node2D
 @onready var rng: RandomNumberGenerator = RandomNumberGenerator.new() # RNG object for randomization
 @onready var animation_player: AnimationPlayer = $AnimationPlayer # Animation player for fading to and from black
 @onready var propsFolder: Array = $Props.get_children() # Folder of all props that may be affected by anomalies
+@onready var playerSprite: AnimatedSprite2D = player.PlayerSprite
+@onready var MARGIN = 10
 
 var anomaly: bool # Is the room an anomaly
 var progress: bool # Is the player able to progress forwards
 
 func _ready() -> void:
 	rng.randomize() # Randomize the RNG seed to prevent repetition
-	#player.
+	var playerWidth: int = playerSprite.sprite_frames.get_frame_texture("idle_animation", 0).get_size().x
+	
 	if player.right == true: # If the player is entering through the right, place them on the right
-		player.position.x = $rightExitArea/rightExitAreaCollider.position.x - 200
+		player.position.x = $rightExitArea/rightExitAreaCollider.position.x - playerWidth - MARGIN
 	else: # If the player is entering through the left, place them on the left
-		player.position.x = $leftExitArea/leftExitAreaCollider.position.x + 200
+		player.position.x = $leftExitArea/leftExitAreaCollider.position.x + playerWidth + MARGIN
 	
 	_generate_anomaly() # Roll to see if this room is an anomaly
 	
@@ -92,7 +95,7 @@ func _choose_anomaly() -> void:
 	
 	if chosenAnomaly <= propsFolder.size(): # If the chosen anomaly is one of the props
 		var prop: AnimatedSprite2D = propsFolder[chosenAnomaly-1] # Find the corresponding prop sprite from index
-		var frames: int = prop.frames.get_frame_count() # Find the number of frames (variants) of the prop
+		var frames: int = prop.sprite_frames.get_frame_count("anomaly") # Find the number of frames (variants) of the prop
 		
 		var frame: int # Chosen frame/variant (just initialized here)
 		

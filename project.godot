@@ -27,6 +27,7 @@ settings="*res://scripts/settings.gd"
 
 window/size/viewport_width=1270
 window/size/viewport_height=580
+window/stretch/mode="canvas_items"
 
 [gui]
 

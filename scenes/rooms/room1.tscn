@@ -1,5 +1,168 @@
-[gd_scene load_steps=2 format=3 uid="uid://dttqk5fdj4t4d"]
+[gd_scene load_steps=20 format=3 uid="uid://dttqk5fdj4t4d"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/parentroom.tscn" id="1_j37sy"]
+[ext_resource type="Texture2D" uid="uid://8vgbixqb5pjr" path="res://assets/furniture/cupboard.png" id="2_0yqos"]
+[ext_resource type="Texture2D" uid="uid://c8dfqb12k24cv" path="res://assets/furniture/nightstand.png" id="3_geole"]
+[ext_resource type="Texture2D" uid="uid://bsigypqqlp5cb" path="res://assets/furniture/bed.png" id="4_itexc"]
+[ext_resource type="Texture2D" uid="uid://c7jqvf265oqqo" path="res://assets/furniture/painting.png" id="5_8aoxc"]
+[ext_resource type="Texture2D" uid="uid://cuhtncgl815or" path="res://assets/furniture/wardrobe.png" id="6_bkknd"]
+[ext_resource type="Texture2D" uid="uid://cc5kmkvicrrw0" path="res://assets/furniture/Shelves1.png" id="7_ps85p"]
+[ext_resource type="Texture2D" uid="uid://l71jcayodjym" path="res://assets/furniture/Shelves2.png" id="8_tmlba"]
+[ext_resource type="Texture2D" uid="uid://52vgh0aih162" path="res://assets/furniture/Desk.png" id="9_bkknd"]
+[ext_resource type="Texture2D" uid="uid://c415js3y1tn1c" path="res://assets/furniture/lamp.png" id="9_chifo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4t3sc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0yqos")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3rw8b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_geole")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8aoxc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_itexc")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kf1l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_8aoxc")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fhsdr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bkknd")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6kccl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_ps85p")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wn5v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_tmlba")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c8y8g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bkknd")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ucck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_chifo")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
 
 [node name="room1" instance=ExtResource("1_j37sy")]
+
+[node name="bookshelf" type="AnimatedSprite2D" parent="Props" index="0"]
+z_index = 1
+position = Vector2(72, -24)
+sprite_frames = SubResource("SpriteFrames_4t3sc")
+animation = &"anomaly"
+
+[node name="nightstand" type="AnimatedSprite2D" parent="Props" index="1"]
+z_index = 1
+position = Vector2(104, -16)
+sprite_frames = SubResource("SpriteFrames_3rw8b")
+animation = &"anomaly"
+
+[node name="bed" type="AnimatedSprite2D" parent="Props" index="2"]
+z_index = 1
+position = Vector2(136, -16)
+sprite_frames = SubResource("SpriteFrames_8aoxc")
+animation = &"anomaly"
+
+[node name="painting" type="AnimatedSprite2D" parent="Props" index="3"]
+position = Vector2(136, -40)
+sprite_frames = SubResource("SpriteFrames_4kf1l")
+animation = &"anomaly"
+
+[node name="wardrobe" type="AnimatedSprite2D" parent="Props" index="4"]
+position = Vector2(208, -16)
+sprite_frames = SubResource("SpriteFrames_fhsdr")
+animation = &"anomaly"
+
+[node name="shelf1" type="AnimatedSprite2D" parent="Props" index="5"]
+position = Vector2(256, -40)
+sprite_frames = SubResource("SpriteFrames_6kccl")
+animation = &"anomaly"
+
+[node name="shelf2" type="AnimatedSprite2D" parent="Props" index="6"]
+position = Vector2(288, -56)
+sprite_frames = SubResource("SpriteFrames_8wn5v")
+animation = &"anomaly"
+
+[node name="desk" type="AnimatedSprite2D" parent="Props" index="7"]
+position = Vector2(280, -16)
+sprite_frames = SubResource("SpriteFrames_c8y8g")
+animation = &"anomaly"
+
+[node name="lamp" type="AnimatedSprite2D" parent="Props" index="8"]
+position = Vector2(328, -16)
+sprite_frames = SubResource("SpriteFrames_0ucck")
+animation = &"anomaly"
+
+[node name="Black" parent="." index="4"]
+visible = true
+offset_left = -546.0
+offset_top = 813.0
+offset_right = 778.0
+offset_bottom = 1393.0
