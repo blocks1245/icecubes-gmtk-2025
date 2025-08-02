@@ -68,6 +68,7 @@ animations = [{
 }]
 
 [node name="map" type="AnimatedSprite2D"]
+z_index = 1
 sprite_frames = SubResource("SpriteFrames_ft4r8")
 animation = &"map"
 script = ExtResource("2_xurvp")
