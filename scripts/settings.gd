@@ -1,6 +1,6 @@
 extends Node
 
-@onready var loops: int = 0 # Number of loops to complete before winning the game (includes intro loop)
+@onready var loops: int = 4 # Number of loops to complete before winning the game (includes intro loop)
 @onready var roomsPerLoop: int = 3 # Number of rooms per loop
 @onready var mistakesAllowed: int = 3 # Number of mistakes allowed before a loss
 @onready var anomalyChance: int = 70 # Chance in percentage of an anomaly occuring

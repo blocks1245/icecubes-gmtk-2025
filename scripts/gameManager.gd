@@ -1,7 +1,7 @@
 extends Node
 
 @onready var availableRooms: Array = Array(DirAccess.get_files_at("res://scenes/rooms/")) # Get an array of all the possible rooms that can be chosen
-@onready var UNIQUE_ANOMALIES: int = 2 # Just a constant for the number of unique anomalies implemented
+@onready var UNIQUE_ANOMALIES: int = 1 # Just a constant for the number of unique anomalies implemented
 
 @onready var rooms: Array = [] # Rooms that are actually active in this round
 @onready var roomIndex: int = 0 # Index of the current room

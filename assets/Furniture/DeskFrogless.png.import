@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkpdf04ffnjyx"
-path="res://.godot/imported/Desk.png-077a16fc53988cee68328e4b56f6c71c.ctex"
+uid="uid://rt87fblqx2je"
+path="res://.godot/imported/DeskFrogless.png-ab21ff6159b34bac2169bcb3f7eaad21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/Desk.png"
-dest_files=["res://.godot/imported/Desk.png-077a16fc53988cee68328e4b56f6c71c.ctex"]
+source_file="res://assets/furniture/DeskFrogless.png"
+dest_files=["res://.godot/imported/DeskFrogless.png-ab21ff6159b34bac2169bcb3f7eaad21.ctex"]
 
 [params]
 

@@ -25,5 +25,4 @@ func _on_return_to_main_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/mainMenu.tscn") # swap to main menu scene
 
 func _on_quit_pressed() -> void:
-	music.buttonPress()
 	get_tree().quit() # quits game when button pressed
