@@ -13,6 +13,7 @@ extends Node2D
 
 var anomaly: bool # Is the room an anomaly
 var progress: bool # Is the player able to progress forwards
+var prevAnomaly: int = 0
 
 func _ready() -> void:
 	player.update()
@@ -43,11 +44,16 @@ func _generate_anomaly() -> void:
 	music.playRegular() # Default to regular music. This will carry into every room that does not then change the music via anomaly selection. This is here because it used to be under the section for rolling a non-anomaly room, but then it persists into consecutive anomaly rooms that it should not existent in
 	
 	if gameManager.getScore() > settings.roomsPerLoop-1: # If the current room is NOT in the first loop (which is for the user to observe the default states of each room)
-		if rng.randi_range(0, 100) > 100 - settings.anomalyChance: # Roll to see if the room is an anomaly, based on percentage chance from settings
+		var rollAnomaly: int = rng.randi_range(0, 100)
+		print(rollAnomaly)
+		
+		if rollAnomaly > 100 - settings.anomalyChance + (gameManager.aStreak): # Roll to see if the room is an anomaly, based on percentage chance from settings
 			anomaly = true # If successful, set the anomaly boolean to true
 			_choose_anomaly() # Choose which anomaly will occur
 		else: # If the room is not an anomaly
 			anomaly = false # Set the anomaly boolean to false
+		
+		gameManager.updateAStreak(anomaly)
 
 func _on_right_exit_area_area_entered(_area: Area2D) -> void: # If the player touches the right exit
 	await get_tree().physics_frame # Wait for a physics frame to avoid an error
@@ -112,28 +118,33 @@ func _choose_anomaly() -> void:
 	var anomalies: int = gameManager.UNIQUE_ANOMALIES + propsFolder.size() # Find the number of available anomalies
 	var chosenAnomaly: int = rng.randi_range(1, anomalies) # Choose an anomaly from the available ones
 	
-	if chosenAnomaly <= propsFolder.size(): # If the chosen anomaly is one of the props
-		var prop: AnimatedSprite2D = propsFolder[chosenAnomaly-1] # Find the corresponding prop sprite from index
-		var frames: int = prop.sprite_frames.get_frame_count("anomaly") # Find the number of frames (variants) of the prop
+	if chosenAnomaly == prevAnomaly:
+		_choose_anomaly()
+	else:
+		prevAnomaly = chosenAnomaly
 		
-		var frame: int # Chosen frame/variant (just initialized here)
+		if chosenAnomaly <= propsFolder.size(): # If the chosen anomaly is one of the props
+			var prop: AnimatedSprite2D = propsFolder[chosenAnomaly-1] # Find the corresponding prop sprite from index
+			var frames: int = prop.sprite_frames.get_frame_count("anomaly") # Find the number of frames (variants) of the prop
+			
+			var frame: int # Chosen frame/variant (just initialized here)
+			
+			if frames <= 1: # If this prop does not have anomaly frames for use
+				_choose_anomaly() # Select a new anomaly
+			else: # If this prop DOES have anomaly frames for use
+				# Randomly choose one (There may only ever be one, but doesn't hurt to make it modular!)
+				frame = rng.randi_range(1, frames-1) # 1 is the second frame (the first non-default), while frames-1 is the last one (-1 as it converts from index to size)
+			
+			prop.set_frame(frame) # Set the current frame of the prop to the chosen anomaly frame
 		
-		if frames <= 1: # If this prop does not have anomaly frames for use
-			_choose_anomaly() # Select a new anomaly
-		else: # If this prop DOES have anomaly frames for use
-			# Randomly choose one (There may only ever be one, but doesn't hurt to make it modular!)
-			frame = rng.randi_range(1, frames-1) # 1 is the second frame (the first non-default), while frames-1 is the last one (-1 as it converts from index to size)
-		
-		prop.set_frame(frame) # Set the current frame of the prop to the chosen anomaly frame
-	
-	# The following are specific cases for unique anomalies. Not super elegant but it works
-	else: # If the chosen anomaly is NOT one of the props
-		match chosenAnomaly - propsFolder.size(): # Subtract all prop spaces from the anomaly to make it a predictable number
-			1: # Case 1: Alternate music
-				music.playAnomaly()
-			_: # Default (none of the above)
-				print("Critical error: an anomaly was generated but could not be chosen") # Output so we are aware if this happens unexpectedly, since it does resolve itself gameplay-wise
-				_choose_anomaly() # Select a new anomaly, since something went wrong (usually UNIQUE_ANOMALIES being too large)
+		# The following are specific cases for unique anomalies. Not super elegant but it works
+		else: # If the chosen anomaly is NOT one of the props
+			match chosenAnomaly - propsFolder.size(): # Subtract all prop spaces from the anomaly to make it a predictable number
+				1: # Case 1: Alternate music
+					music.playAnomaly()
+				_: # Default (none of the above)
+					print("Critical error: an anomaly was generated but could not be chosen") # Output so we are aware if this happens unexpectedly, since it does resolve itself gameplay-wise
+					_choose_anomaly() # Select a new anomaly, since something went wrong (usually UNIQUE_ANOMALIES being too large)
 
 func moveTween(start, end, exit) -> void:
 	player.position.x = start

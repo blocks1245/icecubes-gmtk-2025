@@ -5,6 +5,10 @@ extends Node
 
 @onready var rooms: Array = [] # Rooms that are actually active in this round
 @onready var roomIndex: int = 0 # Index of the current room
+@onready var tutorial: int = 0
+
+@onready var aStreak: int = 0
+@onready var streakMod: int = 20
 
 @onready var score: int = 0 # Score of the player (successful decisions)
 @onready var mistakes: int = 0 #N umber of failures/mistakes the player has made
@@ -32,6 +36,8 @@ func reset() -> void: # Resets all gameplay in the round, but maintains the room
 	score = 0
 	mistakes = 0
 	roomIndex = 0
+	
+	player.right = false
 	music.reset()
 
 func chooseRooms() -> Array: # Select which rooms will be active
@@ -58,3 +64,16 @@ func getRooms() -> Array: # Return the array of active rooms
 
 func getRoomIndex() -> int: # Return the current room index
 	return roomIndex
+
+func updateAStreak(anomaly) -> void:
+	if anomaly:
+		if aStreak < 0:
+			aStreak = 0
+		else:
+			aStreak =+ streakMod
+	
+	else:
+		if aStreak > 0:
+			aStreak = 0
+		else:
+			aStreak -= streakMod
