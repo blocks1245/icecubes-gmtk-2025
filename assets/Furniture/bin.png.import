@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cagk0gb84sjai"
-path="res://.godot/imported/bin.png-39dfed540538a31fbc7c61fc2636e319.ctex"
+uid="uid://cwounqaph1vu8"
+path="res://.godot/imported/bin.png-4d5755072fa508540b3f6e6c28e06518.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/bin.png"
-dest_files=["res://.godot/imported/bin.png-39dfed540538a31fbc7c61fc2636e319.ctex"]
+source_file="res://assets/Furniture/bin.png"
+dest_files=["res://.godot/imported/bin.png-4d5755072fa508540b3f6e6c28e06518.ctex"]
 
 [params]
 
