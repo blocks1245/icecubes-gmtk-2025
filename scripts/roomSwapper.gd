@@ -2,21 +2,34 @@ extends Node2D
 
 @onready var rng: RandomNumberGenerator = RandomNumberGenerator.new() # RNG object for randomization
 @onready var animation_player: AnimationPlayer = $AnimationPlayer # Animation player for fading to and from black
+
 @onready var propsFolder: Array = $Props.get_children() # Folder of all props that may be affected by anomalies
 @onready var playerSprite: AnimatedSprite2D = player.PlayerSprite
-@onready var MARGIN = 10
+@onready var rightExit: CollisionShape2D = $rightExitArea/rightExitAreaCollider
+@onready var leftExit: CollisionShape2D = $leftExitArea/leftExitAreaCollider
+
+@onready var playerWidth: int = playerSprite.sprite_frames.get_frame_texture("idle_animation", 0).get_size().x
+@onready var MARGIN = 32
 
 var anomaly: bool # Is the room an anomaly
 var progress: bool # Is the player able to progress forwards
 
 func _ready() -> void:
-	rng.randomize() # Randomize the RNG seed to prevent repetition
-	var playerWidth: int = playerSprite.sprite_frames.get_frame_texture("idle_animation", 0).get_size().x
+	player.update()
 	
+	rng.randomize() # Randomize the RNG seed to prevent repetition
+	
+	var startpos: int 
+	var endpos: int 
 	if player.right == true: # If the player is entering through the right, place them on the right
-		player.position.x = $rightExitArea/rightExitAreaCollider.position.x - playerWidth - MARGIN
+		startpos = rightExit.position.x + playerWidth + MARGIN
+		endpos = rightExit.position.x - playerWidth - MARGIN
+		moveTween(startpos, endpos, rightExit)
+		
 	else: # If the player is entering through the left, place them on the left
-		player.position.x = $leftExitArea/leftExitAreaCollider.position.x + playerWidth + MARGIN
+		startpos = leftExit.position.x - playerWidth - MARGIN
+		endpos = leftExit.position.x + playerWidth + MARGIN
+		moveTween(startpos, endpos, leftExit)
 	
 	_generate_anomaly() # Roll to see if this room is an anomaly
 	
@@ -43,6 +56,9 @@ func _on_right_exit_area_area_entered(_area: Area2D) -> void: # If the player to
 	_check_success(player.right, true) # Params are the side the player entered the room through, and the side they're exiting through (true = right, false = left)
 	player.right = false # Player will be put on the left side in the next room
 	
+	var endpos: int = rightExit.position.x + playerWidth + MARGIN
+	moveTween(player.position.x, endpos, rightExit)
+	
 	_next_room() # Select and load the next room
 
 func _on_left_exit_area_area_entered(_area: Area2D) -> void: # if you touch the left side
@@ -52,8 +68,11 @@ func _on_left_exit_area_area_entered(_area: Area2D) -> void: # if you touch the 
 	_check_success(player.right, false) # Params are the side the player entered the room through, and the side they're exiting through (true = right, false = left)
 	player.right = true # Player will be put on the right side in the next room
 	
-	_next_room() # sSelect and load the next room
+	var endpos: int = leftExit.position.x - playerWidth - MARGIN
+	moveTween(player.position.x, endpos, leftExit)
 	
+	_next_room() # sSelect and load the next room
+
 func _check_success(entry, exit) -> void:
 	if anomaly == true: # If the room is an anomaly
 		if entry == exit: # If the player exited through the entrance door (backtracked)
@@ -79,7 +98,7 @@ func _next_room() -> void:
 	await animation_player.animation_finished # Wait for the animation to complete
 	
 	if gameManager.getMistakes() > settings.mistakesAllowed: # If more mistakes were made than allowed
-		get_tree().change_scene_to_file("res://scenes/specialRooms/loss.tscn") # Send the player to the loss room
+		get_tree().change_scene_to_file("res://scenes/specialRooms/loss.tscn") # Send the player to the loss scene
 		return # Return so it does not then run the regular room advancement code
 	
 	if gameManager.getScore() >= (settings.roomsPerLoop * settings.loops): # If the player's score exceeds or equals the score needed to win
@@ -117,3 +136,18 @@ func _choose_anomaly() -> void:
 			_: # Default (none of the above)
 				print("Critical error: an anomaly was generated but could not be chosen") # Output so we are aware if this happens unexpectedly, since it does resolve itself gameplay-wise
 				_choose_anomaly() # Select a new anomaly, since something went wrong (usually UNIQUE_ANOMALIES being too large)
+
+func moveTween(start, end, exit) -> void:
+	player.position.x = start
+	player.inTween = true
+	exit.disabled = true
+	
+	var tween: Tween = create_tween()
+	
+	tween.tween_property(player, "position", Vector2(end, player.position.y), 1)
+	tween.play()
+	
+	await tween.finished
+	
+	player.inTween = false
+	exit.disabled = false

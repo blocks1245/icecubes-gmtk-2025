@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://djjo7aqahcu7y"]
+[gd_scene load_steps=18 format=3 uid="uid://djjo7aqahcu7y"]
 
 [ext_resource type="Script" uid="uid://d3svbfm073ve8" path="res://scripts/playerMovement.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Furniture/Sprite_2_idle-Sheet.png" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/Furniture/Sprite_2-Sheet.png" id="3_dqkch"]
-[ext_resource type="PackedScene" uid="uid://cxc6s7xuinfgl" path="res://scenes/pauseMenu.tscn" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/furniture/Sprite_2_idle-Sheet.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/furniture/Sprite_2-Sheet.png" id="3_dqkch"]
+[ext_resource type="PackedScene" uid="uid://dhvlevirgwc6c" path="res://scenes/pauseMenu.tscn" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://58rru66kvehc" path="res://assets/sfx/walk.mp3" id="5_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
 atlas = ExtResource("2_dqkch")
@@ -88,7 +89,10 @@ radius = 7.73161
 radius = 7.0
 
 [node name="player" type="CharacterBody2D"]
+z_index = 2
+position = Vector2(0, -2)
 script = ExtResource("1_g2els")
+speed = 75
 jumpVelocity = 300
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="."]
@@ -103,16 +107,23 @@ frame_progress = 0.404029
 shape = SubResource("CircleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -10)
-zoom = Vector2(12, 12)
+offset = Vector2(0, -26)
+zoom = Vector2(8, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_dqkch")
 
 [node name="pauseMenu" parent="." instance=ExtResource("3_qhqgy")]
 visible = false
-offset_left = -53.0
-offset_top = -34.0
-offset_right = 300.0
-offset_bottom = 126.0
+z_index = 4
+offset_left = 0.0
+offset_top = -28.0
+offset_right = 353.0
+offset_bottom = 132.0
 scale = Vector2(0.3, 0.3)
+use_top_left = true
+
+[node name="walking" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qlg0r")
+volume_db = 2.0
+max_polyphony = 2

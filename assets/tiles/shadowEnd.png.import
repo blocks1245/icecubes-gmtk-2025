@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkpdf04ffnjyx"
-path="res://.godot/imported/desk.png-85baf37d102310bfa49f4904ffaed19f.ctex"
+uid="uid://beofsjqfirmlp"
+path="res://.godot/imported/shadowEnd.png-9614ff13b26ed06ce79c4acaa2816238.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/furniture/desk.png"
-dest_files=["res://.godot/imported/desk.png-85baf37d102310bfa49f4904ffaed19f.ctex"]
+source_file="res://assets/tiles/shadowEnd.png"
+dest_files=["res://.godot/imported/shadowEnd.png-9614ff13b26ed06ce79c4acaa2816238.ctex"]
 
 [params]
 
