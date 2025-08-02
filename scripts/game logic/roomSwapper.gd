@@ -22,12 +22,17 @@ func _ready() -> void:
 	
 	var startpos: int 
 	var endpos: int 
+	
 	if player.right == true: # If the player is entering through the right, place them on the right
+		map.updateMap(rightExit, playerWidth, MARGIN)
+		
 		startpos = rightExit.position.x + playerWidth + MARGIN
 		endpos = rightExit.position.x - playerWidth - MARGIN
 		moveTween(startpos, endpos, rightExit)
 		
 	else: # If the player is entering through the left, place them on the left
+		map.updateMap(leftExit, playerWidth, MARGIN)
+		
 		startpos = leftExit.position.x - playerWidth - MARGIN
 		endpos = leftExit.position.x + playerWidth + MARGIN
 		moveTween(startpos, endpos, leftExit)
