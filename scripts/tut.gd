@@ -2,10 +2,6 @@ extends Node2D
 
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer # Animation player for fading
 @onready var out: Label = $tutUI/VBoxContainer/dialogue # Output dialogue box
-@onready var lines: Array = ["Darkness surrounds you...", 
-"You can't find your parents.\nYou can't find anyone...",
-"You can't keep your bearings.\nRooms seem to shift and swap as\nsoon as you lose sight of them,\nalmost as if you were lost in the Labyrinth of myth.\nBut no, it's just a creepy furniture store...",
-"You HAVE picked up on one pattern...\nWhen the furnishing seems to change,\n or you hear something wrong\n TURN BACK!\nProceeding will only get you more lost...\n You hope you were paying attention to the rooms"] # Big array of dialogue lines for each tutorial page
 
 @onready var finished: bool = false # Finished dialogue bool
 @onready var switching: bool = false # Bool for if it's currently switching because if you spammed enter the game would crash
@@ -22,8 +18,8 @@ func _ready() -> void:
 	
 	music.playRegular() # Play regular music
 	
-	if gameManager.tutorial < lines.size(): # If there are tutorials remaining (why does gameManager.tutorials not get it from here aghhhh)
-		_scrollText(lines[gameManager.tutorial]) # Play the tutorial text
+	if gameManager.tutorial < gameManager.lines.size(): # If there are tutorials remaining (why does gameManager.tutorials not get it from here aghhhh)
+		_scrollText(gameManager.lines[gameManager.tutorial]) # Play the tutorial text
 	else: # Otherwise, it will show the default without scrolling animation and give an error (This should never happen!)
 		print("Critical error: dialogue line '" + str(gameManager.tutorial) + "' does not exist.") 
 	
@@ -51,6 +47,7 @@ func _input(_event) -> void: # When input is pressed
 		
 		if (gameManager.tutorial >= gameManager.tutorials): # If all tutorials played
 			gameManager.popTutorials() # Pop them out of the rooms array
+			gameManager.lines[0] = gameManager.firstLineVariant
 		
 		gameManager.inTut = false # Tell the game you're not in tutorial anymore
 		
