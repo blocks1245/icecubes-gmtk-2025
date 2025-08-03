@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cooo28jnbxtpw"]
+[gd_scene load_steps=28 format=3 uid="uid://cooo28jnbxtpw"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_3lk65"]
 [ext_resource type="Texture2D" uid="uid://8fcgrge5ront" path="res://assets/furniture/luis_2/big_desk.png" id="2_51wyk"]
@@ -8,9 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://2ry38p6ho2jn" path="res://assets/furniture/luis_2/dragon_thing_xd.png" id="3_xdd6j"]
 [ext_resource type="Texture2D" uid="uid://bqetwhcd1bg8d" path="res://assets/furniture/luis_2/big_deskA2.png" id="4_803qg"]
 [ext_resource type="Texture2D" uid="uid://cesmgxlaptw6d" path="res://assets/furniture/luis_2/dragon_thing_xdA.png" id="5_ttfhd"]
+[ext_resource type="Texture2D" uid="uid://b4k3vj1c2ay2k" path="res://assets/furniture/luis_2/big_desk_plant.png" id="7_nfpgp"]
 [ext_resource type="Texture2D" uid="uid://cwt8hdv1apct8" path="res://assets/furniture/luis_2/big_ass_thing.png" id="7_p718m"]
 [ext_resource type="Texture2D" uid="uid://br3ogr6ubs6kk" path="res://assets/furniture/luis_2/big_ass_thingA1.png" id="8_dqohk"]
 [ext_resource type="Texture2D" uid="uid://bxaroqj0xuj68" path="res://assets/furniture/luis_2/big_ass_thingA2.png" id="9_w07b5"]
+[ext_resource type="Texture2D" uid="uid://remrsjrlx35l" path="res://assets/furniture/luis_2/dragon_thing_purple.png" id="10_37ihx"]
 [ext_resource type="Texture2D" uid="uid://dkhltol60vswo" path="res://assets/furniture/luis_2/teddy_bear.png" id="11_w07b5"]
 [ext_resource type="Texture2D" uid="uid://cl6q7k8li7vw0" path="res://assets/furniture/luis_2/teddy_bearA.png" id="12_w07b5"]
 [ext_resource type="Texture2D" uid="uid://c0om34p6q8f34" path="res://assets/furniture/luis_2/dead_bear_lol.png" id="14_rl23p"]
@@ -44,6 +46,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_803qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_nfpgp")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -58,6 +63,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_ttfhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_37ihx")
 }],
 "loop": true,
 "name": &"anomaly",
