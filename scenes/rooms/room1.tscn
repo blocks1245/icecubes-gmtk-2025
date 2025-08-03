@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dttqk5fdj4t4d"]
+[gd_scene load_steps=30 format=3 uid="uid://dttqk5fdj4t4d"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_j37sy"]
 [ext_resource type="Texture2D" uid="uid://8vgbixqb5pjr" path="res://assets/furniture/luis_bedroom/cupboard.png" id="2_0yqos"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://btrrq80i4wpgy" path="res://assets/furniture/luis_bedroom/wardrobe_2.png" id="6_ps85p"]
 [ext_resource type="Texture2D" uid="uid://madn8rotay34" path="res://assets/furniture/luis_bedroom/bedBlue.png" id="7_l8a17"]
 [ext_resource type="Texture2D" uid="uid://cc5kmkvicrrw0" path="res://assets/furniture/luis_bedroom/Shelves1.png" id="7_ps85p"]
+[ext_resource type="Texture2D" uid="uid://dlo1eia0toeaq" path="res://assets/furniture/luis_2/be_anomaly.png" id="8_l8a17"]
 [ext_resource type="Texture2D" uid="uid://l71jcayodjym" path="res://assets/furniture/luis_bedroom/Shelves2.png" id="8_tmlba"]
 [ext_resource type="Texture2D" uid="uid://ojl3ssbs6xip" path="res://assets/furniture/luis_bedroom/paintingNight.png" id="9_0ucck"]
 [ext_resource type="Texture2D" uid="uid://bkpdf04ffnjyx" path="res://assets/furniture/luis_bedroom/Desk.png" id="9_bkknd"]
@@ -56,6 +57,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_l8a17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l8a17")
 }],
 "loop": true,
 "name": &"anomaly",
