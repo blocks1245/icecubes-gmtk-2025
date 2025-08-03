@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://djjo7aqahcu7y"]
+[gd_scene load_steps=18 format=3 uid="uid://dcpl676arpar7"]
 
 [ext_resource type="Script" uid="uid://d3svbfm073ve8" path="res://scripts/playerMovement.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Sprite_2_idle-Sheet.png" id="2_dqkch"]
@@ -116,7 +116,6 @@ shape = SubResource("CircleShape2D_dqkch")
 [node name="pauseMenu" parent="." instance=ExtResource("3_qhqgy")]
 visible = false
 z_index = 4
-offset_left = 0.0
 offset_top = -28.0
 offset_right = 353.0
 offset_bottom = 132.0
@@ -126,4 +125,5 @@ use_top_left = true
 [node name="walking" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qlg0r")
 volume_db = 2.0
+autoplay = true
 max_polyphony = 2

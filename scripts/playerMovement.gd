@@ -13,9 +13,7 @@ extends CharacterBody2D
 func _ready() -> void:
 	update() # Update at the start so that the player is disabled and cannot interact with the menu
 
-func _physics_process(delta) -> void: # Runs on each physics frame instead of each normal frame like _process to keep it regular regardless of device framerate
-	#_handle_gravity(delta) # Calculate the velocity change from gravity
-	#_handle_jumping() # Calculate the velocity change from jumping
+func _physics_process(_delta) -> void: # Runs on each physics frame instead of each normal frame like _process to keep it regular regardless of device framerate
 	_handle_movement() # Calculate the velocity change from horizontal player movement
 	_handle_animations()# handles the walking and idle animations of the player
 	

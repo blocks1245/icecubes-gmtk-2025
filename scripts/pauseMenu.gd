@@ -1,6 +1,6 @@
 extends Control
 
-func _input(event) -> void:
+func _input(_event) -> void:
 	if Input.is_action_just_pressed("escape") and !visible and gameManager.running: # If you pressed escape when UI is not visible (aka not paused)
 		visible = true # Make UI visible
 		get_tree().paused = true # Pause the game
