@@ -123,7 +123,7 @@ layout_mode = 2
 
 [node name="youWin" type="Label" parent="winUI/VBoxContainer"]
 layout_mode = 2
-text = "You found you way out!"
+text = "You found your way out!"
 label_settings = SubResource("LabelSettings_f4haf")
 horizontal_alignment = 1
 
