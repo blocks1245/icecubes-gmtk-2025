@@ -124,9 +124,10 @@ func repairTutorials() -> void: # Repair tutorials after being popped
 		rooms.insert(index, "tut.tscn") # Insert a new tutorial at the correct position
 
 func popTutorials() -> void: # Remove tutorials from the rooms array
-	for room in range(rooms.size(), -1, -1): # Loop backwards through rooms
+	for room in range(rooms.size()-1, -1, -1): # Loop backwards through rooms
 		if tutIndices.has(room) and rooms[room] == "tut.tscn": # If the room is in tutorial indices and is a tutorial (this is to make cleanup not destroy everything)
 			rooms.remove_at(room) # Remove the room
+			print('popped')
 		
 		roomIndex = 0 # Reset the current progress of the player since this will screw it up
 
