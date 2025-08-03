@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://darhawkbga35y"]
+
+[ext_resource type="Texture2D" uid="uid://dpv88ac4j330b" path="res://assets/BlahajIcon.png" id="1_gfsvj"]
+
+[node name="Blahaj" type="Sprite2D"]
+texture = ExtResource("1_gfsvj")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -48.0
+offset_right = 19.0
+offset_bottom = -28.7
+text = "This is  a blajhahahh :3
+It is quite silly"
