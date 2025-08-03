@@ -42,6 +42,20 @@ layout_mode = 2
 theme = ExtResource("2_r5qvj")
 text = "Quit Game"
 
+[node name="VolumeHbox" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="volumeLabel" type="Label" parent="VBoxContainer/VolumeHbox"]
+layout_mode = 2
+text = "Volume:"
+
+[node name="volumeSlider" type="HSlider" parent="VBoxContainer/VolumeHbox"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+min_value = -40.0
+max_value = 6.0
+
 [connection signal="pressed" from="VBoxContainer/unpause" to="." method="_on_unpause_pressed"]
 [connection signal="pressed" from="VBoxContainer/returnToMain" to="." method="_on_return_to_main_pressed"]
 [connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="VBoxContainer/VolumeHbox/volumeSlider" to="." method="_on_volume_slider_value_changed"]

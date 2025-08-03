@@ -1,7 +1,9 @@
 extends Control
-
+@onready var volume_slider: HSlider = $VBoxContainer/VolumeHbox/volumeSlider
+	
 func _input(_event) -> void:
 	if Input.is_action_just_pressed("escape") and !visible and gameManager.running: # If you pressed escape when UI is not visible (aka not paused)
+		volume_slider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
 		visible = true # Make UI visible
 		get_tree().paused = true # Pause the game
 	
@@ -26,3 +28,7 @@ func _on_return_to_main_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit() # Quit game
+
+
+func _on_volume_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)

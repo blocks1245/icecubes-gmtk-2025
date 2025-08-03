@@ -234,6 +234,93 @@ _data = {
 &"RESET": SubResource("Animation_8pl6i")
 }
 
+[sub_resource type="Animation" id="Animation_rgsmu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/fakePlayer:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background/fakePlayer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(500, 334)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("background/fakePlayer:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("background/fakeDesk:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("background/fakePainting:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("background/fakeBed:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_0sa72"]
 resource_name = "backgroundLoop"
 length = 16.0
@@ -323,97 +410,25 @@ tracks/6/keys = {
 "values": [0, 0, 1, 0]
 }
 
-[sub_resource type="Animation" id="Animation_rgsmu"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_48vnj"]
+_data = {
+&"RESET": SubResource("Animation_rgsmu"),
+&"backgroundLoop": SubResource("Animation_0sa72")
+}
+
+[sub_resource type="Animation" id="Animation_otf4o"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("background/fakePlayer:animation")
+tracks/0/path = NodePath("menu:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"walk"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("background/fakePlayer:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(500, 334)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("background/ColorRect:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("background/fakePlayer:flip_h")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("background/fakeDesk:frame")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("background/fakePainting:frame")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("background/fakeBed:frame")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_48vnj"]
-_data = {
-&"RESET": SubResource("Animation_rgsmu"),
-&"backgroundLoop": SubResource("Animation_0sa72")
+"values": [Vector2(597, 206)]
 }
 
 [sub_resource type="Animation" id="Animation_iug6h"]
@@ -431,21 +446,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.5, 2, 0.5, 2),
 "update": 0,
 "values": [Vector2(597, 206), Vector2(597, 201), Vector2(597, 206), Vector2(597, 211)]
-}
-
-[sub_resource type="Animation" id="Animation_otf4o"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("menu:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(597, 206)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_trrmj"]
@@ -772,6 +772,24 @@ layout_mode = 2
 theme = ExtResource("2_3d1i7")
 text = "Return To Main Menu"
 
+[node name="volumeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 346.0
+offset_right = 497.0
+offset_bottom = 365.3
+text = "Volume:"
+
+[node name="volumeSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 365.0
+offset_right = 542.0
+offset_bottom = 381.0
+min_value = -40.0
+max_value = 6.0
+value = 1.0
+
 [node name="menu" type="VBoxContainer" parent="."]
 layout_mode = 2
 offset_left = 597.0
@@ -840,6 +858,7 @@ autoplay = "menu bob"
 
 [connection signal="tab_changed" from="CenterContainer/creditsVbox/credits" to="." method="_on_credits_tab_changed"]
 [connection signal="pressed" from="CenterContainer/creditsVbox/return" to="." method="_on_return_pressed"]
+[connection signal="value_changed" from="volumeSlider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="pressed" from="menu/playGame" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="menu/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="menu/quitGame" to="." method="_on_quit_game_pressed"]
