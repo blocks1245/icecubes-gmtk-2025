@@ -170,5 +170,3 @@ z_index = 1
 position = Vector2(320, -32)
 sprite_frames = SubResource("SpriteFrames_6mjdb")
 animation = &"anomaly"
-frame = 1
-frame_progress = 0.227813
