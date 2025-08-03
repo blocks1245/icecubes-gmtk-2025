@@ -69,7 +69,10 @@ func chooseRooms() -> Array: # Select which rooms will be active
 	tutIndices.append(rooms.size()-1) # Add the tutorial's index to the tracker
 	
 	for room in settings.roomsPerLoop: # For i rooms to select
-		rooms.append("rooms/" + availableRooms[room]) # Add the first i rooms from availableRooms (which has been shuffled) into the active rooms array
+		var filepath: String = availableRooms[room]
+		filepath = filepath.replace('.remap', '') 
+		
+		rooms.append("rooms/" + filepath) # Add the first i rooms from availableRooms (which has been shuffled) into the active rooms array
 		
 		if (tutorial < tutorials): # If there are tutorials remaining
 			rooms.append("tut.tscn") # Add another tutorial scene
