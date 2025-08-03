@@ -26,5 +26,16 @@ stream = ExtResource("5_igctp")
 [node name="birds" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_o77r7")
 
+[node name="Label" type="Label" parent="."]
+offset_left = 56.0
+offset_top = -608.0
+offset_right = 303.0
+offset_bottom = -499.5
+text = "THERES LIKE 30 MINS LEFT IN THE
+JAM IM PUTTING THIS HERE AS A 
+REMINDER IDK NO ONE WILL SEE IT JUST HOLY FUCK 
+THIS TEAM WAS GOATED
+-Cygnus"
+
 [connection signal="finished" from="regular" to="." method="_on_regular_finished"]
 [connection signal="finished" from="mainMenu" to="." method="_on_main_menu_finished"]
