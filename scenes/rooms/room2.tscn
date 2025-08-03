@@ -198,72 +198,79 @@ animations = [{
 
 [node name="counter" type="AnimatedSprite2D" parent="Props" index="0"]
 z_index = 1
-position = Vector2(239, -8)
+position = Vector2(232, -8)
 sprite_frames = SubResource("SpriteFrames_1yw6t")
 animation = &"anomaly"
 
 [node name="cupboard" type="AnimatedSprite2D" parent="Props" index="1"]
 z_index = 1
-position = Vector2(140, -8)
+position = Vector2(136, -8)
 sprite_frames = SubResource("SpriteFrames_ljdae")
 animation = &"anomaly"
 
 [node name="curtain" type="AnimatedSprite2D" parent="Props" index="2"]
 z_index = 1
-position = Vector2(216, -18)
+position = Vector2(200, -8)
 sprite_frames = SubResource("SpriteFrames_8k6ih")
 animation = &"anomaly"
 
 [node name="curtainTop" type="AnimatedSprite2D" parent="Props" index="3"]
 z_index = 1
-position = Vector2(216, -34)
+position = Vector2(200, -24)
 sprite_frames = SubResource("SpriteFrames_1fqik")
 animation = &"anomaly"
 
 [node name="mirrorTop" type="AnimatedSprite2D" parent="Props" index="4"]
 z_index = 1
-position = Vector2(108, -25)
+position = Vector2(104, -24)
 sprite_frames = SubResource("SpriteFrames_vlru5")
 animation = &"anomaly"
 
 [node name="mirrorBottom" type="AnimatedSprite2D" parent="Props" index="5"]
 z_index = 1
-position = Vector2(108, -9)
+position = Vector2(104, -8)
 sprite_frames = SubResource("SpriteFrames_m4tdb")
 animation = &"anomaly"
 
 [node name="plant" type="AnimatedSprite2D" parent="Props" index="6"]
 z_index = 1
-position = Vector2(143, -23)
+position = Vector2(136, -24)
 sprite_frames = SubResource("SpriteFrames_frh23")
 animation = &"anomaly"
 
 [node name="shelf" type="AnimatedSprite2D" parent="Props" index="7"]
 z_index = 1
-position = Vector2(162, -27)
+position = Vector2(168, -37)
 sprite_frames = SubResource("SpriteFrames_hmh3m")
 animation = &"anomaly"
 
 [node name="sink" type="AnimatedSprite2D" parent="Props" index="8"]
 z_index = 1
-position = Vector2(239, -24)
+position = Vector2(232, -24)
 sprite_frames = SubResource("SpriteFrames_xwcvl")
 animation = &"anomaly"
 
 [node name="toilet" type="AnimatedSprite2D" parent="Props" index="9"]
 z_index = 1
-position = Vector2(270, -8)
+position = Vector2(248, -8)
 sprite_frames = SubResource("SpriteFrames_w6vd8")
 animation = &"anomaly"
 
 [node name="towel" type="AnimatedSprite2D" parent="Props" index="10"]
 z_index = 1
-position = Vector2(182, -8)
+position = Vector2(168, -8)
 sprite_frames = SubResource("SpriteFrames_1cjsp")
 animation = &"anomaly"
 
 [node name="towel2" type="AnimatedSprite2D" parent="Props" index="11"]
 z_index = 1
-position = Vector2(198, -8)
+position = Vector2(184, -8)
 sprite_frames = SubResource("SpriteFrames_nu5d7")
 animation = &"anomaly"
+
+[node name="Black" parent="." index="6"]
+visible = false
+offset_left = -565.0
+offset_top = -234.0
+offset_right = 759.0
+offset_bottom = 346.0

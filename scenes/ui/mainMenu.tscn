@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://rraxg8p14rip"]
+[gd_scene load_steps=47 format=4 uid="uid://rraxg8p14rip"]
 
 [ext_resource type="Script" uid="uid://ce5ngtg8r7huy" path="res://scripts/mainMenu.gd" id="1_qkhwq"]
 [ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/ui/buttonTheme.tres" id="2_3d1i7"]
@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://o8g6ikrcvvsj" path="res://assets/tiles/wall.png" id="2_f0x07"]
 [ext_resource type="Texture2D" uid="uid://cvj3do5j760ku" path="res://assets/tiles/floor.png" id="3_6rc6a"]
 [ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Sprite_2_idle-Sheet.png" id="4_ceogi"]
+[ext_resource type="Texture2D" uid="uid://c7cswl0mfxhr" path="res://assets/tiles/shadow.png" id="4_trrmj"]
 [ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/Sprite_2-Sheet.png" id="5_5v4xd"]
+[ext_resource type="Texture2D" uid="uid://beofsjqfirmlp" path="res://assets/tiles/shadowEnd.png" id="5_q7jyy"]
 [ext_resource type="Texture2D" uid="uid://cnogjiabxamng" path="res://assets/furniture/buzzy_bedroom/bed.png" id="6_hx7br"]
 [ext_resource type="Texture2D" uid="uid://cmspbdhxtrlle" path="res://assets/furniture/buzzy_bedroom/bedA.png" id="7_wipqc"]
 [ext_resource type="Texture2D" uid="uid://p0er5ygtv1cv" path="res://assets/furniture/buzzy_bedroom/desk.png" id="8_iug6h"]
@@ -25,6 +27,29 @@ texture = ExtResource("2_f0x07")
 [sub_resource type="TileSet" id="TileSet_ds3hr"]
 sources/2 = SubResource("TileSetAtlasSource_ds3hr")
 sources/3 = SubResource("TileSetAtlasSource_0nxtt")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hy6nf"]
+texture = ExtResource("3_6rc6a")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0sa72"]
+texture = ExtResource("4_trrmj")
+0:0/size_in_atlas = Vector2i(5, 1)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rgsmu"]
+texture = ExtResource("5_q7jyy")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48vnj"]
+texture = ExtResource("2_f0x07")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_aq7qm"]
+sources/0 = SubResource("TileSetAtlasSource_hy6nf")
+sources/1 = SubResource("TileSetAtlasSource_0sa72")
+sources/2 = SubResource("TileSetAtlasSource_rgsmu")
+sources/3 = SubResource("TileSetAtlasSource_48vnj")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_trrmj"]
 animations = [{
@@ -234,6 +259,93 @@ _data = {
 &"RESET": SubResource("Animation_8pl6i")
 }
 
+[sub_resource type="Animation" id="Animation_rgsmu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/fakePlayer:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background/fakePlayer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(500, 334)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("background/fakePlayer:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("background/fakeDesk:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("background/fakePainting:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("background/fakeBed:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="Animation" id="Animation_0sa72"]
 resource_name = "backgroundLoop"
 length = 16.0
@@ -323,97 +435,25 @@ tracks/6/keys = {
 "values": [0, 0, 1, 0]
 }
 
-[sub_resource type="Animation" id="Animation_rgsmu"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_48vnj"]
+_data = {
+&"RESET": SubResource("Animation_rgsmu"),
+&"backgroundLoop": SubResource("Animation_0sa72")
+}
+
+[sub_resource type="Animation" id="Animation_otf4o"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("background/fakePlayer:animation")
+tracks/0/path = NodePath("menu:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [&"walk"]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("background/fakePlayer:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(500, 334)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("background/ColorRect:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("background/fakePlayer:flip_h")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("background/fakeDesk:frame")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("background/fakePainting:frame")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("background/fakeBed:frame")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_48vnj"]
-_data = {
-&"RESET": SubResource("Animation_rgsmu"),
-&"backgroundLoop": SubResource("Animation_0sa72")
+"values": [Vector2(597, 206)]
 }
 
 [sub_resource type="Animation" id="Animation_iug6h"]
@@ -433,21 +473,6 @@ tracks/0/keys = {
 "values": [Vector2(597, 206), Vector2(597, 201), Vector2(597, 206), Vector2(597, 211)]
 }
 
-[sub_resource type="Animation" id="Animation_otf4o"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("menu:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(597, 206)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_trrmj"]
 _data = {
 &"RESET": SubResource("Animation_otf4o"),
@@ -464,23 +489,30 @@ grow_vertical = 2
 script = ExtResource("1_qkhwq")
 
 [node name="backgroundTiles" type="TileMapLayer" parent="."]
+position = Vector2(0, -1)
 tile_map_data = PackedByteArray("AAAaABUAAgAAAAAAAAAaABYAAgAAAAAAAAAaABcAAgAAAAAAAAAaABgAAgAAAAAAAAAbABUAAgAAAAAAAAAbABYAAgAAAAAAAAAbABcAAgAAAAAAAAAbABgAAgAAAAAAAAAcABUAAgAAAAAAAAAcABYAAgAAAAAAAAAcABcAAgAAAAAAAAAcABgAAgAAAAAAAAAdABUAAgAAAAAAAAAdABYAAgAAAAAAAAAdABcAAgAAAAAAAAAdABgAAgAAAAAAAAAeABUAAgAAAAAAAAAeABYAAgAAAAAAAAAeABcAAgAAAAAAAAAeABgAAgAAAAAAAAAfABUAAgAAAAAAAAAfABYAAgAAAAAAAAAfABcAAgAAAAAAAAAfABgAAgAAAAAAAAAgABUAAgAAAAAAAAAgABYAAgAAAAAAAAAgABcAAgAAAAAAAAAgABgAAgAAAAAAAAAhABUAAgAAAAAAAAAhABYAAgAAAAAAAAAhABcAAgAAAAAAAAAhABgAAgAAAAAAAAAiABUAAgAAAAAAAAAiABYAAgAAAAAAAAAiABcAAgAAAAAAAAAiABgAAgAAAAAAAAAjABUAAgAAAAAAAAAjABYAAgAAAAAAAAAjABcAAgAAAAAAAAAjABgAAgAAAAAAAAAkABUAAgAAAAAAAAAkABYAAgAAAAAAAAAkABcAAgAAAAAAAAAkABgAAgAAAAAAAAAlABUAAgAAAAAAAAAlABYAAgAAAAAAAAAlABcAAgAAAAAAAAAlABgAAgAAAAAAAAAmABUAAgAAAAAAAAAmABYAAgAAAAAAAAAmABcAAgAAAAAAAAAmABgAAgAAAAAAAAAnABUAAgAAAAAAAAAnABYAAgAAAAAAAAAnABcAAgAAAAAAAAAnABgAAgAAAAAAAAAoABUAAgAAAAAAAAAoABYAAgAAAAAAAAAoABcAAgAAAAAAAAAoABgAAgAAAAAAAAApABUAAgAAAAAAAAApABYAAgAAAAAAAAApABcAAgAAAAAAAAApABgAAgAAAAAAAAAqABUAAgAAAAAAAAAqABYAAgAAAAAAAAAqABcAAgAAAAAAAAAqABgAAgAAAAAAAAArABUAAgAAAAAAAAArABYAAgAAAAAAAAArABcAAgAAAAAAAAArABgAAgAAAAAAAAAsABUAAgAAAAAAAAAsABYAAgAAAAAAAAAsABcAAgAAAAAAAAAsABgAAgAAAAAAAAAtABUAAgAAAAAAAAAtABYAAgAAAAAAAAAtABcAAgAAAAAAAAAtABgAAgAAAAAAAAAuABUAAgAAAAAAAAAuABYAAgAAAAAAAAAuABcAAgAAAAAAAAAuABgAAgAAAAAAAAAvABUAAgAAAAAAAAAvABYAAgAAAAAAAAAvABcAAgAAAAAAAAAvABgAAgAAAAAAAAAwABUAAgAAAAAAAAAwABYAAgAAAAAAAAAwABcAAgAAAAAAAAAwABgAAgAAAAAAAAAxABUAAgAAAAAAAAAxABYAAgAAAAAAAAAxABcAAgAAAAAAAAAxABgAAgAAAAAAAAAyABUAAgAAAAAAAAAyABYAAgAAAAAAAAAyABcAAgAAAAAAAAAyABgAAgAAAAAAAAAzABUAAgAAAAAAAAAzABYAAgAAAAAAAAAzABcAAgAAAAAAAAAzABgAAgAAAAAAAAA0ABUAAgAAAAAAAAA0ABYAAgAAAAAAAAA0ABcAAgAAAAAAAAA0ABgAAgAAAAAAAAAaAAsAAwAAAAAAAAAaAAwAAwAAAAAAAAAaAA0AAwAAAAAAAAAaAA4AAwAAAAAAAAAaAA8AAwAAAAAAAAAaABAAAwAAAAAAAAAaABEAAwAAAAAAAAAaABIAAwAAAAAAAAAaABMAAwAAAAAAAAAaABQAAwAAAAAAAAAbAAsAAwAAAAAAAAAbAAwAAwAAAAAAAAAbAA0AAwAAAAAAAAAbAA4AAwAAAAAAAAAbAA8AAwAAAAAAAAAbABAAAwAAAAAAAAAbABEAAwAAAAAAAAAbABIAAwAAAAAAAAAbABMAAwAAAAAAAAAbABQAAwAAAAAAAAAcAAsAAwAAAAAAAAAcAAwAAwAAAAAAAAAcAA0AAwAAAAAAAAAcAA4AAwAAAAAAAAAcAA8AAwAAAAAAAAAcABAAAwAAAAAAAAAcABEAAwAAAAAAAAAcABIAAwAAAAAAAAAcABMAAwAAAAAAAAAcABQAAwAAAAAAAAAdAAsAAwAAAAAAAAAdAAwAAwAAAAAAAAAdAA0AAwAAAAAAAAAdAA4AAwAAAAAAAAAdAA8AAwAAAAAAAAAdABAAAwAAAAAAAAAdABEAAwAAAAAAAAAdABIAAwAAAAAAAAAdABMAAwAAAAAAAAAdABQAAwAAAAAAAAAeAAsAAwAAAAAAAAAeAAwAAwAAAAAAAAAeAA0AAwAAAAAAAAAeAA4AAwAAAAAAAAAeAA8AAwAAAAAAAAAeABAAAwAAAAAAAAAeABEAAwAAAAAAAAAeABIAAwAAAAAAAAAeABMAAwAAAAAAAAAeABQAAwAAAAAAAAAfAAsAAwAAAAAAAAAfAAwAAwAAAAAAAAAfAA0AAwAAAAAAAAAfAA4AAwAAAAAAAAAfAA8AAwAAAAAAAAAfABAAAwAAAAAAAAAfABEAAwAAAAAAAAAfABIAAwAAAAAAAAAfABMAAwAAAAAAAAAfABQAAwAAAAAAAAAgAAsAAwAAAAAAAAAgAAwAAwAAAAAAAAAgAA0AAwAAAAAAAAAgAA4AAwAAAAAAAAAgAA8AAwAAAAAAAAAgABAAAwAAAAAAAAAgABEAAwAAAAAAAAAgABIAAwAAAAAAAAAgABMAAwAAAAAAAAAgABQAAwAAAAAAAAAhAAsAAwAAAAAAAAAhAAwAAwAAAAAAAAAhAA0AAwAAAAAAAAAhAA4AAwAAAAAAAAAhAA8AAwAAAAAAAAAhABAAAwAAAAAAAAAhABEAAwAAAAAAAAAhABIAAwAAAAAAAAAhABMAAwAAAAAAAAAhABQAAwAAAAAAAAAiAAsAAwAAAAAAAAAiAAwAAwAAAAAAAAAiAA0AAwAAAAAAAAAiAA4AAwAAAAAAAAAiAA8AAwAAAAAAAAAiABAAAwAAAAAAAAAiABEAAwAAAAAAAAAiABIAAwAAAAAAAAAiABMAAwAAAAAAAAAiABQAAwAAAAAAAAAjAAsAAwAAAAAAAAAjAAwAAwAAAAAAAAAjAA0AAwAAAAAAAAAjAA4AAwAAAAAAAAAjAA8AAwAAAAAAAAAjABAAAwAAAAAAAAAjABEAAwAAAAAAAAAjABIAAwAAAAAAAAAjABMAAwAAAAAAAAAjABQAAwAAAAAAAAAkAAsAAwAAAAAAAAAkAAwAAwAAAAAAAAAkAA0AAwAAAAAAAAAkAA4AAwAAAAAAAAAkAA8AAwAAAAAAAAAkABAAAwAAAAAAAAAkABEAAwAAAAAAAAAkABIAAwAAAAAAAAAkABMAAwAAAAAAAAAkABQAAwAAAAAAAAAlAAsAAwAAAAAAAAAlAAwAAwAAAAAAAAAlAA0AAwAAAAAAAAAlAA4AAwAAAAAAAAAlAA8AAwAAAAAAAAAlABAAAwAAAAAAAAAlABEAAwAAAAAAAAAlABIAAwAAAAAAAAAlABMAAwAAAAAAAAAlABQAAwAAAAAAAAAmAAsAAwAAAAAAAAAmAAwAAwAAAAAAAAAmAA0AAwAAAAAAAAAmAA4AAwAAAAAAAAAmAA8AAwAAAAAAAAAmABAAAwAAAAAAAAAmABEAAwAAAAAAAAAmABIAAwAAAAAAAAAmABMAAwAAAAAAAAAmABQAAwAAAAAAAAAnAAsAAwAAAAAAAAAnAAwAAwAAAAAAAAAnAA0AAwAAAAAAAAAnAA4AAwAAAAAAAAAnAA8AAwAAAAAAAAAnABAAAwAAAAAAAAAnABEAAwAAAAAAAAAnABIAAwAAAAAAAAAnABMAAwAAAAAAAAAnABQAAwAAAAAAAAAoAAsAAwAAAAAAAAAoAAwAAwAAAAAAAAAoAA0AAwAAAAAAAAAoAA4AAwAAAAAAAAAoAA8AAwAAAAAAAAAoABAAAwAAAAAAAAAoABEAAwAAAAAAAAAoABIAAwAAAAAAAAAoABMAAwAAAAAAAAAoABQAAwAAAAAAAAApAAsAAwAAAAAAAAApAAwAAwAAAAAAAAApAA0AAwAAAAAAAAApAA4AAwAAAAAAAAApAA8AAwAAAAAAAAApABAAAwAAAAAAAAApABEAAwAAAAAAAAApABIAAwAAAAAAAAApABMAAwAAAAAAAAApABQAAwAAAAAAAAAqAAsAAwAAAAAAAAAqAAwAAwAAAAAAAAAqAA0AAwAAAAAAAAAqAA4AAwAAAAAAAAAqAA8AAwAAAAAAAAAqABAAAwAAAAAAAAAqABEAAwAAAAAAAAAqABIAAwAAAAAAAAAqABMAAwAAAAAAAAAqABQAAwAAAAAAAAArAAsAAwAAAAAAAAArAAwAAwAAAAAAAAArAA0AAwAAAAAAAAArAA4AAwAAAAAAAAArAA8AAwAAAAAAAAArABAAAwAAAAAAAAArABEAAwAAAAAAAAArABIAAwAAAAAAAAArABMAAwAAAAAAAAArABQAAwAAAAAAAAAsAAsAAwAAAAAAAAAsAAwAAwAAAAAAAAAsAA0AAwAAAAAAAAAsAA4AAwAAAAAAAAAsAA8AAwAAAAAAAAAsABAAAwAAAAAAAAAsABEAAwAAAAAAAAAsABIAAwAAAAAAAAAsABMAAwAAAAAAAAAsABQAAwAAAAAAAAAtAAsAAwAAAAAAAAAtAAwAAwAAAAAAAAAtAA0AAwAAAAAAAAAtAA4AAwAAAAAAAAAtAA8AAwAAAAAAAAAtABAAAwAAAAAAAAAtABEAAwAAAAAAAAAtABIAAwAAAAAAAAAtABMAAwAAAAAAAAAtABQAAwAAAAAAAAAuAAsAAwAAAAAAAAAuAAwAAwAAAAAAAAAuAA0AAwAAAAAAAAAuAA4AAwAAAAAAAAAuAA8AAwAAAAAAAAAuABAAAwAAAAAAAAAuABEAAwAAAAAAAAAuABIAAwAAAAAAAAAuABMAAwAAAAAAAAAuABQAAwAAAAAAAAAvAAsAAwAAAAAAAAAvAAwAAwAAAAAAAAAvAA0AAwAAAAAAAAAvAA4AAwAAAAAAAAAvAA8AAwAAAAAAAAAvABAAAwAAAAAAAAAvABEAAwAAAAAAAAAvABIAAwAAAAAAAAAvABMAAwAAAAAAAAAvABQAAwAAAAAAAAAwAAsAAwAAAAAAAAAwAAwAAwAAAAAAAAAwAA0AAwAAAAAAAAAwAA4AAwAAAAAAAAAwAA8AAwAAAAAAAAAwABAAAwAAAAAAAAAwABEAAwAAAAAAAAAwABIAAwAAAAAAAAAwABMAAwAAAAAAAAAwABQAAwAAAAAAAAAxAAsAAwAAAAAAAAAxAAwAAwAAAAAAAAAxAA0AAwAAAAAAAAAxAA4AAwAAAAAAAAAxAA8AAwAAAAAAAAAxABAAAwAAAAAAAAAxABEAAwAAAAAAAAAxABIAAwAAAAAAAAAxABMAAwAAAAAAAAAxABQAAwAAAAAAAAAyAAsAAwAAAAAAAAAyAAwAAwAAAAAAAAAyAA0AAwAAAAAAAAAyAA4AAwAAAAAAAAAyAA8AAwAAAAAAAAAyABAAAwAAAAAAAAAyABEAAwAAAAAAAAAyABIAAwAAAAAAAAAyABMAAwAAAAAAAAAyABQAAwAAAAAAAAAzAAsAAwAAAAAAAAAzAAwAAwAAAAAAAAAzAA0AAwAAAAAAAAAzAA4AAwAAAAAAAAAzAA8AAwAAAAAAAAAzABAAAwAAAAAAAAAzABEAAwAAAAAAAAAzABIAAwAAAAAAAAAzABMAAwAAAAAAAAAzABQAAwAAAAAAAAA0AAsAAwAAAAAAAAA0AAwAAwAAAAAAAAA0AA0AAwAAAAAAAAA0AA4AAwAAAAAAAAA0AA8AAwAAAAAAAAA0ABAAAwAAAAAAAAA0ABEAAwAAAAAAAAA0ABIAAwAAAAAAAAA0ABMAAwAAAAAAAAA0ABQAAwAAAAAAAAA=")
 tile_set = SubResource("TileSet_ds3hr")
+
+[node name="bgTiles" type="TileMapLayer" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAANAAsAAAAAAAAAAAAOAAsAAAAAAAAAAAAPAAsAAAAAAAAAAAAQAAsAAAAAAAAAAAARAAsAAAAAAAAAAAASAAsAAAAAAAAAAAATAAsAAAAAAAAAAAAUAAsAAAAAAAAAAAAVAAsAAAAAAAAAAAAWAAsAAAAAAAAAAAAXAAsAAAAAAAAAAAAYAAsAAAAAAAAAAAAZAAsAAAAAAAAAAAAaAAsAAAAAAAAAAAAaAAwAAAAAAAAAAAAZAAwAAAAAAAAAAAAYAAwAAAAAAAAAAAAXAAwAAAAAAAAAAAAWAAwAAAAAAAAAAAAVAAwAAAAAAAAAAAAUAAwAAAAAAAAAAAATAAwAAAAAAAAAAAASAAwAAAAAAAAAAAARAAwAAAAAAAAAAAAQAAwAAAAAAAAAAAAPAAwAAAAAAAAAAAAOAAwAAAAAAAAAAAANAAwAAAAAAAAAAAANAAoAAwAAAAAAAAAOAAoAAwAAAAAAAAAPAAoAAwAAAAAAAAAQAAoAAwAAAAAAAAARAAoAAwAAAAAAAAASAAoAAwAAAAAAAAATAAoAAwAAAAAAAAAUAAoAAwAAAAAAAAAVAAoAAwAAAAAAAAAWAAoAAwAAAAAAAAAXAAoAAwAAAAAAAAAYAAoAAwAAAAAAAAAZAAoAAwAAAAAAAAAaAAoAAwAAAAAAAAAaAAkAAwAAAAAAAAAaAAgAAwAAAAAAAAAaAAcAAwAAAAAAAAAaAAYAAwAAAAAAAAAZAAYAAwAAAAAAAAAYAAYAAwAAAAAAAAAXAAYAAwAAAAAAAAAWAAYAAwAAAAAAAAAVAAYAAwAAAAAAAAAUAAYAAwAAAAAAAAATAAYAAwAAAAAAAAASAAYAAwAAAAAAAAARAAYAAwAAAAAAAAAQAAYAAwAAAAAAAAAPAAYAAwAAAAAAAAAOAAYAAwAAAAAAAAANAAYAAwAAAAAAAAANAAcAAwAAAAAAAAANAAgAAwAAAAAAAAANAAkAAwAAAAAAAAAOAAkAAwAAAAAAAAAPAAkAAwAAAAAAAAAQAAkAAwAAAAAAAAARAAkAAwAAAAAAAAASAAkAAwAAAAAAAAATAAkAAwAAAAAAAAAUAAkAAwAAAAAAAAAVAAkAAwAAAAAAAAAWAAkAAwAAAAAAAAAXAAkAAwAAAAAAAAAYAAkAAwAAAAAAAAAZAAkAAwAAAAAAAAAZAAgAAwAAAAAAAAAYAAgAAwAAAAAAAAAXAAgAAwAAAAAAAAAWAAgAAwAAAAAAAAAVAAgAAwAAAAAAAAAUAAgAAwAAAAAAAAATAAgAAwAAAAAAAAASAAgAAwAAAAAAAAARAAgAAwAAAAAAAAAQAAgAAwAAAAAAAAAPAAgAAwAAAAAAAAAOAAgAAwAAAAAAAAAOAAcAAwAAAAAAAAAPAAcAAwAAAAAAAAAQAAcAAwAAAAAAAAARAAcAAwAAAAAAAAASAAcAAwAAAAAAAAATAAcAAwAAAAAAAAAUAAcAAwAAAAAAAAAVAAcAAwAAAAAAAAAWAAcAAwAAAAAAAAAXAAcAAwAAAAAAAAAYAAcAAwAAAAAAAAAZAAcAAwAAAAAAAAA=")
+tile_set = SubResource("TileSet_aq7qm")
 
 [node name="background" type="Node2D" parent="."]
 
 [node name="fakeBed" type="AnimatedSprite2D" parent="background"]
-position = Vector2(759, 305)
+position = Vector2(784, 308)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_trrmj")
 
 [node name="fakeDesk" type="AnimatedSprite2D" parent="background"]
-position = Vector2(532, 304)
+position = Vector2(495, 308)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_q7jyy")
 
 [node name="fakePainting" type="AnimatedSprite2D" parent="background"]
-position = Vector2(787, 240)
+position = Vector2(784, 260)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_hy6nf")
 
@@ -504,6 +536,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = -3.0
+offset_right = 11.0
+offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -579,7 +615,7 @@ text = "@glitchagon22"
 
 [node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contributors/MarginContainer/credits/glitch"]
 layout_mode = 2
-text = "Music"
+text = "Music/Writing"
 
 [node name="ice" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contributors/MarginContainer/credits"]
 layout_mode = 2
@@ -591,7 +627,7 @@ text = "@merilin25"
 
 [node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contributors/MarginContainer/credits/ice"]
 layout_mode = 2
-text = "Music"
+text = "Team Assembly/Music"
 
 [node name="buzzy" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contributors/MarginContainer/credits"]
 layout_mode = 2

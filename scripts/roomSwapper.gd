@@ -118,7 +118,6 @@ func _next_room() -> void:
 		get_tree().change_scene_to_file("res://scenes/specialRooms/win.tscn") # Send the player to the win room
 		return # Return so it does not then run the regular room advancement code
 	
-	print(gameManager.rooms[gameManager.getRoomIndex()])
 	# Load the next room by index
 	get_tree().change_scene_to_file("res://scenes/%s" % gameManager.rooms[gameManager.getRoomIndex()])
 
