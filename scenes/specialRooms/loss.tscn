@@ -158,6 +158,24 @@ offset_bottom = 1393.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Black2" type="ColorRect" parent="."]
+z_index = -1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -565.0
+offset_top = -234.0
+offset_right = 759.0
+offset_bottom = 346.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [connection signal="pressed" from="loseUI/VBoxContainer/tryAgain" to="." method="_on_try_again_pressed"]

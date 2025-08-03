@@ -1,11 +1,245 @@
-[gd_scene load_steps=2 format=3 uid="uid://crh38b5282x0q"]
+[gd_scene load_steps=35 format=3 uid="uid://crh38b5282x0q"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_7ilqw"]
+[ext_resource type="Texture2D" uid="uid://cgj6fhpqn1wvg" path="res://assets/furniture/beta_washroom/counter.png" id="2_h26u8"]
+[ext_resource type="Texture2D" uid="uid://bo3t752i4vp87" path="res://assets/furniture/beta_washroom/counterA.png" id="3_txd13"]
+[ext_resource type="Texture2D" uid="uid://bybv6bny8qwru" path="res://assets/furniture/beta_washroom/cupboard.png" id="4_qsqdi"]
+[ext_resource type="Texture2D" uid="uid://dkng6mn5u3r72" path="res://assets/furniture/beta_washroom/cupboardA.png" id="5_8jbrb"]
+[ext_resource type="Texture2D" uid="uid://vw0er4c7jb68" path="res://assets/furniture/beta_washroom/curtain.png" id="6_8etcu"]
+[ext_resource type="Texture2D" uid="uid://cf0lwah4mm0ur" path="res://assets/furniture/beta_washroom/curtainA.png" id="7_8npys"]
+[ext_resource type="Texture2D" uid="uid://clyyopurfadm3" path="res://assets/furniture/beta_washroom/curtainTop.png" id="8_g3ydg"]
+[ext_resource type="Texture2D" uid="uid://cedgfepyjd2a5" path="res://assets/furniture/beta_washroom/mirrorTop.png" id="9_jisb6"]
+[ext_resource type="Texture2D" uid="uid://cths5sujy5eto" path="res://assets/furniture/beta_washroom/mirror.png" id="10_5j3ra"]
+[ext_resource type="Texture2D" uid="uid://dsgk74tqyi3s4" path="res://assets/furniture/beta_washroom/mirrorA.png" id="11_fbnk3"]
+[ext_resource type="Texture2D" uid="uid://c7agn607fp2d5" path="res://assets/furniture/beta_washroom/plant.png" id="12_ogxaq"]
+[ext_resource type="Texture2D" uid="uid://cuonaup8wk1cd" path="res://assets/furniture/beta_washroom/plantA.png" id="13_j8mn2"]
+[ext_resource type="Texture2D" uid="uid://d14gepslqld7t" path="res://assets/furniture/beta_washroom/shelf.png" id="14_6qmia"]
+[ext_resource type="Texture2D" uid="uid://c4bspi8d4nawk" path="res://assets/furniture/beta_washroom/sink.png" id="15_qc642"]
+[ext_resource type="Texture2D" uid="uid://cnnbolw7pxged" path="res://assets/furniture/beta_washroom/sinkA.png" id="16_jgo2u"]
+[ext_resource type="Texture2D" uid="uid://de5d6ds07jhpi" path="res://assets/furniture/beta_washroom/toilet.png" id="17_kumsq"]
+[ext_resource type="Texture2D" uid="uid://c2ce2ew3bce7" path="res://assets/furniture/beta_washroom/toiletA.png" id="18_rhgw1"]
+[ext_resource type="Texture2D" uid="uid://drgg1ihng7fxj" path="res://assets/furniture/beta_washroom/towel.png" id="19_sfuo4"]
+[ext_resource type="Texture2D" uid="uid://cvoskavju76ye" path="res://assets/furniture/beta_washroom/towelA.png" id="20_lh3f6"]
+[ext_resource type="Texture2D" uid="uid://df55ih21hs2u8" path="res://assets/furniture/beta_washroom/towel2.png" id="21_tuh2r"]
+[ext_resource type="Texture2D" uid="uid://b2mg63o7vet6u" path="res://assets/furniture/beta_washroom/towel2A.png" id="22_sy8as"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yw6t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h26u8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_txd13")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ljdae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qsqdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8jbrb")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8k6ih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_8etcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8npys")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1fqik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_g3ydg")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vlru5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jisb6")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4tdb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_5j3ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fbnk3")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_frh23"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ogxaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j8mn2")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hmh3m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_6qmia")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xwcvl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_qc642")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_jgo2u")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6vd8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_kumsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rhgw1")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1cjsp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_sfuo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lh3f6")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nu5d7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_tuh2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_sy8as")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
 
 [node name="room2" instance=ExtResource("1_7ilqw")]
 
-[node name="Black" parent="." index="4"]
-offset_left = -546.0
-offset_top = 813.0
-offset_right = 778.0
-offset_bottom = 1393.0
+[node name="counter" type="AnimatedSprite2D" parent="Props" index="0"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_1yw6t")
+animation = &"anomaly"
+
+[node name="cupboard" type="AnimatedSprite2D" parent="Props" index="1"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_ljdae")
+animation = &"anomaly"
+
+[node name="curtain" type="AnimatedSprite2D" parent="Props" index="2"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_8k6ih")
+animation = &"anomaly"
+
+[node name="curtainTop" type="AnimatedSprite2D" parent="Props" index="3"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_1fqik")
+animation = &"anomaly"
+
+[node name="mirrorTop" type="AnimatedSprite2D" parent="Props" index="4"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_vlru5")
+animation = &"anomaly"
+
+[node name="mirrorBottom" type="AnimatedSprite2D" parent="Props" index="5"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_m4tdb")
+animation = &"anomaly"
+
+[node name="plant" type="AnimatedSprite2D" parent="Props" index="6"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_frh23")
+animation = &"anomaly"
+
+[node name="shelf" type="AnimatedSprite2D" parent="Props" index="7"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_hmh3m")
+animation = &"anomaly"
+
+[node name="sink" type="AnimatedSprite2D" parent="Props" index="8"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_xwcvl")
+animation = &"anomaly"
+
+[node name="toilet" type="AnimatedSprite2D" parent="Props" index="9"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_w6vd8")
+animation = &"anomaly"
+
+[node name="towel" type="AnimatedSprite2D" parent="Props" index="10"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_1cjsp")
+animation = &"anomaly"
+
+[node name="towel2" type="AnimatedSprite2D" parent="Props" index="11"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_nu5d7")
+animation = &"anomaly"

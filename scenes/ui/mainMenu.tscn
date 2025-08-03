@@ -337,6 +337,20 @@ theme_override_colors/font_color = Color(0, 1, 1, 1)
 text = "Link"
 uri = "https://www.youtube.com/watch?v=fmCbOy39hro"
 
+[node name="birds" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/birds"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Birds SFX"
+
+[node name="link" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/birds"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://www.youtube.com/watch?v=jAebfIiXllY"
+
 [node name="return" type="Button" parent="CenterContainer/creditsVbox"]
 layout_mode = 2
 theme = ExtResource("2_3d1i7")
