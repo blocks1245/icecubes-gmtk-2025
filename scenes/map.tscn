@@ -1,43 +1,69 @@
-[gd_scene load_steps=12 format=3 uid="uid://frm0e32qoutq"]
+[gd_scene load_steps=17 format=3 uid="uid://frm0e32qoutq"]
 
 [ext_resource type="Texture2D" uid="uid://dk23pb0qoymws" path="res://assets/mapSheet.png" id="1_paxxb"]
 [ext_resource type="Script" uid="uid://dnkyugl6epyv1" path="res://scripts/map.gd" id="2_gldc4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0cso3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_paxxb"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2klcf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gldc4"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2lpho"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cso3"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nakos"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2klcf"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jh32y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lpho"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(0, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_be0no"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nakos"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_blm8a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jh32y"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mlgqr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_be0no"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blm8a"]
+atlas = ExtResource("1_paxxb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlgqr"]
+atlas = ExtResource("1_paxxb")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wslke"]
+atlas = ExtResource("1_paxxb")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw3fx"]
+atlas = ExtResource("1_paxxb")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1psn"]
+atlas = ExtResource("1_paxxb")
+region = Rect2(0, 96, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wslke"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_paxxb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gldc4")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0cso3")
 }, {
@@ -61,6 +87,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mlgqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wslke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw3fx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1psn")
 }],
 "loop": true,
 "name": &"map",
@@ -71,4 +106,6 @@ animations = [{
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_wslke")
 animation = &"map"
+frame = 4
+frame_progress = 0.400814
 script = ExtResource("2_gldc4")

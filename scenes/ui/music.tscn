@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4a872766tocn"]
+[gd_scene load_steps=7 format=3 uid="uid://b4a872766tocn"]
 
 [ext_resource type="Script" uid="uid://blnnposnxut56" path="res://scripts/music.gd" id="1_0iwnl"]
 [ext_resource type="AudioStream" uid="uid://b8o3a4d42jego" path="res://assets/music/weewooweewooweewoo.mp3" id="2_o77r7"]
 [ext_resource type="AudioStream" uid="uid://csahwli0l76jg" path="res://assets/music/MainMenu.wav" id="3_u2n8u"]
 [ext_resource type="AudioStream" uid="uid://c4qgvf8qesyee" path="res://assets/sfx/lights_buzz.mp3" id="4_qh037"]
 [ext_resource type="AudioStream" uid="uid://ysop1ace0jeq" path="res://assets/sfx/button.mp3" id="5_igctp"]
+[ext_resource type="AudioStream" uid="uid://cmob3bbsr5hcp" path="res://assets/sfx/birds.mp3" id="6_o77r7"]
 
 [node name="musicPlayer" type="Node"]
 script = ExtResource("1_0iwnl")
@@ -21,6 +22,9 @@ volume_db = 12.0
 
 [node name="button" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_igctp")
+
+[node name="birds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_o77r7")
 
 [connection signal="finished" from="regular" to="." method="_on_regular_finished"]
 [connection signal="finished" from="mainMenu" to="." method="_on_main_menu_finished"]
