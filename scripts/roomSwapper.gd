@@ -55,7 +55,8 @@ func _generate_anomaly() -> void:
 		
 		if rollAnomaly > 100 - settings.anomalyChance + (gameManager.aStreak): # See if the room is an anomaly, based on percentage chance from settings and streak modifiers
 			anomaly = true # If successful, set the anomaly boolean to true
-			_choose_anomaly() # Choose which anomaly will occur
+			for i in range(3):
+				_choose_anomaly() # Choose which anomaly will occur
 		else: # If the room is not an anomaly
 			anomaly = false # Set the anomaly boolean to false
 		

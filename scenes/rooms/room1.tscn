@@ -98,9 +98,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_lwipn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_tmlba")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -115,9 +112,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("15_3vrwj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_ps85p")
 }],
 "loop": true,
 "name": &"anomaly",

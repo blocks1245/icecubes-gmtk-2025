@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://frm0e32qoutq"]
+[gd_scene load_steps=14 format=3 uid="uid://nhpyme76ptkg"]
 
 [ext_resource type="Texture2D" uid="uid://dk23pb0qoymws" path="res://assets/mapSheet.png" id="1_paxxb"]
-[ext_resource type="Script" uid="uid://dnkyugl6epyv1" path="res://scripts/map.gd" id="2_gldc4"]
+[ext_resource type="Script" path="res://scripts/map.gd" id="2_gldc4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_paxxb"]
 atlas = ExtResource("1_paxxb")
@@ -19,25 +19,13 @@ region = Rect2(64, 0, 32, 32)
 atlas = ExtResource("1_paxxb")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2lpho"]
-atlas = ExtResource("1_paxxb")
-region = Rect2(0, 32, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_nakos"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(32, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jh32y"]
-atlas = ExtResource("1_paxxb")
-region = Rect2(64, 32, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_be0no"]
 atlas = ExtResource("1_paxxb")
 region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_blm8a"]
-atlas = ExtResource("1_paxxb")
-region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mlgqr"]
 atlas = ExtResource("1_paxxb")
@@ -71,19 +59,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_2klcf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2lpho")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_nakos")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jh32y")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_be0no")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_blm8a")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mlgqr")

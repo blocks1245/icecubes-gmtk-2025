@@ -579,7 +579,7 @@ text = "@glitchagon22"
 
 [node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contributors/MarginContainer/credits/glitch"]
 layout_mode = 2
-text = "Music/Writing"
+text = "Music"
 
 [node name="ice" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/Contributors/MarginContainer/credits"]
 layout_mode = 2
@@ -639,7 +639,7 @@ text = "@booftacopantsboy"
 
 [node name="task" type="Label" parent="CenterContainer/creditsVbox/credits/Contributors/MarginContainer/credits/boof"]
 layout_mode = 2
-text = "Team Management"
+text = "Team Organisation"
 
 [node name="External Resources" type="ScrollContainer" parent="CenterContainer/creditsVbox/credits"]
 visible = false

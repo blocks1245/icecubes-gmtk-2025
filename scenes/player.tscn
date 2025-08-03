@@ -125,4 +125,5 @@ use_top_left = true
 [node name="walking" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qlg0r")
 volume_db = 2.0
+autoplay = true
 max_polyphony = 2

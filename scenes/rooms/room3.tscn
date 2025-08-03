@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://cnin4nl6ebyqy"]
+[gd_scene load_steps=39 format=3 uid="uid://cnin4nl6ebyqy"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_4c8fp"]
 [ext_resource type="Texture2D" uid="uid://cagk0gb84sjai" path="res://assets/furniture/buzzy_entry/bin.png" id="2_vucmd"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://c4ss46nam1tkb" path="res://assets/furniture/buzzy_bedroom/nightstandA.png" id="19_gffr0"]
 [ext_resource type="Texture2D" uid="uid://cfpf0vmryxu8c" path="res://assets/furniture/buzzy_bedroom/pictureA.png" id="21_2x7av"]
 [ext_resource type="Texture2D" uid="uid://dpevon4uxsikp" path="res://assets/furniture/beta_washroom/shelfA.png" id="22_6qtey"]
+[ext_resource type="Texture2D" uid="uid://up7b2i7vq5xo" path="res://assets/furniture/buzzy_bedroom/shelfA.png" id="24_dmfy2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oeiau"]
 animations = [{
@@ -35,7 +36,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_ff26f")
 }],
-"loop": true,
+"loop": false,
 "name": &"anomaly",
 "speed": 5.0
 }]
@@ -63,7 +64,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("7_ocg7t")
 }],
-"loop": true,
+"loop": false,
 "name": &"anomaly",
 "speed": 5.0
 }]
@@ -174,6 +175,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("14_6v7td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dmfy2")
 }],
 "loop": true,
 "name": &"default",
@@ -198,7 +202,7 @@ animations = [{
 
 [node name="bin" type="AnimatedSprite2D" parent="Props" index="0"]
 z_index = 1
-position = Vector2(268, -9)
+position = Vector2(268, -8)
 sprite_frames = SubResource("SpriteFrames_oeiau")
 animation = &"anomaly"
 
