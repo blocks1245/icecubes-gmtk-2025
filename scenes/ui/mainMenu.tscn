@@ -733,6 +733,20 @@ theme_override_colors/font_color = Color(0, 1, 1, 1)
 text = "Link"
 uri = "https://www.pixilart.com/"
 
+[node name="art3" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/art3"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Art: Krita"
+
+[node name="LinkButton" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/art3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://krita.org/en/"
+
 [node name="music" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
