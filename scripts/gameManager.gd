@@ -14,6 +14,13 @@ const tutorials: int = 4 # Constant for number of tutorial stages
 @onready var inTut: bool = false # Boolean for if a tutorial is active
 @onready var textSpeed: float = 0.05 # Text speed variable
 
+@onready var lines: Array = ["Darkness surrounds you...", 
+"You can't find your parents.\nYou can't find anyone...",
+"You can't keep your bearings.\nRooms seem to shift and swap as\nsoon as you lose sight of them,\nalmost as if you were lost in the Labyrinth of myth.\nBut no, it's just a creepy furniture store...",
+"You HAVE picked up on one pattern...\nWhen the furnishing seems to change,\n or you hear something wrong\n TURN BACK!\nProceeding will only get you more lost...\n You hope you were paying attention to the rooms"] # Big array of dialogue lines for each tutorial page
+@onready var firstLine: String = "Darkness surrounds you..."
+@onready var firstLineVariant: String = "Lost in the dark..."
+
 @onready var aStreak: int = 0 # Anomaly streak variable (negative for mundane streak)
 @onready var streakMod: int = 20 # Percentage chance changed for each streak 
 
@@ -108,6 +115,7 @@ func updateAStreak(anomaly) -> void: # Update the anomaly streak
 func _resetTutorials() -> void: # Reset the tutorial progress and indices
 	tutorial = 0
 	tutIndices = []
+	lines[0] = firstLine
 
 func repairTutorials() -> void: # Repair tutorials after being popped
 	popTutorials() # Pop them to clean it out
