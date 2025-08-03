@@ -26,9 +26,5 @@ func _on_return_to_main_pressed() -> void:
 	
 	get_tree().change_scene_to_file("res://scenes/ui/mainMenu.tscn") # Swap to main menu scene
 
-func _on_quit_pressed() -> void:
-	get_tree().quit() # Quit game
-
-
 func _on_volume_slider_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
