@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dttqk5fdj4t4d"]
+[gd_scene load_steps=29 format=3 uid="uid://dttqk5fdj4t4d"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_j37sy"]
 [ext_resource type="Texture2D" uid="uid://8vgbixqb5pjr" path="res://assets/furniture/luis_bedroom/cupboard.png" id="2_0yqos"]
@@ -11,13 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://btrrq80i4wpgy" path="res://assets/furniture/luis_bedroom/wardrobe_2.png" id="6_ps85p"]
 [ext_resource type="Texture2D" uid="uid://madn8rotay34" path="res://assets/furniture/luis_bedroom/bedBlue.png" id="7_l8a17"]
 [ext_resource type="Texture2D" uid="uid://cc5kmkvicrrw0" path="res://assets/furniture/luis_bedroom/Shelves1.png" id="7_ps85p"]
-[ext_resource type="Texture2D" uid="uid://cmrobhog7h6cy" path="res://assets/furniture/luis_bedroom/bedOrange.png" id="8_l7bcf"]
 [ext_resource type="Texture2D" uid="uid://l71jcayodjym" path="res://assets/furniture/luis_bedroom/Shelves2.png" id="8_tmlba"]
+[ext_resource type="Texture2D" uid="uid://ojl3ssbs6xip" path="res://assets/furniture/luis_bedroom/paintingNight.png" id="9_0ucck"]
 [ext_resource type="Texture2D" uid="uid://bkpdf04ffnjyx" path="res://assets/furniture/luis_bedroom/Desk.png" id="9_bkknd"]
 [ext_resource type="Texture2D" uid="uid://c415js3y1tn1c" path="res://assets/furniture/luis_bedroom/lamp.png" id="9_chifo"]
 [ext_resource type="Texture2D" uid="uid://bipk6xcnqgtve" path="res://assets/furniture/luis_bedroom/Shelves1Horseless.png" id="13_lwipn"]
 [ext_resource type="Texture2D" uid="uid://bv05wobsxp2h5" path="res://assets/furniture/luis_bedroom/Shelves2Horseful.png" id="15_3vrwj"]
 [ext_resource type="Texture2D" uid="uid://rt87fblqx2je" path="res://assets/furniture/luis_bedroom/DeskFrogless.png" id="17_cbcfq"]
+[ext_resource type="Texture2D" uid="uid://chjcvopteuujr" path="res://assets/furniture/luis_bedroom/lampAltered.png" id="19_l8a17"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4t3sc"]
 animations = [{
@@ -55,9 +56,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_l8a17")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_l7bcf")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -69,6 +67,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("5_8aoxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0ucck")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -142,6 +143,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("9_chifo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_l8a17")
 }],
 "loop": true,
 "name": &"anomaly",

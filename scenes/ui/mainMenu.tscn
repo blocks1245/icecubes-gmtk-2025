@@ -1,8 +1,148 @@
-[gd_scene load_steps=8 format=3 uid="uid://rraxg8p14rip"]
+[gd_scene load_steps=40 format=4 uid="uid://rraxg8p14rip"]
 
 [ext_resource type="Script" uid="uid://ce5ngtg8r7huy" path="res://scripts/mainMenu.gd" id="1_qkhwq"]
 [ext_resource type="Theme" uid="uid://drqf40jgpx4ip" path="res://assets/ui/buttonTheme.tres" id="2_3d1i7"]
 [ext_resource type="Texture2D" uid="uid://dstudmrwvnfav" path="res://assets/ui/title.png" id="2_c8enf"]
+[ext_resource type="Texture2D" uid="uid://o8g6ikrcvvsj" path="res://assets/tiles/wall.png" id="2_f0x07"]
+[ext_resource type="Texture2D" uid="uid://cvj3do5j760ku" path="res://assets/tiles/floor.png" id="3_6rc6a"]
+[ext_resource type="Texture2D" uid="uid://dvb4cujv80yfa" path="res://assets/Sprite_2_idle-Sheet.png" id="4_ceogi"]
+[ext_resource type="Texture2D" uid="uid://babb4j7gf43o1" path="res://assets/Sprite_2-Sheet.png" id="5_5v4xd"]
+[ext_resource type="Texture2D" uid="uid://cnogjiabxamng" path="res://assets/furniture/buzzy_bedroom/bed.png" id="6_hx7br"]
+[ext_resource type="Texture2D" uid="uid://cmspbdhxtrlle" path="res://assets/furniture/buzzy_bedroom/bedA.png" id="7_wipqc"]
+[ext_resource type="Texture2D" uid="uid://p0er5ygtv1cv" path="res://assets/furniture/buzzy_bedroom/desk.png" id="8_iug6h"]
+[ext_resource type="Texture2D" uid="uid://ds4dqsuubkp4r" path="res://assets/furniture/buzzy_bedroom/deskA.png" id="9_otf4o"]
+[ext_resource type="Texture2D" uid="uid://c7jqvf265oqqo" path="res://assets/furniture/luis_bedroom/painting.png" id="10_iug6h"]
+[ext_resource type="Texture2D" uid="uid://ojl3ssbs6xip" path="res://assets/furniture/luis_bedroom/paintingNight.png" id="11_otf4o"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ds3hr"]
+texture = ExtResource("3_6rc6a")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0nxtt"]
+texture = ExtResource("2_f0x07")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ds3hr"]
+sources/2 = SubResource("TileSetAtlasSource_ds3hr")
+sources/3 = SubResource("TileSetAtlasSource_0nxtt")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_trrmj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hx7br")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wipqc")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q7jyy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_iug6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_otf4o")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hy6nf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_iug6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_otf4o")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hx7br"]
+atlas = ExtResource("4_ceogi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wipqc"]
+atlas = ExtResource("4_ceogi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iug6h"]
+atlas = ExtResource("4_ceogi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otf4o"]
+atlas = ExtResource("4_ceogi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trrmj"]
+atlas = ExtResource("4_ceogi")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7jyy"]
+atlas = ExtResource("5_5v4xd")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy6nf"]
+atlas = ExtResource("5_5v4xd")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sa72"]
+atlas = ExtResource("5_5v4xd")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgsmu"]
+atlas = ExtResource("5_5v4xd")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_48vnj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hx7br")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wipqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iug6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otf4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trrmj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7jyy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hy6nf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sa72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgsmu")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_ur823"]
 resource_name = "FadeIn"
@@ -94,6 +234,226 @@ _data = {
 &"RESET": SubResource("Animation_8pl6i")
 }
 
+[sub_resource type="Animation" id="Animation_0sa72"]
+resource_name = "backgroundLoop"
+length = 16.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/fakePlayer:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.26667, 3, 7, 7.1, 12.5667, 12.8, 13.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [&"idle", &"idle", &"walk", &"walk", &"idle", &"idle", &"walk", &"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background/fakePlayer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3, 7, 11.7667, 12.0667, 12.8, 13.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(500, 334), Vector2(500, 334), Vector2(700, 334), Vector2(700, 334), Vector2(495, 334), Vector2(495, 334), Vector2(500, 334)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10.7209, 11.0031, 11.2431, 11.5931, 12.3531),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("background/fakePlayer:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(11.9169, 13.5333, 13.9, 14.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("background/fakeDesk:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10.8447, 11.0333, 11.5999),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("background/fakePainting:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10.6687, 11.0731, 11.6028),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("background/fakeBed:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10.6334, 11.0675, 11.6123),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_rgsmu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("background/fakePlayer:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"walk"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("background/fakePlayer:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(500, 334)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("background/ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("background/fakePlayer:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("background/fakeDesk:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("background/fakePainting:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("background/fakeBed:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_48vnj"]
+_data = {
+&"RESET": SubResource("Animation_rgsmu"),
+&"backgroundLoop": SubResource("Animation_0sa72")
+}
+
+[sub_resource type="Animation" id="Animation_iug6h"]
+resource_name = "menu bob"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(0.5, 2, 0.5, 2),
+"update": 0,
+"values": [Vector2(597, 206), Vector2(597, 201), Vector2(597, 206), Vector2(597, 211)]
+}
+
+[sub_resource type="Animation" id="Animation_otf4o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menu:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(597, 206)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_trrmj"]
+_data = {
+&"RESET": SubResource("Animation_otf4o"),
+&"menu bob": SubResource("Animation_iug6h")
+}
+
 [node name="mainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -103,6 +463,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qkhwq")
 
+[node name="backgroundTiles" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAaABUAAgAAAAAAAAAaABYAAgAAAAAAAAAaABcAAgAAAAAAAAAaABgAAgAAAAAAAAAbABUAAgAAAAAAAAAbABYAAgAAAAAAAAAbABcAAgAAAAAAAAAbABgAAgAAAAAAAAAcABUAAgAAAAAAAAAcABYAAgAAAAAAAAAcABcAAgAAAAAAAAAcABgAAgAAAAAAAAAdABUAAgAAAAAAAAAdABYAAgAAAAAAAAAdABcAAgAAAAAAAAAdABgAAgAAAAAAAAAeABUAAgAAAAAAAAAeABYAAgAAAAAAAAAeABcAAgAAAAAAAAAeABgAAgAAAAAAAAAfABUAAgAAAAAAAAAfABYAAgAAAAAAAAAfABcAAgAAAAAAAAAfABgAAgAAAAAAAAAgABUAAgAAAAAAAAAgABYAAgAAAAAAAAAgABcAAgAAAAAAAAAgABgAAgAAAAAAAAAhABUAAgAAAAAAAAAhABYAAgAAAAAAAAAhABcAAgAAAAAAAAAhABgAAgAAAAAAAAAiABUAAgAAAAAAAAAiABYAAgAAAAAAAAAiABcAAgAAAAAAAAAiABgAAgAAAAAAAAAjABUAAgAAAAAAAAAjABYAAgAAAAAAAAAjABcAAgAAAAAAAAAjABgAAgAAAAAAAAAkABUAAgAAAAAAAAAkABYAAgAAAAAAAAAkABcAAgAAAAAAAAAkABgAAgAAAAAAAAAlABUAAgAAAAAAAAAlABYAAgAAAAAAAAAlABcAAgAAAAAAAAAlABgAAgAAAAAAAAAmABUAAgAAAAAAAAAmABYAAgAAAAAAAAAmABcAAgAAAAAAAAAmABgAAgAAAAAAAAAnABUAAgAAAAAAAAAnABYAAgAAAAAAAAAnABcAAgAAAAAAAAAnABgAAgAAAAAAAAAoABUAAgAAAAAAAAAoABYAAgAAAAAAAAAoABcAAgAAAAAAAAAoABgAAgAAAAAAAAApABUAAgAAAAAAAAApABYAAgAAAAAAAAApABcAAgAAAAAAAAApABgAAgAAAAAAAAAqABUAAgAAAAAAAAAqABYAAgAAAAAAAAAqABcAAgAAAAAAAAAqABgAAgAAAAAAAAArABUAAgAAAAAAAAArABYAAgAAAAAAAAArABcAAgAAAAAAAAArABgAAgAAAAAAAAAsABUAAgAAAAAAAAAsABYAAgAAAAAAAAAsABcAAgAAAAAAAAAsABgAAgAAAAAAAAAtABUAAgAAAAAAAAAtABYAAgAAAAAAAAAtABcAAgAAAAAAAAAtABgAAgAAAAAAAAAuABUAAgAAAAAAAAAuABYAAgAAAAAAAAAuABcAAgAAAAAAAAAuABgAAgAAAAAAAAAvABUAAgAAAAAAAAAvABYAAgAAAAAAAAAvABcAAgAAAAAAAAAvABgAAgAAAAAAAAAwABUAAgAAAAAAAAAwABYAAgAAAAAAAAAwABcAAgAAAAAAAAAwABgAAgAAAAAAAAAxABUAAgAAAAAAAAAxABYAAgAAAAAAAAAxABcAAgAAAAAAAAAxABgAAgAAAAAAAAAyABUAAgAAAAAAAAAyABYAAgAAAAAAAAAyABcAAgAAAAAAAAAyABgAAgAAAAAAAAAzABUAAgAAAAAAAAAzABYAAgAAAAAAAAAzABcAAgAAAAAAAAAzABgAAgAAAAAAAAA0ABUAAgAAAAAAAAA0ABYAAgAAAAAAAAA0ABcAAgAAAAAAAAA0ABgAAgAAAAAAAAAaAAsAAwAAAAAAAAAaAAwAAwAAAAAAAAAaAA0AAwAAAAAAAAAaAA4AAwAAAAAAAAAaAA8AAwAAAAAAAAAaABAAAwAAAAAAAAAaABEAAwAAAAAAAAAaABIAAwAAAAAAAAAaABMAAwAAAAAAAAAaABQAAwAAAAAAAAAbAAsAAwAAAAAAAAAbAAwAAwAAAAAAAAAbAA0AAwAAAAAAAAAbAA4AAwAAAAAAAAAbAA8AAwAAAAAAAAAbABAAAwAAAAAAAAAbABEAAwAAAAAAAAAbABIAAwAAAAAAAAAbABMAAwAAAAAAAAAbABQAAwAAAAAAAAAcAAsAAwAAAAAAAAAcAAwAAwAAAAAAAAAcAA0AAwAAAAAAAAAcAA4AAwAAAAAAAAAcAA8AAwAAAAAAAAAcABAAAwAAAAAAAAAcABEAAwAAAAAAAAAcABIAAwAAAAAAAAAcABMAAwAAAAAAAAAcABQAAwAAAAAAAAAdAAsAAwAAAAAAAAAdAAwAAwAAAAAAAAAdAA0AAwAAAAAAAAAdAA4AAwAAAAAAAAAdAA8AAwAAAAAAAAAdABAAAwAAAAAAAAAdABEAAwAAAAAAAAAdABIAAwAAAAAAAAAdABMAAwAAAAAAAAAdABQAAwAAAAAAAAAeAAsAAwAAAAAAAAAeAAwAAwAAAAAAAAAeAA0AAwAAAAAAAAAeAA4AAwAAAAAAAAAeAA8AAwAAAAAAAAAeABAAAwAAAAAAAAAeABEAAwAAAAAAAAAeABIAAwAAAAAAAAAeABMAAwAAAAAAAAAeABQAAwAAAAAAAAAfAAsAAwAAAAAAAAAfAAwAAwAAAAAAAAAfAA0AAwAAAAAAAAAfAA4AAwAAAAAAAAAfAA8AAwAAAAAAAAAfABAAAwAAAAAAAAAfABEAAwAAAAAAAAAfABIAAwAAAAAAAAAfABMAAwAAAAAAAAAfABQAAwAAAAAAAAAgAAsAAwAAAAAAAAAgAAwAAwAAAAAAAAAgAA0AAwAAAAAAAAAgAA4AAwAAAAAAAAAgAA8AAwAAAAAAAAAgABAAAwAAAAAAAAAgABEAAwAAAAAAAAAgABIAAwAAAAAAAAAgABMAAwAAAAAAAAAgABQAAwAAAAAAAAAhAAsAAwAAAAAAAAAhAAwAAwAAAAAAAAAhAA0AAwAAAAAAAAAhAA4AAwAAAAAAAAAhAA8AAwAAAAAAAAAhABAAAwAAAAAAAAAhABEAAwAAAAAAAAAhABIAAwAAAAAAAAAhABMAAwAAAAAAAAAhABQAAwAAAAAAAAAiAAsAAwAAAAAAAAAiAAwAAwAAAAAAAAAiAA0AAwAAAAAAAAAiAA4AAwAAAAAAAAAiAA8AAwAAAAAAAAAiABAAAwAAAAAAAAAiABEAAwAAAAAAAAAiABIAAwAAAAAAAAAiABMAAwAAAAAAAAAiABQAAwAAAAAAAAAjAAsAAwAAAAAAAAAjAAwAAwAAAAAAAAAjAA0AAwAAAAAAAAAjAA4AAwAAAAAAAAAjAA8AAwAAAAAAAAAjABAAAwAAAAAAAAAjABEAAwAAAAAAAAAjABIAAwAAAAAAAAAjABMAAwAAAAAAAAAjABQAAwAAAAAAAAAkAAsAAwAAAAAAAAAkAAwAAwAAAAAAAAAkAA0AAwAAAAAAAAAkAA4AAwAAAAAAAAAkAA8AAwAAAAAAAAAkABAAAwAAAAAAAAAkABEAAwAAAAAAAAAkABIAAwAAAAAAAAAkABMAAwAAAAAAAAAkABQAAwAAAAAAAAAlAAsAAwAAAAAAAAAlAAwAAwAAAAAAAAAlAA0AAwAAAAAAAAAlAA4AAwAAAAAAAAAlAA8AAwAAAAAAAAAlABAAAwAAAAAAAAAlABEAAwAAAAAAAAAlABIAAwAAAAAAAAAlABMAAwAAAAAAAAAlABQAAwAAAAAAAAAmAAsAAwAAAAAAAAAmAAwAAwAAAAAAAAAmAA0AAwAAAAAAAAAmAA4AAwAAAAAAAAAmAA8AAwAAAAAAAAAmABAAAwAAAAAAAAAmABEAAwAAAAAAAAAmABIAAwAAAAAAAAAmABMAAwAAAAAAAAAmABQAAwAAAAAAAAAnAAsAAwAAAAAAAAAnAAwAAwAAAAAAAAAnAA0AAwAAAAAAAAAnAA4AAwAAAAAAAAAnAA8AAwAAAAAAAAAnABAAAwAAAAAAAAAnABEAAwAAAAAAAAAnABIAAwAAAAAAAAAnABMAAwAAAAAAAAAnABQAAwAAAAAAAAAoAAsAAwAAAAAAAAAoAAwAAwAAAAAAAAAoAA0AAwAAAAAAAAAoAA4AAwAAAAAAAAAoAA8AAwAAAAAAAAAoABAAAwAAAAAAAAAoABEAAwAAAAAAAAAoABIAAwAAAAAAAAAoABMAAwAAAAAAAAAoABQAAwAAAAAAAAApAAsAAwAAAAAAAAApAAwAAwAAAAAAAAApAA0AAwAAAAAAAAApAA4AAwAAAAAAAAApAA8AAwAAAAAAAAApABAAAwAAAAAAAAApABEAAwAAAAAAAAApABIAAwAAAAAAAAApABMAAwAAAAAAAAApABQAAwAAAAAAAAAqAAsAAwAAAAAAAAAqAAwAAwAAAAAAAAAqAA0AAwAAAAAAAAAqAA4AAwAAAAAAAAAqAA8AAwAAAAAAAAAqABAAAwAAAAAAAAAqABEAAwAAAAAAAAAqABIAAwAAAAAAAAAqABMAAwAAAAAAAAAqABQAAwAAAAAAAAArAAsAAwAAAAAAAAArAAwAAwAAAAAAAAArAA0AAwAAAAAAAAArAA4AAwAAAAAAAAArAA8AAwAAAAAAAAArABAAAwAAAAAAAAArABEAAwAAAAAAAAArABIAAwAAAAAAAAArABMAAwAAAAAAAAArABQAAwAAAAAAAAAsAAsAAwAAAAAAAAAsAAwAAwAAAAAAAAAsAA0AAwAAAAAAAAAsAA4AAwAAAAAAAAAsAA8AAwAAAAAAAAAsABAAAwAAAAAAAAAsABEAAwAAAAAAAAAsABIAAwAAAAAAAAAsABMAAwAAAAAAAAAsABQAAwAAAAAAAAAtAAsAAwAAAAAAAAAtAAwAAwAAAAAAAAAtAA0AAwAAAAAAAAAtAA4AAwAAAAAAAAAtAA8AAwAAAAAAAAAtABAAAwAAAAAAAAAtABEAAwAAAAAAAAAtABIAAwAAAAAAAAAtABMAAwAAAAAAAAAtABQAAwAAAAAAAAAuAAsAAwAAAAAAAAAuAAwAAwAAAAAAAAAuAA0AAwAAAAAAAAAuAA4AAwAAAAAAAAAuAA8AAwAAAAAAAAAuABAAAwAAAAAAAAAuABEAAwAAAAAAAAAuABIAAwAAAAAAAAAuABMAAwAAAAAAAAAuABQAAwAAAAAAAAAvAAsAAwAAAAAAAAAvAAwAAwAAAAAAAAAvAA0AAwAAAAAAAAAvAA4AAwAAAAAAAAAvAA8AAwAAAAAAAAAvABAAAwAAAAAAAAAvABEAAwAAAAAAAAAvABIAAwAAAAAAAAAvABMAAwAAAAAAAAAvABQAAwAAAAAAAAAwAAsAAwAAAAAAAAAwAAwAAwAAAAAAAAAwAA0AAwAAAAAAAAAwAA4AAwAAAAAAAAAwAA8AAwAAAAAAAAAwABAAAwAAAAAAAAAwABEAAwAAAAAAAAAwABIAAwAAAAAAAAAwABMAAwAAAAAAAAAwABQAAwAAAAAAAAAxAAsAAwAAAAAAAAAxAAwAAwAAAAAAAAAxAA0AAwAAAAAAAAAxAA4AAwAAAAAAAAAxAA8AAwAAAAAAAAAxABAAAwAAAAAAAAAxABEAAwAAAAAAAAAxABIAAwAAAAAAAAAxABMAAwAAAAAAAAAxABQAAwAAAAAAAAAyAAsAAwAAAAAAAAAyAAwAAwAAAAAAAAAyAA0AAwAAAAAAAAAyAA4AAwAAAAAAAAAyAA8AAwAAAAAAAAAyABAAAwAAAAAAAAAyABEAAwAAAAAAAAAyABIAAwAAAAAAAAAyABMAAwAAAAAAAAAyABQAAwAAAAAAAAAzAAsAAwAAAAAAAAAzAAwAAwAAAAAAAAAzAA0AAwAAAAAAAAAzAA4AAwAAAAAAAAAzAA8AAwAAAAAAAAAzABAAAwAAAAAAAAAzABEAAwAAAAAAAAAzABIAAwAAAAAAAAAzABMAAwAAAAAAAAAzABQAAwAAAAAAAAA0AAsAAwAAAAAAAAA0AAwAAwAAAAAAAAA0AA0AAwAAAAAAAAA0AA4AAwAAAAAAAAA0AA8AAwAAAAAAAAA0ABAAAwAAAAAAAAA0ABEAAwAAAAAAAAA0ABIAAwAAAAAAAAA0ABMAAwAAAAAAAAA0ABQAAwAAAAAAAAA=")
+tile_set = SubResource("TileSet_ds3hr")
+
+[node name="background" type="Node2D" parent="."]
+
+[node name="fakeBed" type="AnimatedSprite2D" parent="background"]
+position = Vector2(759, 305)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_trrmj")
+
+[node name="fakeDesk" type="AnimatedSprite2D" parent="background"]
+position = Vector2(532, 304)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_q7jyy")
+
+[node name="fakePainting" type="AnimatedSprite2D" parent="background"]
+position = Vector2(787, 240)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hy6nf")
+
+[node name="fakePlayer" type="AnimatedSprite2D" parent="background"]
+position = Vector2(500, 334)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_48vnj")
+animation = &"walk"
+autoplay = "idle"
+
+[node name="ColorRect" type="ColorRect" parent="background"]
+visible = false
+offset_left = 414.0
+offset_top = 175.0
+offset_right = 853.0
+offset_bottom = 397.0
+color = Color(0, 0, 0, 1)
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -110,28 +506,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="menu" type="VBoxContainer" parent="CenterContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="CenterContainer/menu"]
-layout_mode = 2
-texture = ExtResource("2_c8enf")
-
-[node name="playGame" type="Button" parent="CenterContainer/menu"]
-layout_mode = 2
-theme = ExtResource("2_3d1i7")
-text = "Play"
-
-[node name="credits" type="Button" parent="CenterContainer/menu"]
-layout_mode = 2
-theme = ExtResource("2_3d1i7")
-text = "Credits"
-
-[node name="quitGame" type="Button" parent="CenterContainer/menu"]
-layout_mode = 2
-theme = ExtResource("2_3d1i7")
-text = "Quit"
 
 [node name="creditsVbox" type="VBoxContainer" parent="CenterContainer"]
 visible = false
@@ -281,6 +655,48 @@ theme_override_constants/margin_top = 4
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer"]
 layout_mode = 2
 
+[node name="engin" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/engin"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Engine: Godot Game Engine"
+
+[node name="LinkButton" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/engin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://godotengine.org/"
+
+[node name="art" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/art"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Art: Aseprite"
+
+[node name="LinkButton" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/art"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://www.aseprite.org/"
+
+[node name="music" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/music"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Music: BeepBox"
+
+[node name="LinkButton" type="LinkButton" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer/music"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 1, 1)
+text = "Link"
+uri = "https://www.beepbox.co/#9n31s0k0l00e03t2ma7g0fj07r1i0o432T5v1ua2f50le2dc2j02e02feq83432d38HK_Sziiirrqih99h0E0T1v1ub3f20sa2oaq0x10n71d23A1F0B5Q00acPd557E3b963974T1v1u72f10u7q00d03A1FhB8Q4154Pd567E178T4v1uf0f0q011z6666ji8k8k3jSBKSJJAArriiiiii07JCABrzrrrrrrr00YrkqHrsrrrrjr005zrAqzrjzrrqr1jRjrqGGrrzsrsA099ijrABJJJIAzrrtirqrqjqixzsrAjrqjiqaqqysttAJqjikikrizrHtBJJAzArzrIsRCITKSS099ijrAJS____Qg99habbCAYrDzh00E0b4h400000000h4g000000014h000000004h400000000p16000000"
+
 [node name="font" type="HBoxContainer" parent="CenterContainer/creditsVbox/credits/External Resources/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
@@ -356,6 +772,32 @@ layout_mode = 2
 theme = ExtResource("2_3d1i7")
 text = "Return To Main Menu"
 
+[node name="menu" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 597.0
+offset_top = 206.0
+offset_right = 673.0
+offset_bottom = 374.0
+
+[node name="TextureRect" type="TextureRect" parent="menu"]
+layout_mode = 2
+texture = ExtResource("2_c8enf")
+
+[node name="playGame" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("2_3d1i7")
+text = "Play"
+
+[node name="credits" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("2_3d1i7")
+text = "Credits"
+
+[node name="quitGame" type="Button" parent="menu"]
+layout_mode = 2
+theme = ExtResource("2_3d1i7")
+text = "Quit"
+
 [node name="menuCam" type="Camera2D" parent="."]
 top_level = true
 position = Vector2(635, 290)
@@ -384,8 +826,20 @@ libraries = {
 &"": SubResource("AnimationLibrary_w4rbc")
 }
 
-[connection signal="pressed" from="CenterContainer/menu/playGame" to="." method="_on_play_game_pressed"]
-[connection signal="pressed" from="CenterContainer/menu/credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="CenterContainer/menu/quitGame" to="." method="_on_quit_game_pressed"]
+[node name="backAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_48vnj")
+}
+autoplay = "backgroundLoop"
+
+[node name="menubob" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_trrmj")
+}
+autoplay = "menu bob"
+
 [connection signal="tab_changed" from="CenterContainer/creditsVbox/credits" to="." method="_on_credits_tab_changed"]
 [connection signal="pressed" from="CenterContainer/creditsVbox/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="menu/playGame" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="menu/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="menu/quitGame" to="." method="_on_quit_game_pressed"]

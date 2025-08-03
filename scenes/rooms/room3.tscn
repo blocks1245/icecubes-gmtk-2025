@@ -1,25 +1,39 @@
-[gd_scene load_steps=27 format=3 uid="uid://cnin4nl6ebyqy"]
+[gd_scene load_steps=38 format=3 uid="uid://cnin4nl6ebyqy"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_4c8fp"]
 [ext_resource type="Texture2D" uid="uid://cagk0gb84sjai" path="res://assets/furniture/buzzy_entry/bin.png" id="2_vucmd"]
+[ext_resource type="Texture2D" uid="uid://c4x7km2orvcyv" path="res://assets/furniture/buzzy_entry/binAltered.png" id="3_ff26f"]
 [ext_resource type="Texture2D" uid="uid://dddd13oxupg7x" path="res://assets/furniture/buzzy_entry/carpet.png" id="3_ketqm"]
 [ext_resource type="Texture2D" uid="uid://dfglyc6ku7qo1" path="res://assets/furniture/buzzy_entry/picture.png" id="4_nuaid"]
+[ext_resource type="Texture2D" uid="uid://chcslukdmumty" path="res://assets/furniture/buzzy_entry/carpetA.png" id="5_dmfy2"]
 [ext_resource type="Texture2D" uid="uid://d3d4hgb4jatdk" path="res://assets/furniture/buzzy_entry/plant.png" id="5_risbr"]
 [ext_resource type="Texture2D" uid="uid://bog7w6w6gxagw" path="res://assets/furniture/buzzy_entry/plantBlue.png" id="6_3dnxy"]
 [ext_resource type="Texture2D" uid="uid://cnogjiabxamng" path="res://assets/furniture/buzzy_bedroom/bed.png" id="7_kqajr"]
+[ext_resource type="Texture2D" uid="uid://dqpogiupol50h" path="res://assets/furniture/buzzy_entry/pictureAltered.png" id="7_ocg7t"]
 [ext_resource type="Texture2D" uid="uid://dcpthc1kvu1wk" path="res://assets/furniture/buzzy_bedroom/bookshelf.png" id="8_ketqm"]
 [ext_resource type="Texture2D" uid="uid://p0er5ygtv1cv" path="res://assets/furniture/buzzy_bedroom/desk.png" id="9_3m4m6"]
+[ext_resource type="Texture2D" uid="uid://cmspbdhxtrlle" path="res://assets/furniture/buzzy_bedroom/bedA.png" id="9_8k55f"]
 [ext_resource type="Texture2D" uid="uid://4nspkvkytcmr" path="res://assets/furniture/buzzy_bedroom/door.png" id="10_lkk7e"]
 [ext_resource type="Texture2D" uid="uid://bx7ummw4iwcnh" path="res://assets/furniture/buzzy_bedroom/guitar.png" id="11_6qws1"]
+[ext_resource type="Texture2D" uid="uid://iv1iuikuq5ic" path="res://assets/furniture/buzzy_bedroom/bookshelfA.png" id="11_osq6n"]
 [ext_resource type="Texture2D" uid="uid://0lq600qrqyyu" path="res://assets/furniture/buzzy_bedroom/nightstand.png" id="12_rln1m"]
 [ext_resource type="Texture2D" uid="uid://b13w1rviov3kn" path="res://assets/furniture/buzzy_bedroom/picture.png" id="13_xegiu"]
+[ext_resource type="Texture2D" uid="uid://ds4dqsuubkp4r" path="res://assets/furniture/buzzy_bedroom/deskA.png" id="13_y5hd8"]
 [ext_resource type="Texture2D" uid="uid://cxp5nt0iqxini" path="res://assets/furniture/buzzy_bedroom/shelf.png" id="14_6v7td"]
+[ext_resource type="Texture2D" uid="uid://bgbviovvnlb6d" path="res://assets/furniture/buzzy_bedroom/doorA.png" id="15_fkb7m"]
+[ext_resource type="Texture2D" uid="uid://bifhnm2c1xu60" path="res://assets/furniture/buzzy_bedroom/guitarA.png" id="17_4f8i1"]
+[ext_resource type="Texture2D" uid="uid://c4ss46nam1tkb" path="res://assets/furniture/buzzy_bedroom/nightstandA.png" id="19_gffr0"]
+[ext_resource type="Texture2D" uid="uid://cfpf0vmryxu8c" path="res://assets/furniture/buzzy_bedroom/pictureA.png" id="21_2x7av"]
+[ext_resource type="Texture2D" uid="uid://dpevon4uxsikp" path="res://assets/furniture/beta_washroom/shelfA.png" id="22_6qtey"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_oeiau"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_vucmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ff26f")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -31,8 +45,11 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_ketqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dmfy2")
 }],
-"loop": true,
+"loop": false,
 "name": &"anomaly",
 "speed": 5.0
 }]
@@ -42,20 +59,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_nuaid")
-}],
-"loop": true,
-"name": &"anomaly",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6qws1"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_risbr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_3dnxy")
+"texture": ExtResource("7_ocg7t")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -67,6 +73,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("7_kqajr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_8k55f")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -78,6 +87,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("8_ketqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_osq6n")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -89,6 +101,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("9_3m4m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_y5hd8")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -100,6 +115,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("10_lkk7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fkb7m")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -111,6 +129,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("11_6qws1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_4f8i1")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -122,6 +143,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("12_rln1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gffr0")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -133,6 +157,12 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("13_xegiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2x7av")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6qtey")
 }],
 "loop": true,
 "name": &"anomaly",
@@ -150,63 +180,89 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qws1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_risbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3dnxy")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
 [node name="room3" instance=ExtResource("1_4c8fp")]
 
 [node name="bin" type="AnimatedSprite2D" parent="Props" index="0"]
 z_index = 1
+position = Vector2(268, -9)
 sprite_frames = SubResource("SpriteFrames_oeiau")
 animation = &"anomaly"
 
 [node name="carpet" type="AnimatedSprite2D" parent="Props" index="1"]
 z_index = 1
+position = Vector2(153, -8)
 sprite_frames = SubResource("SpriteFrames_3m4m6")
 animation = &"anomaly"
 
 [node name="picture" type="AnimatedSprite2D" parent="Props" index="2"]
 z_index = 1
+position = Vector2(270, -54)
 sprite_frames = SubResource("SpriteFrames_lkk7e")
 animation = &"anomaly"
 
-[node name="plant" type="AnimatedSprite2D" parent="Props" index="3"]
+[node name="bed" type="AnimatedSprite2D" parent="Props" index="3"]
 z_index = 1
-sprite_frames = SubResource("SpriteFrames_6qws1")
-animation = &"anomaly"
-
-[node name="bed" type="AnimatedSprite2D" parent="Props" index="4"]
-z_index = 1
+position = Vector2(192, -16)
 sprite_frames = SubResource("SpriteFrames_rln1m")
 animation = &"anomaly"
 
-[node name="bookshelf" type="AnimatedSprite2D" parent="Props" index="5"]
+[node name="bookshelf" type="AnimatedSprite2D" parent="Props" index="4"]
 z_index = 1
+position = Vector2(292, -31)
 sprite_frames = SubResource("SpriteFrames_nuaid")
 animation = &"anomaly"
 
-[node name="desk" type="AnimatedSprite2D" parent="Props" index="6"]
+[node name="desk" type="AnimatedSprite2D" parent="Props" index="5"]
 z_index = 1
+position = Vector2(241, -16)
 sprite_frames = SubResource("SpriteFrames_s1of6")
 animation = &"anomaly"
 
-[node name="door" type="AnimatedSprite2D" parent="Props" index="7"]
+[node name="door" type="AnimatedSprite2D" parent="Props" index="6"]
 z_index = 1
+position = Vector2(103, -24)
 sprite_frames = SubResource("SpriteFrames_kvpld")
 animation = &"anomaly"
 
-[node name="guitar" type="AnimatedSprite2D" parent="Props" index="8"]
+[node name="guitar" type="AnimatedSprite2D" parent="Props" index="7"]
 z_index = 1
+position = Vector2(157, -42)
 sprite_frames = SubResource("SpriteFrames_7mnvb")
 animation = &"anomaly"
 
-[node name="nightstand" type="AnimatedSprite2D" parent="Props" index="9"]
+[node name="nightstand" type="AnimatedSprite2D" parent="Props" index="8"]
 z_index = 1
+position = Vector2(131, -16)
 sprite_frames = SubResource("SpriteFrames_fmwv8")
 animation = &"anomaly"
 
-[node name="picture2" type="AnimatedSprite2D" parent="Props" index="10"]
+[node name="picture2" type="AnimatedSprite2D" parent="Props" index="9"]
 z_index = 1
+position = Vector2(203, -52)
 sprite_frames = SubResource("SpriteFrames_83m05")
 animation = &"anomaly"
 
-[node name="shelf" type="AnimatedSprite2D" parent="Props" index="11"]
+[node name="shelf" type="AnimatedSprite2D" parent="Props" index="10"]
 z_index = 1
+position = Vector2(241, -48)
 sprite_frames = SubResource("SpriteFrames_ff26f")
+
+[node name="plant" type="AnimatedSprite2D" parent="Props" index="11"]
+z_index = 1
+position = Vector2(131, -28)
+sprite_frames = SubResource("SpriteFrames_6qws1")
+animation = &"anomaly"

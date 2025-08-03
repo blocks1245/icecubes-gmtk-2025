@@ -1,9 +1,10 @@
 extends Control
 
-@onready var menu: VBoxContainer = $CenterContainer/menu # Main menu UI parent node
+@onready var menu: VBoxContainer = $menu # Main menu UI parent node
 @onready var credits_vbox: VBoxContainer = $CenterContainer/creditsVbox # Vbox container for credits UI
 @onready var credits_tab: TabContainer = $CenterContainer/creditsVbox/credits # Credits tab
 @onready var animation_player: AnimationPlayer = $AnimationPlayer # Animation player for fading
+@onready var fake_player: AnimatedSprite2D = $background/fakePlayer
 
 func _ready() -> void:
 	music.stopAll() # Stops music
@@ -66,5 +67,5 @@ func _on_return_pressed() -> void: # When return to menu is pressed
 	await animation_player.animation_finished # Wait for the animation to finish (quite brief)
 
 
-func _on_credits_tab_changed(tab: int) -> void: 
+func _on_credits_tab_changed(_tab: int) -> void: 
 	music.buttonPress() # You guessed it; play the button press sfx!!

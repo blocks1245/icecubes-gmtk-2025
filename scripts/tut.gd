@@ -40,7 +40,7 @@ func _scrollText(string): # Scrolling text function
 	
 	finished = true # Set finished to true
 
-func _input(event) -> void: # When input is pressed
+func _input(_event) -> void: # When input is pressed
 	if Input.is_action_just_pressed("enter") and finished and !switching: # When everything is ready to move on and enter pressed
 		switching = true # Set switching to true to prevent doubling up on this
 		
