@@ -22,7 +22,7 @@ func _on_try_again_pressed() -> void:
 	gameManager.running = true # Set game running
 	
 	# Switch to the first room
-	get_tree().change_scene_to_file("res://scenes/%s" % gameManager.rooms[gameManager.getRoomIndex()])
+	get_tree().change_scene_to_file("res://scenes/%s" % gameManager.chooseRooms()[0])
 
 func _on_main_menu_pressed() -> void:
 	music.buttonPress() # Play button press sfx
