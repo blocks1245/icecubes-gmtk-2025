@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://buv8104kxh206"]
+[gd_scene load_steps=8 format=3 uid="uid://cdigquax2n7px"]
 
-[ext_resource type="Script" uid="uid://dv15dpedrd040" path="res://scripts/tut.gd" id="1_78itc"]
+[ext_resource type="Script" path="res://scripts/tut.gd" id="1_78itc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f4haf"]
 outline_color = Color(0, 0, 0, 1)
@@ -147,10 +147,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -565.0
-offset_top = -234.0
-offset_right = 759.0
-offset_bottom = 346.0
+offset_left = -546.0
+offset_top = 813.0
+offset_right = 778.0
+offset_bottom = 1393.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
