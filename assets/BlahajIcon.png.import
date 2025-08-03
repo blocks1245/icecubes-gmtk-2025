@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cagk0gb84sjai"
-path="res://.godot/imported/bin.png-4d5755072fa508540b3f6e6c28e06518.ctex"
+uid="uid://c4q4hhw88lkek"
+path="res://.godot/imported/BlahajIcon.png-afa3de93b832b4ca53fc248d5e9c13c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Furniture/bin.png"
-dest_files=["res://.godot/imported/bin.png-4d5755072fa508540b3f6e6c28e06518.ctex"]
+source_file="res://assets/BlahajIcon.png"
+dest_files=["res://.godot/imported/BlahajIcon.png-afa3de93b832b4ca53fc248d5e9c13c8.ctex"]
 
 [params]
 
