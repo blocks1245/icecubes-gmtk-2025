@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://crh38b5282x0q"]
+[gd_scene load_steps=44 format=3 uid="uid://crh38b5282x0q"]
 
 [ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_7ilqw"]
 [ext_resource type="Texture2D" uid="uid://cgj6fhpqn1wvg" path="res://assets/furniture/beta_washroom/counter.png" id="2_h26u8"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://cvoskavju76ye" path="res://assets/furniture/beta_washroom/towelA.png" id="20_lh3f6"]
 [ext_resource type="Texture2D" uid="uid://df55ih21hs2u8" path="res://assets/furniture/beta_washroom/towel2.png" id="21_tuh2r"]
 [ext_resource type="Texture2D" uid="uid://cmfqrbta52umw" path="res://assets/furniture/beta_washroom/pixil-layer-21.png" id="22_g3ydg"]
+[ext_resource type="Texture2D" uid="uid://majk11mpeaci" path="res://assets/furniture/beta_washroom/pixil-layer-22.png" id="22_jisb6"]
 [ext_resource type="Texture2D" uid="uid://b2mg63o7vet6u" path="res://assets/furniture/beta_washroom/towel2A.png" id="22_sy8as"]
 [ext_resource type="Texture2D" uid="uid://33vcb8ryt52e" path="res://assets/furniture/beta_washroom/pixil-layer-19.png" id="26_8npys"]
 [ext_resource type="Texture2D" uid="uid://oanxcid4qp5j" path="res://assets/furniture/beta_washroom/pixil-layer-20.png" id="27_g3ydg"]
@@ -173,6 +174,9 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("22_jisb6")
+}, {
+"duration": 1.0,
 "texture": ExtResource("22_g3ydg")
 }],
 "loop": true,
@@ -278,31 +282,31 @@ position = Vector2(184, -8)
 sprite_frames = SubResource("SpriteFrames_nu5d7")
 animation = &"anomaly"
 
-[node name="towel1" type="AnimatedSprite2D" parent="." index="7"]
+[node name="towel1" type="AnimatedSprite2D" parent="Props" index="9"]
 z_index = 1
 position = Vector2(232, -8)
 sprite_frames = SubResource("SpriteFrames_jisb6")
 animation = &"anomaly"
 
-[node name="towel2" type="AnimatedSprite2D" parent="." index="8"]
+[node name="towel3" type="AnimatedSprite2D" parent="Props" index="10"]
 z_index = 1
 position = Vector2(216, -8)
 sprite_frames = SubResource("SpriteFrames_5j3ra")
 animation = &"anomaly"
 
-[node name="counter" type="AnimatedSprite2D" parent="." index="9"]
+[node name="counter" type="AnimatedSprite2D" parent="Props" index="11"]
 z_index = 1
 position = Vector2(264, -8)
 sprite_frames = SubResource("SpriteFrames_1yw6t")
 animation = &"anomaly"
 
-[node name="sink" type="AnimatedSprite2D" parent="." index="10"]
+[node name="sink" type="AnimatedSprite2D" parent="Props" index="12"]
 z_index = 1
 position = Vector2(264, -24)
 sprite_frames = SubResource("SpriteFrames_xwcvl")
 animation = &"anomaly"
 
-[node name="toilet" type="AnimatedSprite2D" parent="." index="11"]
+[node name="toilet" type="AnimatedSprite2D" parent="Props" index="13"]
 z_index = 1
 position = Vector2(280, -8)
 sprite_frames = SubResource("SpriteFrames_w6vd8")

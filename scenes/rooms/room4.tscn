@@ -1,0 +1,174 @@
+[gd_scene load_steps=26 format=3 uid="uid://cooo28jnbxtpw"]
+
+[ext_resource type="PackedScene" uid="uid://3yy3x54wukbp" path="res://scenes/specialRooms/parentroom.tscn" id="1_3lk65"]
+[ext_resource type="Texture2D" uid="uid://8fcgrge5ront" path="res://assets/furniture/luis_2/big_desk.png" id="2_51wyk"]
+[ext_resource type="Texture2D" uid="uid://cgqdg8yew273b" path="res://assets/furniture/luis_2/cat.png" id="2_dqohk"]
+[ext_resource type="Texture2D" uid="uid://lodmreb8j67r" path="res://assets/furniture/luis_2/catA.png" id="3_8kcyv"]
+[ext_resource type="Texture2D" uid="uid://cab6i2an1cbpt" path="res://assets/furniture/luis_2/big_deskA.png" id="3_nojl6"]
+[ext_resource type="Texture2D" uid="uid://2ry38p6ho2jn" path="res://assets/furniture/luis_2/dragon_thing_xd.png" id="3_xdd6j"]
+[ext_resource type="Texture2D" uid="uid://bqetwhcd1bg8d" path="res://assets/furniture/luis_2/big_deskA2.png" id="4_803qg"]
+[ext_resource type="Texture2D" uid="uid://cesmgxlaptw6d" path="res://assets/furniture/luis_2/dragon_thing_xdA.png" id="5_ttfhd"]
+[ext_resource type="Texture2D" uid="uid://cwt8hdv1apct8" path="res://assets/furniture/luis_2/big_ass_thing.png" id="7_p718m"]
+[ext_resource type="Texture2D" uid="uid://br3ogr6ubs6kk" path="res://assets/furniture/luis_2/big_ass_thingA1.png" id="8_dqohk"]
+[ext_resource type="Texture2D" uid="uid://bxaroqj0xuj68" path="res://assets/furniture/luis_2/big_ass_thingA2.png" id="9_w07b5"]
+[ext_resource type="Texture2D" uid="uid://dkhltol60vswo" path="res://assets/furniture/luis_2/teddy_bear.png" id="11_w07b5"]
+[ext_resource type="Texture2D" uid="uid://cl6q7k8li7vw0" path="res://assets/furniture/luis_2/teddy_bearA.png" id="12_w07b5"]
+[ext_resource type="Texture2D" uid="uid://c0om34p6q8f34" path="res://assets/furniture/luis_2/dead_bear_lol.png" id="14_rl23p"]
+[ext_resource type="Texture2D" uid="uid://ch8k1bwvq687p" path="res://assets/furniture/luis_2/tv.png" id="14_ym1hn"]
+[ext_resource type="Texture2D" uid="uid://bu3vucuxtjufj" path="res://assets/furniture/luis_2/tvA.png" id="15_ym1hn"]
+[ext_resource type="Texture2D" uid="uid://0m23q0qpoq27" path="res://assets/furniture/luis_2/big_big_wardrobe.png" id="16_sgqsv"]
+[ext_resource type="Texture2D" uid="uid://ctc78iu3kxtkp" path="res://assets/furniture/luis_2/big_big_wardrobe_anomaly.png" id="17_6mjdb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8kcyv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dqohk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8kcyv")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdd6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_51wyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nojl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_803qg")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_51wyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xdd6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ttfhd")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1u2my"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_p718m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dqohk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_w07b5")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ym1hn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_w07b5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_w07b5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rl23p")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sgqsv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_ym1hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ym1hn")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6mjdb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_sgqsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_6mjdb")
+}],
+"loop": true,
+"name": &"anomaly",
+"speed": 5.0
+}]
+
+[node name="parentroom" instance=ExtResource("1_3lk65")]
+
+[node name="cat" type="AnimatedSprite2D" parent="Props" index="0"]
+z_index = 1
+position = Vector2(144, -48)
+sprite_frames = SubResource("SpriteFrames_8kcyv")
+animation = &"anomaly"
+
+[node name="desk" type="AnimatedSprite2D" parent="Props" index="1"]
+z_index = 1
+position = Vector2(208, -16)
+sprite_frames = SubResource("SpriteFrames_xdd6j")
+animation = &"anomaly"
+
+[node name="dragon_thing" type="AnimatedSprite2D" parent="Props" index="2"]
+z_index = 1
+position = Vector2(112, -24)
+sprite_frames = SubResource("SpriteFrames_51wyk")
+animation = &"anomaly"
+
+[node name="big" type="AnimatedSprite2D" parent="Props" index="3"]
+z_index = 1
+position = Vector2(80, -32)
+sprite_frames = SubResource("SpriteFrames_1u2my")
+animation = &"anomaly"
+
+[node name="teddy" type="AnimatedSprite2D" parent="Props" index="4"]
+z_index = 1
+position = Vector2(160, -16)
+sprite_frames = SubResource("SpriteFrames_ym1hn")
+animation = &"anomaly"
+
+[node name="tv" type="AnimatedSprite2D" parent="Props" index="5"]
+z_index = 1
+position = Vector2(272, -24)
+sprite_frames = SubResource("SpriteFrames_sgqsv")
+animation = &"anomaly"
+frame_progress = 0.353752
+
+[node name="wardrobe" type="AnimatedSprite2D" parent="Props" index="6"]
+z_index = 1
+position = Vector2(320, -32)
+sprite_frames = SubResource("SpriteFrames_6mjdb")
+animation = &"anomaly"
+frame = 1
+frame_progress = 0.227813
