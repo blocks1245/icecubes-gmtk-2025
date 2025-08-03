@@ -808,6 +808,24 @@ layout_mode = 2
 theme = ExtResource("2_3d1i7")
 text = "Return To Main Menu"
 
+[node name="volumeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 346.0
+offset_right = 497.0
+offset_bottom = 365.3
+text = "Volume:"
+
+[node name="volumeSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 438.0
+offset_top = 365.0
+offset_right = 542.0
+offset_bottom = 381.0
+min_value = -40.0
+max_value = 6.0
+value = 1.0
+
 [node name="menu" type="VBoxContainer" parent="."]
 layout_mode = 2
 offset_left = 597.0
@@ -876,6 +894,7 @@ autoplay = "menu bob"
 
 [connection signal="tab_changed" from="CenterContainer/creditsVbox/credits" to="." method="_on_credits_tab_changed"]
 [connection signal="pressed" from="CenterContainer/creditsVbox/return" to="." method="_on_return_pressed"]
+[connection signal="value_changed" from="volumeSlider" to="." method="_on_volume_slider_value_changed"]
 [connection signal="pressed" from="menu/playGame" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="menu/credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="menu/quitGame" to="." method="_on_quit_game_pressed"]

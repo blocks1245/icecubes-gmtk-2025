@@ -1,5 +1,6 @@
 extends Control
 
+@onready var volume_slider: HSlider = $volumeSlider
 @onready var menu: VBoxContainer = $menu # Main menu UI parent node
 @onready var credits_vbox: VBoxContainer = $CenterContainer/creditsVbox # Vbox container for credits UI
 @onready var credits_tab: TabContainer = $CenterContainer/creditsVbox/credits # Credits tab
@@ -12,6 +13,7 @@ func _ready() -> void:
 	player.update()
 	map.update(null)
 	
+	volume_slider.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
 	music.playMainMenu() # Play menu music
 	
 	animation_player.play("FadeIn") # Start animation to fade back in from black
@@ -69,3 +71,7 @@ func _on_return_pressed() -> void: # When return to menu is pressed
 
 func _on_credits_tab_changed(_tab: int) -> void: 
 	music.buttonPress() # You guessed it; play the button press sfx!!
+
+
+func _on_volume_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
