@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dpv88ac4j330b" path="res://assets/BlahajIcon.png" id="1_gfsvj"]
 
 [node name="Blahaj" type="Sprite2D"]
+position = Vector2(101, -302)
 texture = ExtResource("1_gfsvj")
 
 [node name="Label" type="Label" parent="."]
